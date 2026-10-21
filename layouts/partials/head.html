@@ -4,7 +4,7 @@
 <meta name="description" content="{{ $description }}">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/Logo_Site.png" type="image/svg+xml">
 {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">{{ end }}
 <title>{{ if .IsHome }}{{ .Site.Title }} — Cours et annales corrigées de CPGE{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
