@@ -1,4 +1,4 @@
 ---
 title: "Accueil"
-description: "Cours, fiches, méthodes et annales corrigées pour les étudiants de classes préparatoires scientifiques."
+description: "Des ressources pour les étudiants en classes préparatoires."
 ---

@@ -1,4 +1,8 @@
 {{ define "main" }}
-<section class="page-hero"><div class="container"><p class="eyebrow">{{ .Section | humanize }}</p><h1>{{ .Title }}</h1>{{ with .Description }}<p class="page-lead">{{ . }}</p>{{ end }}</div></section>
-<section class="container listing-section"><div class="resource-grid">{{ range .Paginator.Pages }}{{ partial "resource-card.html" . }}{{ else }}<div class="empty-state"><strong>Aucune ressource publiée dans cette rubrique pour le moment.</strong><p>Les pages apparaîtront ici à mesure que tu ajouteras les fichiers Markdown.</p></div>{{ end }}</div>{{ template "_internal/pagination.html" . }}</section>
+<div class="page-top"><a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a><p class="section-kicker">LES RESSOURCES</p><h1>{{ .Title }}</h1>{{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}{{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}</div>
+<div class="resource-list">
+  {{ range .RegularPages.ByDate.Reverse }}
+    <article class="resource-card"><div class="resource-card-content"><p class="tile-tag">RESSOURCE</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}</div><a class="card-arrow" href="{{ .RelPermalink }}" aria-label="Consulter {{ .Title }}">→</a></article>
+  {{ else }}<div class="empty-state"><span>✳</span><h2>Les ressources arrivent bientôt</h2><p>Cette rubrique est en cours de préparation. Les nouvelles ressources seront ajoutées ici manuellement.</p></div>{{ end }}
+</div>
 {{ end }}

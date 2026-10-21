@@ -1,98 +1,65 @@
-# Tout pour Cpgérer — site Hugo publié par Cloudflare Pages
+# Tout pour Cpgérer — site Hugo
 
-Ce dépôt contient le site web. Tu peux gérer le contenu depuis le navigateur, avec l'interface GitHub. **Tu n'as pas besoin d'installer Hugo ni Git sur ton ordinateur.** Cloudflare exécute Hugo sur ses propres serveurs à chaque mise à jour.
+Site statique en français, pensé pour être géré depuis l'interface web de GitHub, sans installer Hugo ni Git sur l'ordinateur. Cloudflare Pages construit le site à chaque mise à jour du dépôt.
 
-## 1. Mettre le projet sur GitHub
+## Configuration Cloudflare Pages
 
-1. Crée un dépôt GitHub vide.
-2. Décompresse cette archive sur ton ordinateur.
-3. Dans le dépôt GitHub, clique sur **Add file → Upload files** et téléverse le contenu du dossier `tout-pour-cpgerer` (les dossiers `content`, `layouts`, `assets`, `static`, ainsi que `hugo.toml` et `README.md`). Il faut téléverser les fichiers du projet, pas seulement l'archive ZIP.
-4. Clique sur **Commit changes**.
+- Branche de production : `main` (ou la branche principale réelle du dépôt)
+- Commande de build : `hugo --minify`
+- Répertoire de sortie : `public`
+- Framework : Hugo
 
-## 2. Relier GitHub à Cloudflare Pages
+Dans `hugo.toml`, la valeur `baseURL` est encore réglée sur l’ancienne adresse `workers.dev`. Si tu publies désormais sur une adresse `pages.dev`, remplace-la par l’adresse exacte du projet Pages pour que les URL canoniques soient correctes.
 
-Dans Cloudflare, ouvre **Workers & Pages → Create → Pages → Connect to Git** et sélectionne le dépôt GitHub.
+La commande `hugo --minify` s'exécute sur les serveurs de Cloudflare, pas sur l'ordinateur. Elle transforme les fichiers Markdown et les modèles HTML en site publiable.
 
-Paramètres de compilation :
+## Personnaliser l'apparence
 
-- **Framework preset** : Hugo (ou configuration personnalisée si Hugo n'est pas proposé)
-- **Build command** : `hugo --minify`
-- **Build output directory** : `public`
-- **Production branch** : `main` si c'est le nom de la branche principale de ton dépôt
+- `assets/css/main.css` : couleurs, typographie, espaces, cartes et responsive mobile.
+- `layouts/index.html` : contenu et structure de la page d'accueil.
+- `layouts/partials/header.html` : marque et menu principal.
+- `layouts/partials/footer.html` : liens et pied de page.
+- `layouts/_default/list.html` : présentation des rubriques.
+- `layouts/_default/single.html` : modèle des pages individuelles, dont le lecteur PDF.
+- `hugo.toml` : titre, description et liens du site.
 
-La commande `hugo --minify` est lancée **par Cloudflare**, pas par ton ordinateur. Elle construit les pages HTML à partir des fichiers du dépôt. Après un commit GitHub, Cloudflare relance normalement la compilation et publie le site.
+Palette actuelle : bleu clair, doré et noir. La marque affichée est un monogramme typographique temporaire ; si tu as le fichier image de ton logo original, ajoute-le dans `static/` puis adapte `layouts/partials/header.html`.
 
-Dans `hugo.toml`, remplace `https://example.pages.dev/` par l'adresse réelle de ton site Cloudflare, avec un `/` final. Tu peux faire cette modification directement dans GitHub avec le bouton de modification du fichier.
+## Ajouter une ressource manuellement
 
-## 3. Ajouter un PDF et sa page manuellement
+1. Dans GitHub, ouvre `static/pdfs/` et téléverse le PDF.
+2. Crée toi-même un fichier Markdown dans le dossier de la bonne rubrique :
+   - `content/fiches-chimie/`
+   - `content/annales-centrale/`
+   - `content/informatique-physico-chimique/`
+3. Ajoute le titre, le résumé, le texte et le chemin du PDF dans les métadonnées du fichier.
+4. Enregistre : Cloudflare Pages reconstruira le site automatiquement.
 
-Chaque PDF et chaque page HTML sont ajoutés séparément : **aucune page n'est créée automatiquement à partir du nom d'un PDF**. Tu choisis toi-même la rubrique, le titre, la description et le contenu de chaque page.
+**Important : déposer un PDF ne crée aucune page automatiquement.** Les pages sont créées et classées manuellement.
 
-### Téléverser le PDF
+### Modèle de page Markdown avec PDF
 
-1. Dans GitHub, ouvre `static/pdfs/`.
-2. Clique sur **Add file → Upload files**.
-3. Téléverse le PDF final, puis clique sur **Commit changes**.
+Crée par exemple `content/fiches-chimie/equilibres-chimiques.md` :
 
-Exemple de chemin : `static/pdfs/corrige-centrale-pc-2025.pdf`. L'adresse publique sera `https://TON-SITE.pages.dev/pdfs/corrige-centrale-pc-2025.pdf`.
+```toml
++++
+title = "Équilibres chimiques"
+date = 2026-10-21
+summary = "Une fiche pour réviser les équilibres chimiques."
+pdf = "/pdfs/equilibres-chimiques.pdf"
++++
 
-### Créer la page HTML
+## À retenir
 
-1. Ouvre le dossier correspondant, par exemple `content/annales/`.
-2. Clique sur **Add file → Create new file**.
-3. Crée un fichier Markdown, par exemple `corrige-centrale-pc-2025.md`.
-4. Utilise cette structure et personnalise tous les champs :
-
-```markdown
----
-title: "Corrigé de Centrale PC 2025"
-date: 2026-10-21
-lastmod: 2026-10-21
-description: "Corrigé détaillé de Centrale PC 2025 : méthodes et résultats expliqués."
-tags: ["annales", "corrigé", "PC"]
-draft: false
-pdf: "/pdfs/corrige-centrale-pc-2025.pdf"
----
-
-## Présentation
-
-Présente ici l'épreuve, les exercices et les principales méthodes utilisées.
-
-## Notions abordées
-
-- Première notion importante.
-- Deuxième notion importante.
-
-## Résultat à retenir
-
-Par exemple, tu peux écrire une formule qui sera rendue dans la page HTML par MathJax :
+Ajoute ici ta présentation, les explications et les formules.
 
 $$
-\\sum_{k=0}^{n} q^k = \\frac{1-q^{n+1}}{1-q}, \qquad q \\ne 1.
+K^\circ = \prod_i a_i^{\nu_i}
 $$
 ```
 
-Vérifie que la valeur de `pdf` correspond exactement au nom du fichier téléversé. La page HTML affichera le texte, les formules MathJax, un lecteur PDF intégré et un lien de téléchargement. Enregistre la page avec **Commit changes**.
+Le champ `pdf` est facultatif. S'il est renseigné, la page affiche un lecteur PDF et un bouton de téléchargement. MathJax rend les formules LaTeX écrites dans le contenu HTML. MathJax ne compile pas un fichier `.tex` en PDF : compile le PDF séparément puis téléverse-le dans `static/pdfs/`.
 
-Pour une page de cours sans PDF, crée simplement un fichier dans `content/cours/` et retire la ligne `pdf`. Pour une fiche de méthode, utilise `content/methodes/`. Tu peux créer d'autres rubriques, mais il faudra alors adapter le menu et les modèles si tu veux les afficher dans la navigation.
+## Liens externes
 
-## 4. Contrôler les rubriques et les pages d'accueil
-
-Les fichiers `content/cours/_index.md`, `content/annales/_index.md` et `content/methodes/_index.md` décrivent les pages de rubrique. Modifie-les directement sur GitHub pour ajuster leur titre et leur introduction. Les pages publiées apparaissent dans leur rubrique selon les modèles du site ; les fichiers avec `draft: true` ne sont pas publiés.
-
-Les fichiers `exemple-...md` sont des modèles de démonstration laissés en brouillon. Copie leur structure pour créer tes pages, ou supprime-les quand tu n'en as plus besoin.
-
-## MathJax et PDF : deux rôles différents
-
-- **MathJax** affiche les formules écrites en LaTeX dans le texte HTML, par exemple `\\(e^x\\)` ou un bloc `$$ ... $$`.
-- **LaTeX sur ton ordinateur** sert à compiler tes fichiers `.tex` en PDF. Continue de faire cette compilation comme d'habitude, puis téléverse uniquement le PDF final dans `static/pdfs/`.
-- **Hugo sur Cloudflare** transforme les fichiers Markdown en pages HTML et publie le site. Tu n'as pas à lancer Hugo toi-même.
-
-## Référencement
-
-Rédige une description utile pour chaque page, explique réellement le contenu du document et crée des liens entre les ressources connexes. Une publication ou un sitemap ne garantit pas l'indexation par Google. Conserve Google Sites et Blogger pendant la transition, le temps de vérifier le nouveau site.
-
-Liens utiles :
-- Hugo : https://gohugo.io/documentation/
-- Cloudflare Pages : https://developers.cloudflare.com/pages/
-- Google Search Console : https://search.google.com/search-console/
+Le lien Blogger est configuré dans `hugo.toml`. Le lien Instagram peut être ajouté au paramètre `instagramURL` lorsque l'URL souhaitée est connue.

@@ -1,7 +1,11 @@
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div><strong>Tout pour Cpgérer</strong><p>Des ressources pour travailler efficacement en classes préparatoires scientifiques.</p></div>
-    <div class="footer-links"><a href="{{ site.Params.bloggerURL }}">Articles sur Blogger</a><a href="{{ site.Params.googleSitesURL }}">Ancien site</a><a href="/index.xml">Flux RSS</a></div>
+    <div><strong>Tout pour Cpgérer</strong><p>Des ressources pour avancer sereinement en CPGE.</p></div>
+    <div class="footer-links">
+      {{ with .Site.Params.bloggerURL }}<a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>{{ end }}
+      {{ with .Site.Params.instagramURL }}<a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+      <a href="{{ "index.xml" | relURL }}">Flux RSS</a>
+    </div>
+    <p class="copyright">© {{ now.Year }} Tout pour Cpgérer</p>
   </div>
-  <div class="container footer-bottom">© {{ now.Year }} Tout pour Cpgérer · Les contenus sont proposés à des fins pédagogiques.</div>
 </footer>

@@ -1,59 +1,9 @@
-baseURL = "https://site.c8s.pages.dev/"
+baseURL = "https://site.tout-pour-cpgerer.workers.dev/"
 languageCode = "fr-fr"
 title = "Tout pour Cpgérer"
-theme = []
 enableRobotsTXT = true
-defaultContentLanguage = "fr"
 
-# Empêche Markdown d'abîmer tes formules LaTeX
-[markup.goldmark.extensions.passthrough]
-  enable = true
-  [markup.goldmark.extensions.passthrough.delimiters]
-    block = [['\[', '\]'], ['$$', '$$']]
-    inline = [['\(', '\)'], ['$', '$']]
-
-[pagination]
-  pagerSize = 12
-[permalinks]
-  [permalinks.page]
-    cours = "/cours/:slug/"
-    annales = "/annales/:slug/"
-    methodes = "/methodes/:slug/"
 [params]
-  description = "Cours, fiches, méthodes et annales corrigées pour les étudiants de classes préparatoires scientifiques."
-  author = "Tout pour Cpgérer"
-  math = true
+  description = "Des ressources claires et utiles pour réussir en classes préparatoires : fiches de chimie, annales de Centrale et informatique physico-chimique."
+  instagramURL = ""
   bloggerURL = "https://toutpourcpgerer.blogspot.com/"
-  googleSitesURL = "https://sites.google.com/view/tout-pour-cpgerer/accueil"
-  [params.social]
-    blogger = "https://toutpourcpgerer.blogspot.com/"
-[menu]
-  [[menu.main]]
-    name = "Accueil"
-    pageRef = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Cours"
-    pageRef = "/cours"
-    weight = 2
-  [[menu.main]]
-    name = "Annales corrigées"
-    pageRef = "/annales"
-    weight = 3
-  [[menu.main]]
-    name = "Méthodes & fiches"
-    pageRef = "/methodes"
-    weight = 4
-  [[menu.main]]
-    name = "Le blog"
-    url = "https://toutpourcpgerer.blogspot.com/"
-    weight = 5
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
-  page = ["HTML"]
-[outputFormats.JSON]
-  mediaType = "application/json"
-  baseName = "search-index"
-  isPlainText = true
-  notAlternative = true

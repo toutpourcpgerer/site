@@ -1,37 +1,9 @@
 {{ define "main" }}
-<article class="container article-layout">
-  <nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="/">Accueil</a><span>/</span><a href="/{{ .Section }}/">{{ .Section | humanize }}</a><span>/</span><span>{{ .Title }}</span></nav>
-  <header class="article-header">
-    <p class="eyebrow">{{ .Section | humanize }}{{ with .Params.level }} · {{ . }}{{ end }}</p>
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="article-lead">{{ . }}</p>{{ end }}
-    <div class="article-meta">
-      <span>Mis à jour le {{ .Lastmod.Format "02/01/2006" }}</span>
-      {{ with .Params.tags }}<span class="tag-list">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</span>{{ end }}
-    </div>
-  </header>
-
-  <div class="prose">{{ .Content }}</div>
-
-  {{ with .Params.pdf }}
-    {{ $pdfURL := . | relURL }}
-    <section class="pdf-section" aria-labelledby="pdf-title">
-      <div class="pdf-heading">
-        <div>
-          <p class="eyebrow">Document à consulter</p>
-          <h2 id="pdf-title">Le corrigé complet en PDF</h2>
-          <p>Tu peux le lire directement ci-dessous ou le télécharger pour le conserver et l’imprimer.</p>
-        </div>
-        <a class="button button-primary" href="{{ $pdfURL }}" download>Télécharger le PDF ↓</a>
-      </div>
-      <div class="pdf-viewer">
-        <iframe src="{{ $pdfURL }}#view=FitH" title="Corrigé PDF : {{ $.Title }}" loading="lazy"></iframe>
-      </div>
-      <p class="pdf-fallback">Si le PDF ne s’affiche pas dans ton navigateur, <a href="{{ $pdfURL }}" target="_blank" rel="noopener">ouvre-le dans un nouvel onglet</a>.</p>
-    </section>
-  {{ end }}
-
-  {{ with .Params.related }}<aside class="related-box"><h2>À consulter aussi</h2><ul>{{ range . }}<li><a href="{{ . | relURL }}">{{ . }}</a></li>{{ end }}</ul></aside>{{ end }}
-  <div class="article-end"><a href="/{{ .Section }}/">← Toutes les ressources de cette rubrique</a></div>
+<article class="article">
+  <p class="breadcrumbs"><a href="{{ .CurrentSection.RelPermalink }}">← {{ .CurrentSection.Title }}</a></p>
+  <p class="section-kicker">TOUT POUR CPGÉRER</p><h1>{{ .Title }}</h1>
+  {{ with .Params.summary }}<p class="summary">{{ . }}</p>{{ end }}
+  <div class="article-content">{{ .Content }}</div>
+  {{ with .Params.pdf }}<section class="pdf-section"><div class="pdf-heading"><div><p class="section-kicker">DOCUMENT À CONSULTER</p><h2>Le document PDF</h2></div><a class="button button-dark" href="{{ . | relURL }}" download>Télécharger le PDF ↓</a></div><iframe class="pdf-viewer" src="{{ . | relURL }}#view=FitH" title="Lecteur PDF : {{ $.Title }}" loading="lazy"></iframe></section>{{ end }}
 </article>
 {{ end }}

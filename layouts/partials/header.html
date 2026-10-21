@@ -1,11 +1,13 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Tout pour Cpgérer, accueil">
-      <span class="brand-mark">∑</span>
-      <span><strong>Tout pour Cpgérer</strong><small>Comprendre · S'entraîner · Réussir</small></span>
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Tout pour Cpgérer, accueil">
+      <span class="brand-mark" aria-hidden="true">C<span>+</span></span>
+      <span class="brand-words"><strong>Tout pour Cpgérer</strong><small>Les ressources qui font la différence</small></span>
     </a>
     <nav aria-label="Navigation principale">
-      {{ range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+      <a href="{{ "fiches-chimie/" | relURL }}">Fiches de chimie</a>
+      <a href="{{ "annales-centrale/" | relURL }}">Annales Centrale</a>
+      <a href="{{ "informatique-physico-chimique/" | relURL }}">Informatique physico-chimique</a>
     </nav>
   </div>
 </header>
