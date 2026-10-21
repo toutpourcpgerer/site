@@ -1,53 +1,122 @@
 {{/*
   ============================================================
-  PAGE DE LISTE (rubrique)
+  PAGE DE RUBRIQUE (list.html) — SOUPLE
   ============================================================
-  Affiche la liste des ressources d’une rubrique
-  (ex. : Fiches de chimie, Annales de Centrale…).
+  Affiche :
+  1. Le contenu que tu écris dans le fichier _index.md
+  2. Les sous-dossiers (comme Centrale, Mines…) en boutons dorés
+  3. Les pages articles :
+     - style « annale » si le front matter a note / sujet / correction
+     - sinon style carte classique
 
-  Structure :
-  1. En-tête de page (titre + description)
-  2. Liste des pages enfants (ou message « bientôt »)
+  Pour désactiver la liste auto et tout gérer à la main dans le
+  Markdown : ajoute dans le front matter →  hide_auto_list: true
   ============================================================
 */}}
 {{ define "main" }}
 
-{{/* --- En-tête de la rubrique --- */}}
 <div class="page-top">
-  <a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
-  <p class="section-kicker">LES RESSOURCES</p>
+  {{/* Retour vers le parent (pas toujours l’accueil) */}}
+  {{ if .Parent }}
+    <a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+  {{ else }}
+    <a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
+  {{ end }}
+
   <h1>{{ .Title }}</h1>
 
   {{ with .Description }}
     <p class="page-description">{{ . }}</p>
   {{ end }}
-
-  {{ with .Content }}
-    <div class="page-intro">{{ . }}</div>
-  {{ end }}
 </div>
 
-{{/* --- Liste des ressources --- */}}
-<div class="resource-list">
-  {{ range .RegularPages.ByDate.Reverse }}
-    <article class="resource-card">
-      <div class="resource-card-content">
-        <p class="tile-tag">RESSOURCE</p>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Params.summary }}
-          <p>{{ . }}</p>
-        {{ end }}
-      </div>
-      <a class="card-arrow" href="{{ .RelPermalink }}" aria-label="Consulter {{ .Title }}">→</a>
-    </article>
-  {{ else }}
-    {{/* Message affiché si la rubrique est encore vide */}}
-    <div class="empty-state">
-      <span>✳</span>
-      <h2>Les ressources arrivent bientôt</h2>
-      <p>Cette rubrique est en cours de préparation. Les nouvelles ressources seront ajoutées ici manuellement.</p>
+{{/* --- Contenu libre écrit dans _index.md --- */}}
+{{ with .Content }}
+  <div class="page-intro content-block">
+    {{ . }}
+  </div>
+{{ end }}
+
+{{ if not .Params.hide_auto_list }}
+
+  {{/* --- Sous-rubriques (dossiers enfants) → boutons dorés --- */}}
+  {{ $sections := .Sections }}
+  {{ if $sections }}
+    <div class="btn-grid">
+      {{ range $sections }}
+        <a class="btn-gold" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
     </div>
   {{ end }}
-</div>
+
+  {{/* --- Pages enfants --- */}}
+  {{ $pages := .RegularPages.ByDate.Reverse }}
+  {{ if $pages }}
+
+    {{/* Détecte si au moins une page a le format « annale » */}}
+    {{ $hasAnnale := false }}
+    {{ range $pages }}
+      {{ if or .Params.note .Params.sujet .Params.correction }}
+        {{ $hasAnnale = true }}
+      {{ end }}
+    {{ end }}
+
+    {{ if $hasAnnale }}
+      {{/* Lignes type Google Sites : titre | note | Sujet | Correction */}}
+      <div class="annale-list">
+        {{ range $pages }}
+          <div class="annale-row">
+            <div class="annale-title">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </div>
+            <div class="annale-note">
+              {{ with .Params.note }}{{ . }}{{ end }}
+            </div>
+            <div class="annale-actions">
+              {{ with .Params.sujet }}
+                <a class="btn-outline-green" href="{{ . | relURL }}" target="_blank" rel="noopener">Sujet</a>
+              {{ end }}
+              {{ with .Params.correction }}
+                <a class="btn-gold-sm" href="{{ . | relURL }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}>Correction</a>
+              {{ else }}
+                {{ with .Params.pdf }}
+                  <a class="btn-gold-sm" href="{{ .RelPermalink }}">Correction</a>
+                {{ else }}
+                  <a class="btn-gold-sm" href="{{ .RelPermalink }}">Correction</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      {{/* Cartes classiques */}}
+      <div class="resource-list">
+        {{ range $pages }}
+          <article class="resource-card">
+            <div class="resource-card-content">
+              <p class="tile-tag">RESSOURCE</p>
+              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+              {{ with .Params.summary }}
+                <p>{{ . }}</p>
+              {{ end }}
+            </div>
+            <a class="card-arrow" href="{{ .RelPermalink }}" aria-label="Consulter {{ .Title }}">→</a>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+
+  {{ else }}
+    {{ if and (not $sections) (not .Content) }}
+      <div class="empty-state">
+        <span>✳</span>
+        <h2>Les ressources arrivent bientôt</h2>
+        <p>Cette rubrique est en cours de préparation.</p>
+      </div>
+    {{ end }}
+  {{ end }}
+
+{{ end }}
 
 {{ end }}
