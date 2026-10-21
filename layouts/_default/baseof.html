@@ -2,12 +2,6 @@
   ============================================================
   SQUELETTE DE TOUTES LES PAGES
   ============================================================
-  Structure :
-  - <head> : métadonnées + CSS + MathJax
-  - header + sidebar (partial)
-  - contenu principal
-  - footer
-  ============================================================
 */}}
 <!doctype html>
 <html lang="fr">
@@ -19,11 +13,9 @@
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <link rel="icon" type="image/png" href="{{ "Logo_Site.png" | relURL }}">
 
-  {{/* CSS principal — fichier dans assets/main.css */}}
   {{ $style := resources.Get "main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
-  {{/* MathJax pour les formules */}}
   <script>
     window.MathJax = {
       tex: {
@@ -45,5 +37,41 @@
   </div>
 
   {{ partial "footer.html" . }}
+
+  {{/* Script pour ouvrir / fermer le sommaire */}}
+  <script>
+    (function () {
+      var toggle  = document.getElementById('sidebar-toggle');
+      var closeBtn = document.getElementById('sidebar-close');
+      var sidebar = document.getElementById('sidebar');
+      var overlay = document.getElementById('sidebar-overlay');
+
+      function openSidebar() {
+        sidebar.hidden = false;
+        overlay.hidden = false;
+        document.body.classList.add('sidebar-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Fermer le sommaire');
+      }
+
+      function closeSidebar() {
+        sidebar.hidden = true;
+        overlay.hidden = true;
+        document.body.classList.remove('sidebar-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Ouvrir le sommaire');
+      }
+
+      if (toggle)  toggle.addEventListener('click', function () {
+        if (sidebar.hidden) openSidebar(); else closeSidebar();
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+      if (overlay)  overlay.addEventListener('click', closeSidebar);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !sidebar.hidden) closeSidebar();
+      });
+    })();
+  </script>
 </body>
 </html>
