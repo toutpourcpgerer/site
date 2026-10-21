@@ -1,16 +1,12 @@
 {{/*
   ============================================================
-  FICHIER DE BASE DE TOUTES LES PAGES
+  SQUELETTE DE TOUTES LES PAGES
   ============================================================
-  Ce fichier est le "squelette" de chaque page du site.
-  Toutes les autres pages (accueil, listes, articles…)
-  s’insèrent dans le bloc {{ block "main" . }}.
-
   Structure :
-  - <head> : métadonnées, CSS, MathJax
-  - header  : barre de navigation (partial)
-  - main    : contenu de la page (défini ailleurs)
-  - footer  : pied de page (partial)
+  - <head> : métadonnées + CSS + MathJax
+  - header + sidebar (partial)
+  - contenu principal
+  - footer
   ============================================================
 */}}
 <!doctype html>
@@ -18,33 +14,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {{/* Description de la page (pour Google, réseaux sociaux…) */}}
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-
-  {{/* Couleur de la barre d’adresse sur mobile */}}
-  <meta name="theme-color" content="#b9e5f5">
-
-  {{/* Titre de l’onglet du navigateur */}}
+  <meta name="theme-color" content="#101820">
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <link rel="icon" type="image/png" href="{{ "Logo_Site.png" | relURL }}">
 
-  {{/* Favicon (petite icône dans l’onglet) */}}
-  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
-
-  {{/*
-    CHARGEMENT DU CSS
-    -----------------
-    - resources.Get "main.css"  → cherche le fichier dans le dossier assets/
-    - | minify                  → compresse le CSS (plus léger)
-    - | fingerprint             → ajoute une empreinte pour le cache navigateur
-
-    IMPORTANT : le fichier doit s’appeler exactement "main.css"
-    et se trouver dans le dossier "assets/" (pas assets/css/).
-  */}}
+  {{/* CSS principal — fichier dans assets/main.css */}}
   {{ $style := resources.Get "main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
-  {{/* Configuration de MathJax pour les formules mathématiques */}}
+  {{/* MathJax pour les formules */}}
   <script>
     window.MathJax = {
       tex: {
@@ -57,15 +36,14 @@
 </head>
 
 <body>
-  {{/* Barre de navigation en haut */}}
   {{ partial "header.html" . }}
 
-  {{/* Contenu principal de la page */}}
-  <main id="contenu" class="container">
-    {{ block "main" . }}{{ end }}
-  </main>
+  <div class="page-wrapper">
+    <main id="contenu" class="container">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
 
-  {{/* Pied de page */}}
   {{ partial "footer.html" . }}
 </body>
 </html>
