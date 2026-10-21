@@ -11,7 +11,7 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+{{ $css := resources.Get "main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{ if .Site.Params.math }}
 <script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] }, options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };</script>
