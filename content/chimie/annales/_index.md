@@ -1,6 +1,6 @@
 ---
-title: "Annales de chimie"
-description: "Annales et corrigés de chimie."
+title: "Annales d'écrits de CPGE en chimie"
 ---
+Les annales de chimie de CPGE classées par concours.
 
-Les annales de chimie classées par concours.
+
