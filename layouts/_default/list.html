@@ -2,8 +2,8 @@
   PAGE DE RUBRIQUE SOUPLE
   - Contenu libre du _index.md
   - Sous-dossiers → boutons dorés
-  - Articles avec note/sujet/correction → lignes d'annales
-  - Sinon → cartes classiques
+  - Articles annale : titre cliquable + note + Sujet (si renseigné)
+    Le bouton Correction n’apparaît QUE si tu mets correction: "..." dans le front matter
   - hide_auto_list: true pour tout gérer à la main
 */}}
 {{ define "main" }}
@@ -61,17 +61,17 @@
               {{ with $page.Params.note }}{{ . }}{{ end }}
             </div>
             <div class="annale-actions">
+              {{/* Sujet : seulement si le champ sujet est rempli */}}
               {{ with $page.Params.sujet }}
                 {{ if . }}
                   <a class="btn-outline-green" href="{{ . | relURL }}" target="_blank" rel="noopener">Sujet</a>
                 {{ end }}
               {{ end }}
-              {{ if $page.Params.correction }}
-                <a class="btn-gold-sm" href="{{ $page.Params.correction | relURL }}">Correction</a>
-              {{ else if $page.Params.pdf }}
-                <a class="btn-gold-sm" href="{{ $page.Params.pdf | relURL }}">Correction</a>
-              {{ else }}
-                <a class="btn-gold-sm" href="{{ $page.RelPermalink }}">Correction</a>
+              {{/* Correction : seulement si tu l’ajoutes explicitement dans le front matter */}}
+              {{ with $page.Params.correction }}
+                {{ if . }}
+                  <a class="btn-gold-sm" href="{{ . | relURL }}">Correction</a>
+                {{ end }}
               {{ end }}
             </div>
           </div>

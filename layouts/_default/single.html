@@ -1,18 +1,12 @@
 {{/*
-  ============================================================
   PAGE D’UNE RESSOURCE INDIVIDUELLE
-  ============================================================
-  Affiche le contenu d’un article (fiche, annale, cours…).
-
-  Si le front matter contient un champ "pdf", un lecteur PDF
-  et un bouton de téléchargement s’affichent automatiquement.
-  ============================================================
+  Si pdf est renseigné : lecteur intégré + bouton qui OUVRE le PDF
+  (pas de téléchargement forcé → meilleur pour le référencement)
 */}}
 {{ define "main" }}
 
 <article class="article">
 
-  {{/* Fil d’Ariane : retour vers la rubrique parente */}}
   <p class="breadcrumbs">
     <a href="{{ .CurrentSection.RelPermalink }}">← {{ .CurrentSection.Title }}</a>
   </p>
@@ -20,22 +14,14 @@
   <p class="section-kicker">TOUT POUR CPGÉRER</p>
   <h1>{{ .Title }}</h1>
 
-  {{/* Résumé (si présent dans le front matter) */}}
   {{ with .Params.summary }}
     <p class="summary">{{ . }}</p>
   {{ end }}
 
-  {{/* Contenu Markdown de la page */}}
   <div class="article-content">
     {{ .Content }}
   </div>
 
-  {{/*
-    LECTEUR PDF
-    -----------
-    S’affiche uniquement si le front matter contient :
-    pdf = "/pdfs/nom-du-fichier.pdf"
-  */}}
   {{ with .Params.pdf }}
     <section class="pdf-section">
       <div class="pdf-heading">
@@ -43,8 +29,9 @@
           <p class="section-kicker">DOCUMENT À CONSULTER</p>
           <h2>Le document PDF</h2>
         </div>
-        <a class="button button-dark" href="{{ . | relURL }}" download>
-          Télécharger le PDF ↓
+        {{/* Pas d’attribut download : le lien ouvre le PDF dans le navigateur */}}
+        <a class="button button-dark" href="{{ . | relURL }}" target="_blank" rel="noopener">
+          Ouvrir le PDF ↗
         </a>
       </div>
 
