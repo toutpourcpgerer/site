@@ -1,9 +1,34 @@
+# ============================================================
+# CONFIGURATION DU SITE HUGO
+# ============================================================
+# Ce fichier contient les réglages généraux du site.
+# Tu peux le modifier sans connaître Hugo en détail.
+# ============================================================
+
+# Adresse officielle du site (utilisée pour les liens et le SEO)
 baseURL = "https://site-c8s.pages.dev/"
+
+# Langue principale
 languageCode = "fr-fr"
+
+# Titre affiché dans l’onglet du navigateur et le footer
 title = "Tout pour Cpgérer"
+
+# Active la génération du fichier robots.txt
 enableRobotsTXT = true
 
+# ------------------------------------------------------------
+# PARAMÈTRES PERSONNALISÉS
+# ------------------------------------------------------------
+# Ces valeurs sont utilisées dans les templates
+# (description, liens Instagram et Blogger…).
+# ------------------------------------------------------------
 [params]
+  # Description générale du site (SEO + réseaux sociaux)
   description = "Des ressources claires et utiles pour réussir en classes préparatoires : fiches de chimie, annales de Centrale et informatique physico-chimique."
+
+  # Lien vers la page Instagram
   instagramURL = "https://www.instagram.com/tout_pour_cpgerer/"
+
+  # Lien vers le blog Blogger
   bloggerURL = "https://toutpourcpgerer.blogspot.com/"

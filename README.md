@@ -1,43 +1,63 @@
 # Tout pour Cpgérer — site Hugo
 
-Site statique en français, pensé pour être géré depuis l'interface web de GitHub, sans installer Hugo ni Git sur l'ordinateur. Cloudflare Pages construit le site à chaque mise à jour du dépôt.
+Site statique en français, pensé pour être géré depuis l’interface web de GitHub, **sans installer Hugo ni Git** sur ton ordinateur.  
+Cloudflare Pages reconstruit le site automatiquement à chaque modification.
+
+---
+
+## Structure des dossiers (à ne pas renommer)
+
+| Dossier     | Rôle                                      | Comment le voir |
+|-------------|-------------------------------------------|-----------------|
+| `assets/`   | Mise en page (fichier CSS)                | Style du site   |
+| `content/`  | Pages (fichiers Markdown)                 | Contenu         |
+| `layouts/`  | Structure HTML des pages                   | Templates       |
+| `static/`   | Fichiers fixes (PDF, images, favicon…)    | Fichiers        |
+| `archetypes/` | Modèles pour créer de nouvelles pages   | Squelettes      |
+
+**Important :** ne renomme pas ces dossiers. Hugo les cherche par leur nom exact.
+
+---
 
 ## Configuration Cloudflare Pages
 
-- Branche de production : `main` (ou la branche principale réelle du dépôt)
-- Commande de build : `hugo --minify`
-- Répertoire de sortie : `public`
-- Framework : Hugo
+- **Branche de production** : `main`
+- **Commande de build** : `hugo --minify`
+- **Répertoire de sortie** : `public`
+- **Framework** : Hugo
 
-Dans `hugo.toml`, la valeur `baseURL` est encore réglée sur l’ancienne adresse `workers.dev`. Si tu publies désormais sur une adresse `pages.dev`, remplace-la par l’adresse exacte du projet Pages pour que les URL canoniques soient correctes.
+---
 
-La commande `hugo --minify` s'exécute sur les serveurs de Cloudflare, pas sur l'ordinateur. Elle transforme les fichiers Markdown et les modèles HTML en site publiable.
+## Personnaliser l’apparence
 
-## Personnaliser l'apparence
+| Fichier | Ce qu’il contrôle |
+|---------|-------------------|
+| `assets/main.css` | Couleurs, polices, espacements, cartes, mobile |
+| `layouts/index.html` | Page d’accueil |
+| `layouts/partials/header.html` | Logo + menu |
+| `layouts/partials/footer.html` | Pied de page |
+| `layouts/_default/list.html` | Liste d’une rubrique |
+| `layouts/_default/single.html` | Page d’une ressource + lecteur PDF |
+| `hugo.toml` | Titre, description, liens Instagram/Blogger |
 
-- `assets/css/main.css` : couleurs, typographie, espaces, cartes et responsive mobile.
-- `layouts/index.html` : contenu et structure de la page d'accueil.
-- `layouts/partials/header.html` : marque et menu principal.
-- `layouts/partials/footer.html` : liens et pied de page.
-- `layouts/_default/list.html` : présentation des rubriques.
-- `layouts/_default/single.html` : modèle des pages individuelles, dont le lecteur PDF.
-- `hugo.toml` : titre, description et liens du site.
+Palette actuelle : bleu clair, doré et noir.
 
-Palette actuelle : bleu clair, doré et noir. La marque affichée est un monogramme typographique temporaire ; si tu as le fichier image de ton logo original, ajoute-le dans `static/` puis adapte `layouts/partials/header.html`.
+---
 
 ## Ajouter une ressource manuellement
 
-1. Dans GitHub, ouvre `static/pdfs/` et téléverse le PDF.
-2. Crée toi-même un fichier Markdown dans le dossier de la bonne rubrique :
+1. Dans GitHub, ouvre `static/pdfs/` et **téléverse le PDF**.
+2. Crée un fichier Markdown dans la bonne rubrique :
    - `content/fiches-chimie/`
    - `content/annales-centrale/`
    - `content/informatique-physico-chimique/`
-3. Ajoute le titre, le résumé, le texte et le chemin du PDF dans les métadonnées du fichier.
-4. Enregistre : Cloudflare Pages reconstruira le site automatiquement.
+3. Remplis le front matter (voir modèle ci-dessous).
+4. Enregistre → Cloudflare reconstruit le site automatiquement.
 
-**Important : déposer un PDF ne crée aucune page automatiquement.** Les pages sont créées et classées manuellement.
+**Important :** déposer un PDF ne crée **aucune page** automatiquement.  
+Chaque page doit être créée manuellement.
 
-### Modèle de page Markdown avec PDF
+### Modèle de page avec PDF
 
 Crée par exemple `content/fiches-chimie/equilibres-chimiques.md` :
 
@@ -58,8 +78,26 @@ K^\circ = \prod_i a_i^{\nu_i}
 $$
 ```
 
-Le champ `pdf` est facultatif. S'il est renseigné, la page affiche un lecteur PDF et un bouton de téléchargement. MathJax rend les formules LaTeX écrites dans le contenu HTML. MathJax ne compile pas un fichier `.tex` en PDF : compile le PDF séparément puis téléverse-le dans `static/pdfs/`.
+- Le champ `pdf` est **facultatif**.
+- S’il est renseigné, un lecteur PDF et un bouton de téléchargement apparaissent.
+- MathJax affiche les formules LaTeX écrites dans le contenu.
+
+---
 
 ## Liens externes
 
-Le lien Blogger est configuré dans `hugo.toml`. Le lien Instagram peut être ajouté au paramètre `instagramURL` lorsque l'URL souhaitée est connue.
+Les liens Blogger et Instagram sont configurés dans `hugo.toml` (section `[params]`).
+
+---
+
+## En cas de problème de build
+
+Si Cloudflare affiche une erreur liée à `minify` ou `resources.Get` :
+
+1. Vérifie que le fichier CSS s’appelle bien `main.css`
+2. Vérifie qu’il se trouve bien dans le dossier `assets/` (pas `assets/css/`)
+3. Dans `layouts/_default/baseof.html`, la ligne doit être :
+
+```
+{{ $style := resources.Get "main.css" | minify | fingerprint }}
+```
