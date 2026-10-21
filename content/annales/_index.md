@@ -4,4 +4,4 @@ description: "Retrouve les sujets de concours et leurs corrigés pour t'entraîn
 ---
 On peut écrire des choses ici
 
-Faire des liens [lien]{annales-centrale}
+Faire des liens [lien]{/annales-centrale}
