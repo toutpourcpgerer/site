@@ -1,7 +1,7 @@
 baseURL = "https://site.tout-pour-cpgerer.workers.dev/"
 languageCode = "fr-fr"
 title = "Tout pour Cpgérer"
-theme = "PaperMod"
+theme = []
 enableRobotsTXT = true
 defaultContentLanguage = "fr"
 
