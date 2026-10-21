@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Ressources pour les CPGE scientifiques</p>
+      <h1>Travaille mieux. <span>Comprends vraiment.</span></h1>
+      <p class="hero-lead">Cours, fiches de révision, méthodes et annales corrigées pour t'aider à progresser en classe préparatoire.</p>
+      <div class="hero-actions"><a class="button button-primary" href="/annales/">Explorer les annales <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/cours/">Voir les cours</a></div>
+      <p class="hero-note">Des ressources claires, organisées par matière et par objectif.</p>
+    </div>
+    <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="formula-card formula-a"><span class="formula-label">Méthode</span><span class="formula">\( f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h} \)</span></div><div class="formula-card formula-b"><span class="formula-label">S'entraîner</span><span class="formula">\( \sum_{k=0}^{n}q^k=\frac{1-q^{n+1}}{1-q} \)</span></div><div class="hero-symbol">∫</div><span class="dot dot-one"></span><span class="dot dot-two"></span></div>
+  </div>
+</section>
+<section class="container section-block">
+  <div class="section-heading"><div><p class="eyebrow">Explorer les ressources</p><h2>Tout pour avancer dans ton travail</h2></div><p>Retrouve rapidement le bon support, que tu révises un chapitre ou que tu prépares un concours.</p></div>
+  <div class="feature-grid">
+    <a class="feature-card" href="/cours/"><span class="feature-icon">∑</span><h3>Cours et notions</h3><p>Des explications structurées pour consolider les bases et comprendre les résultats importants.</p><span class="card-link">Explorer les cours <span>→</span></span></a>
+    <a class="feature-card" href="/annales/"><span class="feature-icon">↗</span><h3>Annales corrigées</h3><p>Entraîne-toi sur des sujets de concours et retrouve les corrigés PDF associés.</p><span class="card-link">Voir les annales <span>→</span></span></a>
+    <a class="feature-card" href="/methodes/"><span class="feature-icon">✓</span><h3>Fiches et méthodes</h3><p>Les techniques à maîtriser, les réflexes utiles et les points à revoir avant une épreuve.</p><span class="card-link">Réviser efficacement <span>→</span></span></a>
+  </div>
+</section>
+<section class="latest-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Pour commencer</p><h2>Ressources récemment ajoutées</h2></div><p>Le site est en construction : les exemples ci-dessous servent de modèles et doivent être remplacés par tes vraies ressources.</p></div><div class="resource-grid">{{ $pages := where .Site.RegularPages "Section" "in" (slice "cours" "annales" "methodes") }}{{ range first 6 ($pages.ByDate.Reverse) }}{{ partial "resource-card.html" . }}{{ else }}<div class="empty-state"><strong>Les premières ressources arrivent ici.</strong><p>Ajoute un fichier Markdown dans <code>content/cours/</code>, <code>content/annales/</code> ou <code>content/methodes/</code>.</p></div>{{ end }}</div></div></section>
+<section class="container callout"><div><p class="eyebrow">Un article à lire</p><h2>Retrouve aussi les articles du blog</h2><p>Les articles de fond, conseils et nouvelles publications restent disponibles sur Blogger.</p></div><a class="button button-primary" href="{{ .Site.Params.bloggerURL }}">Lire le blog <span>→</span></a></section>
+{{ end }}

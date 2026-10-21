@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container"><p class="eyebrow">{{ .Section | humanize }}</p><h1>{{ .Title }}</h1>{{ with .Description }}<p class="page-lead">{{ . }}</p>{{ end }}</div></section>
+<section class="container listing-section"><div class="resource-grid">{{ range .Paginator.Pages }}{{ partial "resource-card.html" . }}{{ else }}<div class="empty-state"><strong>Aucune ressource publiée dans cette rubrique pour le moment.</strong><p>Les pages apparaîtront ici à mesure que tu ajouteras les fichiers Markdown.</p></div>{{ end }}</div>{{ template "_internal/pagination.html" . }}</section>
+{{ end }}

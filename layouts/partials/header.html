@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Tout pour Cpgérer, accueil">
+      <span class="brand-mark">∑</span>
+      <span><strong>Tout pour Cpgérer</strong><small>Comprendre · S'entraîner · Réussir</small></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      {{ range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+    </nav>
+  </div>
+</header>
