@@ -1,13 +1,33 @@
+{{/*
+  ============================================================
+  EN-TÊTE / BARRE DE NAVIGATION
+  ============================================================
+  Affiché en haut de toutes les pages.
+  Contient :
+  - Le logo / nom du site
+  - Les liens vers les principales rubriques
+
+  Pour ajouter un lien : copie une ligne <a href=...> et adapte.
+  ============================================================
+*/}}
 <header class="site-header">
   <div class="container header-inner">
+
+    {{/* --- Logo cliquable vers l’accueil --- */}}
     <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Tout pour Cpgérer, accueil">
       <span class="brand-mark" aria-hidden="true">C<span>+</span></span>
-      <span class="brand-words"><strong>Tout pour Cpgérer</strong><small>Les ressources qui font la différence</small></span>
+      <span class="brand-words">
+        <strong>Tout pour Cpgérer</strong>
+        <small>Les ressources qui font la différence</small>
+      </span>
     </a>
+
+    {{/* --- Menu de navigation --- */}}
     <nav aria-label="Navigation principale">
       <a href="{{ "fiches-chimie/" | relURL }}">Fiches de chimie</a>
       <a href="{{ "annales-centrale/" | relURL }}">Annales Centrale</a>
       <a href="{{ "informatique-physico-chimique/" | relURL }}">Informatique physico-chimique</a>
     </nav>
+
   </div>
 </header>
