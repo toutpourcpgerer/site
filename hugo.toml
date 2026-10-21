@@ -1,9 +1,17 @@
-baseURL = "https://example.pages.dev/"
+baseURL = "https://tonsite.pages.dev/"
 languageCode = "fr-fr"
 title = "Tout pour Cpgérer"
-theme = []
+theme = "PaperMod"
 enableRobotsTXT = true
 defaultContentLanguage = "fr"
+
+# Empêche Markdown d'abîmer tes formules LaTeX
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)'], ['$', '$']]
+
 [pagination]
   pagerSize = 12
 [permalinks]
