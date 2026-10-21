@@ -1,4 +1,4 @@
-baseURL = "https://site.workers.dev/"
+baseURL = "https://site.tout-pour-cpgerer.workers.dev/"
 languageCode = "fr-fr"
 title = "Tout pour Cpgérer"
 theme = "PaperMod"
