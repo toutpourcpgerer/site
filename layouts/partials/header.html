@@ -1,9 +1,15 @@
 {{/*
+  ============================================================
   EN-TÊTE + SOMMAIRE RÉTRACTABLE
-  Structure alignée sur le Google Sites original
+  ============================================================
+  IMPORTANT : c’est ICI que tu modifies le menu / sommaire.
+  Chaque lien doit correspondre à un dossier dans content/.
+  Structure alignée sur le Google Sites original.
+  ============================================================
 */}}
 
-<button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">
+<button type="button" class="sidebar-toggle" id="sidebar-toggle"
+  aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">
   <span class="toggle-bar"></span>
   <span class="toggle-bar"></span>
   <span class="toggle-bar"></span>
@@ -36,13 +42,21 @@
       </a>
       <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Fermer le sommaire">✕</button>
     </div>
+
     <nav class="sidebar-nav">
+
+      {{/* --- ACCUEIL --- */}}
       <a href="{{ .Site.Home.RelPermalink }}"{{ if .IsHome }} class="is-active"{{ end }}>Accueil</a>
+
+      {{/* --- CHIMIE (comme Google Sites) --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Chimie</span>
-        <a href="{{ "chimie/" | relURL }}"{{ if eq .Section "chimie" }} class="is-active"{{ end }}>Chimie</a>
-        <a href="{{ "fiches-chimie/" | relURL }}"{{ if eq .Section "fiches-chimie" }} class="is-active"{{ end }}>Fiches de chimie</a>
+        <a href="{{ "chimie/" | relURL }}"{{ if and (eq .Section "chimie") (eq .File.Dir "chimie/") }} class="is-active"{{ end }}>Chimie</a>
+        <a href="{{ "chimie/annales/centrale/" | relURL }}">Annales Centrale</a>
+        <a href="{{ "chimie/annales/MinesPC/" | relURL }}">Annales Mines PC</a>
       </div>
+
+      {{/* --- AGRÉGATION PHYSIQUE-CHIMIE --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Agrégation Physique-Chimie</span>
         <a href="{{ "agregation-physique-chimie/" | relURL }}"{{ if eq .Section "agregation-physique-chimie" }} class="is-active"{{ end }}>Vue d'ensemble</a>
@@ -50,26 +64,38 @@
         <a href="{{ "agregation-physique-chimie/informatique/" | relURL }}">Informatique (PC)</a>
         <a href="{{ "agregation-physique-chimie/mathematiques/" | relURL }}">Mathématiques</a>
       </div>
+
+      {{/* --- INTÉGRATION --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Intégration</span>
         <a href="{{ "integration/" | relURL }}"{{ if eq .Section "integration" }} class="is-active"{{ end }}>Intégration</a>
       </div>
+
+      {{/* --- LYCÉE --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Lycée</span>
         <a href="{{ "lycee/" | relURL }}"{{ if eq .Section "lycee" }} class="is-active"{{ end }}>Lycée</a>
         <a href="{{ "lycee/liens-utiles/" | relURL }}">Liens utiles</a>
         <a href="{{ "lycee/livre-d-or/" | relURL }}">Livre d'or</a>
       </div>
+
+      {{/* --- INFORMATIQUE PHYSICO-CHIMIQUE (rubrique séparée) --- */}}
       <div class="sidebar-group">
-        <span class="sidebar-label">Autres ressources</span>
-        <a href="{{ "annales-centrale/" | relURL }}"{{ if eq .Section "annales-centrale" }} class="is-active"{{ end }}>Annales Centrale</a>
+        <span class="sidebar-label">Autres</span>
         <a href="{{ "informatique-physico-chimique/" | relURL }}"{{ if eq .Section "informatique-physico-chimique" }} class="is-active"{{ end }}>Informatique physico-chimique</a>
       </div>
+
+      {{/* --- LIENS EXTERNES --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Liens externes</span>
-        {{ with .Site.Params.bloggerURL }}<a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>{{ end }}
-        {{ with .Site.Params.instagramURL }}<a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+        {{ with .Site.Params.bloggerURL }}
+          <a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>
+        {{ end }}
+        {{ with .Site.Params.instagramURL }}
+          <a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>
+        {{ end }}
       </div>
+
     </nav>
   </div>
 </aside>

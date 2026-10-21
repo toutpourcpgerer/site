@@ -1,103 +1,159 @@
 # Tout pour Cpgérer — site Hugo
 
-Site statique en français, pensé pour être géré depuis l’interface web de GitHub, **sans installer Hugo ni Git** sur ton ordinateur.  
-Cloudflare Pages reconstruit le site automatiquement à chaque modification.
+Site statique en français, géré depuis GitHub.  
+Cloudflare Pages reconstruit le site à chaque modification.
 
 ---
 
-## Structure des dossiers (à ne pas renommer)
+## Comment le sommaire est relié aux pages
 
-| Dossier     | Rôle                                      | Comment le voir |
-|-------------|-------------------------------------------|-----------------|
-| `assets/`   | Mise en page (fichier CSS)                | Style du site   |
-| `content/`  | Pages (fichiers Markdown)                 | Contenu         |
-| `layouts/`  | Structure HTML des pages                   | Templates       |
-| `static/`   | Fichiers fixes (PDF, images, favicon…)    | Fichiers        |
-| `archetypes/` | Modèles pour créer de nouvelles pages   | Squelettes      |
+### Règle d’or
 
-**Important :** ne renomme pas ces dossiers. Hugo les cherche par leur nom exact.
+| Dossier dans `content/` | URL sur le site | Lien dans le sommaire |
+|-------------------------|-----------------|------------------------|
+| `content/chimie/` | `/chimie/` | doit pointer vers `chimie/` |
+| `content/chimie/annales/centrale/` | `/chimie/annales/centrale/` | doit pointer vers `chimie/annales/centrale/` |
+| `content/lycee/livre-d-or/` | `/lycee/livre-d-or/` | doit pointer vers `lycee/livre-d-or/` |
+
+**Le sommaire ne se met PAS à jour tout seul.**  
+Il est écrit à la main dans le fichier :
+
+```
+layouts/partials/header.html
+```
+
+Quand tu ajoutes, renommes ou supprimes un dossier dans `content/`,  
+tu dois aussi modifier ce fichier pour que les liens restent justes.
+
+### Où modifier le sommaire
+
+1. Ouvre `layouts/partials/header.html` sur GitHub
+2. Cherche la zone `sidebar-nav` (le menu latéral)
+3. Chaque lien ressemble à ceci :
+
+```html
+<a href="{{ "chimie/" | relURL }}">Chimie</a>
+```
+
+- `chimie/` = chemin du dossier dans `content/` (sans le mot `content`)
+- `Chimie` = texte affiché dans le menu
+
+Pour ajouter un lien :
+
+```html
+<a href="{{ "mon-nouveau-dossier/" | relURL }}">Mon titre</a>
+```
+
+Pour supprimer un lien : efface toute la ligne `<a ...>...</a>`.
 
 ---
 
-## Configuration Cloudflare Pages
+## Organisation actuelle (alignée sur le Google Sites)
 
-- **Branche de production** : `main`
-- **Commande de build** : `hugo --minify`
-- **Répertoire de sortie** : `public`
-- **Framework** : Hugo
+```
+content/
+├── _index.md                          → Accueil (/)
+│
+├── chimie/                            → Chimie
+│   ├── _index.md
+│   └── annales/
+│       ├── centrale/                  → Annales Centrale
+│       │   └── corrige_cen_pc_24.md
+│       └── MinesPC/                   → Annales Mines PC
+│           └── corrige_mines_pc_2024_chimie.md
+│
+├── agregation-physique-chimie/        → Agrégation Physique-Chimie
+│   ├── _index.md
+│   ├── physique/
+│   ├── informatique/
+│   └── mathematiques/
+│
+├── integration/                       → Intégration
+│
+├── lycee/                             → Lycée
+│   ├── _index.md
+│   ├── liens-utiles/
+│   └── livre-d-or/
+│
+└── informatique-physico-chimique/     → Informatique physico-chimique
+```
+
+C’est la même ossature que le menu du Google Sites :
+
+- Accueil
+- Chimie
+- Agrégation Physique-Chimie (Physique, Informatique, Mathématiques)
+- Intégration
+- Lycée (Liens utiles, Livre d’or)
 
 ---
 
-## Personnaliser l’apparence
+## Comment créer une nouvelle page
 
-| Fichier | Ce qu’il contrôle |
-|---------|-------------------|
-| `assets/main.css` | Couleurs, polices, espacements, cartes, mobile |
-| `layouts/index.html` | Page d’accueil |
-| `layouts/partials/header.html` | Logo + menu |
-| `layouts/partials/footer.html` | Pied de page |
-| `layouts/_default/list.html` | Liste d’une rubrique |
-| `layouts/_default/single.html` | Page d’une ressource + lecteur PDF |
-| `hugo.toml` | Titre, description, liens Instagram/Blogger |
+### 1. Créer le dossier (si besoin)
 
-Palette actuelle : bleu clair, doré et noir.
+Exemple : une nouvelle fiche de chimie  
+→ crée le fichier dans `content/chimie/` (ou un sous-dossier).
 
----
+### 2. Créer le fichier Markdown
 
-## Ajouter une ressource manuellement
-
-1. Dans GitHub, ouvre `static/pdfs/` et **téléverse le PDF**.
-2. Crée un fichier Markdown dans la bonne rubrique :
-   - `content/fiches-chimie/`
-   - `content/annales-centrale/`
-   - `content/informatique-physico-chimique/`
-3. Remplis le front matter (voir modèle ci-dessous).
-4. Enregistre → Cloudflare reconstruit le site automatiquement.
-
-**Important :** déposer un PDF ne crée **aucune page** automatiquement.  
-Chaque page doit être créée manuellement.
-
-### Modèle de page avec PDF
-
-Crée par exemple `content/fiches-chimie/equilibres-chimiques.md` :
+Exemple : `content/chimie/equilibres.md`
 
 ```toml
 +++
 title = "Équilibres chimiques"
 date = 2026-10-21
-summary = "Une fiche pour réviser les équilibres chimiques."
-pdf = "/pdfs/equilibres-chimiques.pdf"
+summary = "Fiche de révision sur les équilibres."
+pdf = "/pdfs/equilibres.pdf"   # optionnel
 +++
 
 ## À retenir
 
-Ajoute ici ta présentation, les explications et les formules.
-
-$$
-K^\circ = \prod_i a_i^{\nu_i}
-$$
+Ton texte ici…
 ```
 
-- Le champ `pdf` est **facultatif**.
-- S’il est renseigné, un lecteur PDF et un bouton de téléchargement apparaissent.
-- MathJax affiche les formules LaTeX écrites dans le contenu.
+### 3. (Optionnel) Ajouter le lien dans le sommaire
+
+Si tu veux que la page apparaisse dans le menu latéral,  
+ajoute une ligne dans `layouts/partials/header.html`.
+
+Sinon, elle sera listée automatiquement sur la page de sa rubrique  
+(ex. : toutes les pages de `content/chimie/` apparaissent sur `/chimie/`).
+
+### 4. PDF
+
+1. Téléverse le PDF dans `static/pdfs/`
+2. Indique le chemin dans le front matter : `pdf = "/pdfs/nom.pdf"`
 
 ---
 
-## Liens externes
+## Fichiers importants
 
-Les liens Blogger et Instagram sont configurés dans `hugo.toml` (section `[params]`).
+| Fichier | Rôle |
+|---------|------|
+| `layouts/partials/header.html` | **Sommaire + menu** (à modifier quand tu changes la structure) |
+| `layouts/partials/footer.html` | Pied de page |
+| `layouts/_default/list.html` | Affichage d’une rubrique (liste des pages) |
+| `layouts/_default/single.html` | Affichage d’une page individuelle + lecteur PDF |
+| `layouts/index.html` | Page d’accueil |
+| `assets/main.css` | Apparence (couleurs, tailles, sommaire rétractable) |
+| `hugo.toml` | Titre du site, liens Instagram / Blogger |
+| `content/` | **Toutes tes pages** |
+| `static/pdfs/` | Fichiers PDF |
 
 ---
 
-## En cas de problème de build
+## Configuration Cloudflare Pages
 
-Si Cloudflare affiche une erreur liée à `minify` ou `resources.Get` :
+- Branche : `main`
+- Commande de build : `hugo --minify`
+- Répertoire de sortie : `public`
 
-1. Vérifie que le fichier CSS s’appelle bien `main.css`
-2. Vérifie qu’il se trouve bien dans le dossier `assets/` (pas `assets/css/`)
-3. Dans `layouts/_default/baseof.html`, la ligne doit être :
+---
 
-```
-{{ $style := resources.Get "main.css" | minify | fingerprint }}
-```
+## En cas de lien cassé dans le sommaire
+
+1. Vérifie que le dossier existe bien dans `content/`
+2. Ouvre `layouts/partials/header.html`
+3. Corrige le chemin dans le `href="{{ "chemin/" | relURL }}"`
+4. Enregistre → Cloudflare reconstruit le site
