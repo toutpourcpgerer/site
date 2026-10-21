@@ -141,7 +141,7 @@ a:focus-visible {
   background: var(--sky);
   font-family: Manrope, sans-serif;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: -2px;
   position: relative;
 }
@@ -167,7 +167,7 @@ a:focus-visible {
 }
 
 .brand-words small {
-  font-size: 10px;
+  font-size: 20px;
   color: var(--muted);
   margin-top: 5px;
 }
