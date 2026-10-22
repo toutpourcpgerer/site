@@ -1,14 +1,11 @@
 {{/*
   PAGE DE RUBRIQUE — CONTENU LIBRE
 
-  Front matter page :
-  - back_to / back_label
-  - hide_auto_list: true → page 100 % manuelle
+  Front matter page : back_to / back_label / hide_auto_list
 
-  Pages enfants (annales) — front matter :
-  - note: 5  ou  "5/5"  → étoiles
-  - sujet: "/pdfs/sujet.pdf"  → bouton Sujet (optionnel)
-  - pdf: "/pdfs/corrige.pdf"  ou  correction: "..."  → pastille ✓ Corrigé
+  Pages enfants (annales) :
+  - note: 5
+  - sujet / pdf : nom de fichier dans le dossier de la page, ou chemin /...
 */}}
 {{ define "main" }}
 
@@ -73,6 +70,19 @@
           {{ $hasCorrige := or $page.Params.correction $page.Params.pdf }}
           {{ $hasSujet := and $page.Params.sujet (ne $page.Params.sujet "") }}
 
+          {{ $sujetURL := "" }}
+          {{ if $hasSujet }}
+            {{ if or (hasPrefix $page.Params.sujet "/") (hasPrefix $page.Params.sujet "http") }}
+              {{ $sujetURL = $page.Params.sujet | relURL }}
+            {{ else }}
+              {{ with $page.Resources.GetMatch $page.Params.sujet }}
+                {{ $sujetURL = .RelPermalink }}
+              {{ else }}
+                {{ $sujetURL = path.Join $page.RelPermalink $page.Params.sujet | relURL }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
           <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
             <div class="annale-main">
               <span class="annale-title-link">
@@ -97,9 +107,9 @@
               {{ else }}
                 <span class="badge badge-sujet-seul">Sujet seul</span>
               {{ end }}
-              {{ if $hasSujet }}
+              {{ if and $hasSujet $sujetURL }}
                 <span class="btn-outline-green annale-sujet-btn"
-                  onclick="event.preventDefault(); event.stopPropagation(); window.open('{{ $page.Params.sujet | relURL }}', '_blank', 'noopener');">Sujet</span>
+                  onclick="event.preventDefault(); event.stopPropagation(); window.open('{{ $sujetURL }}', '_blank', 'noopener');">Sujet</span>
               {{ end }}
             </div>
           </a>

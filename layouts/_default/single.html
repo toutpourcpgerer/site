@@ -2,11 +2,44 @@
   PAGE D’UNE ANNALE / RESSOURCE
 
   Front matter :
-  - sujet: chemin ou URL du PDF du sujet
-  - pdf: chemin ou URL du PDF du corrigé
-  - summary: court texte sous le titre
+  - sujet / pdf : nom de fichier dans le dossier de la page (bundle)
+    ou chemin absolu type "/chimie/annales/centrale/fichier.pdf"
+  - summary
 */}}
 {{ define "main" }}
+
+{{/* Résout un param sujet/pdf → URL publique */}}
+{{ $sujetURL := "" }}
+{{ $pdfURL := "" }}
+
+{{ with .Params.sujet }}
+  {{ if ne . "" }}
+    {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
+      {{ $sujetURL = . | relURL }}
+    {{ else }}
+      {{ with $.Resources.GetMatch . }}
+        {{ $sujetURL = .RelPermalink }}
+      {{ else }}
+        {{/* Miroir static/ ou mount content→static */}}
+        {{ $sujetURL = path.Join $.RelPermalink . | relURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.pdf }}
+  {{ if ne . "" }}
+    {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
+      {{ $pdfURL = . | relURL }}
+    {{ else }}
+      {{ with $.Resources.GetMatch . }}
+        {{ $pdfURL = .RelPermalink }}
+      {{ else }}
+        {{ $pdfURL = path.Join $.RelPermalink . | relURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 <article class="article">
 
@@ -21,16 +54,13 @@
     <p class="summary">{{ . }}</p>
   {{ end }}
 
-  {{ $hasSujet := and .Params.sujet (ne .Params.sujet "") }}
-  {{ $hasPdf := and .Params.pdf (ne .Params.pdf "") }}
-
-  {{ if or $hasSujet $hasPdf }}
+  {{ if or $sujetURL $pdfURL }}
     <div class="doc-actions">
-      {{ if $hasSujet }}
-        <a class="btn-outline-green" href="{{ .Params.sujet | relURL }}" target="_blank" rel="noopener">Ouvrir le sujet ↗</a>
+      {{ if $sujetURL }}
+        <a class="btn-outline-green" href="{{ $sujetURL }}" target="_blank" rel="noopener">Ouvrir le sujet ↗</a>
       {{ end }}
-      {{ if $hasPdf }}
-        <a class="btn-gold" href="{{ .Params.pdf | relURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
+      {{ if $pdfURL }}
+        <a class="btn-gold" href="{{ $pdfURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
       {{ end }}
     </div>
   {{ end }}
@@ -39,43 +69,29 @@
     {{ .Content }}
   </div>
 
-  {{ if $hasSujet }}
+  {{ if $sujetURL }}
     <section class="pdf-section">
       <div class="pdf-heading">
         <div>
           <p class="section-kicker">SUJET</p>
           <h2>Le sujet</h2>
         </div>
-        <a class="button button-outline" href="{{ .Params.sujet | relURL }}" target="_blank" rel="noopener">
-          Ouvrir le sujet ↗
-        </a>
+        <a class="button button-outline" href="{{ $sujetURL }}" target="_blank" rel="noopener">Ouvrir le sujet ↗</a>
       </div>
-      <iframe
-        class="pdf-viewer"
-        src="{{ .Params.sujet | relURL }}#view=FitH"
-        title="Sujet : {{ .Title }}"
-        loading="lazy">
-      </iframe>
+      <iframe class="pdf-viewer" src="{{ $sujetURL }}#view=FitH" title="Sujet : {{ .Title }}" loading="lazy"></iframe>
     </section>
   {{ end }}
 
-  {{ if $hasPdf }}
+  {{ if $pdfURL }}
     <section class="pdf-section">
       <div class="pdf-heading">
         <div>
           <p class="section-kicker">CORRIGÉ</p>
           <h2>Le corrigé</h2>
         </div>
-        <a class="button button-dark" href="{{ .Params.pdf | relURL }}" target="_blank" rel="noopener">
-          Ouvrir le corrigé ↗
-        </a>
+        <a class="button button-dark" href="{{ $pdfURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
       </div>
-      <iframe
-        class="pdf-viewer"
-        src="{{ .Params.pdf | relURL }}#view=FitH"
-        title="Corrigé : {{ .Title }}"
-        loading="lazy">
-      </iframe>
+      <iframe class="pdf-viewer" src="{{ $pdfURL }}#view=FitH" title="Corrigé : {{ .Title }}" loading="lazy"></iframe>
     </section>
   {{ end }}
 

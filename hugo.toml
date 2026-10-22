@@ -13,6 +13,21 @@ enableRobotsTXT = true
   bloggerURL = "https://toutpourcpgerer.blogspot.com/"
 
 # Autorise le HTML dans les fichiers Markdown
-# (nécessaire pour mettre des boutons, tableaux, etc.)
 [markup.goldmark.renderer]
   unsafe = true
+
+# Publie les PDF placés dans content/ (page bundles)
+# → un PDF dans content/chimie/annales/centrale/centrale-pc-2024/x.pdf
+#   est servi à /chimie/annales/centrale/centrale-pc-2024/x.pdf
+[[module.mounts]]
+  source = "static"
+  target = "static"
+
+[[module.mounts]]
+  source = "content"
+  target = "static"
+  includeFiles = ["**.pdf", "**.PDF"]
+
+[[module.mounts]]
+  source = "content"
+  target = "content"
