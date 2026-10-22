@@ -1,10 +1,8 @@
 ---
-title: "Annales Banque PT — Chimie"
-description: "Sujets et corrigés de chimie du concours Banque PT."
+title: "Sujets Banque PT — Chimie"
+description: "Sujets et corrigés des épreuves de chimie au concours Banque PT."
 ---
 
-<div class="info-band">
+## Format de l'épreuve
 
-Sujets et corrigés de chimie.
-
-</div>
+Deux heures, une quarantaine de questions très proches du cours.
