@@ -1,11 +1,21 @@
 {{/*
-  PAGE DE RUBRIQUE SOUPLE
-  - Contenu libre du _index.md
-  - Sous-dossiers → boutons dorés
-  - Articles annale : titre cliquable + note + Sujet (si renseigné)
-    Le bouton Correction n’apparaît QUE si tu mets correction: "..." dans le front matter
-  - hide_auto_list: true pour tout gérer à la main
-  - back_to / back_label dans le front matter pour forcer le lien de retour
+  PAGE DE RUBRIQUE — CONTENU LIBRE
+
+  Tout le HTML/Markdown du _index.md est affiché tel quel.
+  Tu contrôles la mise en page (titres, boutons, listes) dans le fichier Markdown.
+
+  Front matter utile :
+  - back_to / back_label : lien de retour (ex. "/" et "Accueil")
+  - hide_auto_list: true  → rien n’est ajouté après le contenu (recommandé pour une page sur mesure)
+  - sans hide_auto_list   → le template ajoute encore, en bas :
+      • un bouton doré par sous-dossier
+      • les pages enfants (lignes d’annales si note/sujet/correction, sinon cartes)
+
+  Exemple de boutons à coller dans le _index.md :
+  <div class="btn-grid">
+    <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines PC — Chimie</a>
+    <a class="btn-gold" href="/chimie/annales/centrale/">Sujets Centrale filière PC</a>
+  </div>
 */}}
 {{ define "main" }}
 
@@ -64,13 +74,11 @@
               {{ with $page.Params.note }}{{ . }}{{ end }}
             </div>
             <div class="annale-actions">
-              {{/* Sujet : seulement si le champ sujet est rempli */}}
               {{ with $page.Params.sujet }}
                 {{ if . }}
                   <a class="btn-outline-green" href="{{ . | relURL }}" target="_blank" rel="noopener">Sujet</a>
                 {{ end }}
               {{ end }}
-              {{/* Correction : seulement si tu l’ajoutes explicitement dans le front matter */}}
               {{ with $page.Params.correction }}
                 {{ if . }}
                   <a class="btn-gold-sm" href="{{ . | relURL }}">Correction</a>

@@ -3,6 +3,7 @@ title: "Annales d'écrits de CPGE en chimie"
 description: "Sujets et corrigés d'épreuves de chimie de CPGE, classés par concours."
 back_to: "/"
 back_label: "Accueil"
+hide_auto_list: true
 ---
 
 <div class="info-band">
@@ -19,21 +20,19 @@ La correction est complète : elle est notamment accompagnée de remarques (pour
 
 ## Annales pour PC (et MP/PSI)
 
-<!--
-  Les boutons ci-dessous sont générés automatiquement à partir
-  des sous-dossiers (centrale, MinesPC…).
-  Tu peux aussi écrire tes propres boutons à la main, exemple :
-
-  <div class="btn-grid">
-    <a class="btn-gold" href="/chimie/annales/centrale/">Annales Centrale</a>
-    <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines</a>
-  </div>
--->
+<div class="btn-grid">
+  <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines PC — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/centrale/">Sujets Centrale filière PC</a>
+</div>
 
 ## Annales pour PT
 
-<!-- À alimenter plus tard : sous-dossiers ou boutons manuels -->
+<!-- Ajoute ici tes boutons quand tu auras des pages, par exemple :
+<div class="btn-grid">
+  <a class="btn-gold" href="/chimie/annales/pt-centrale/">Centrale PT</a>
+</div>
+-->
 
 ## Annales pour BCPST
 
-<!-- À alimenter plus tard : sous-dossiers ou boutons manuels -->
+<!-- Idem : boutons ou texte libre, tout se gère dans ce fichier. -->
