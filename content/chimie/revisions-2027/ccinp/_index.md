@@ -1,6 +1,7 @@
 ---
 title: "3 annales pour CCINP en PC"
 description: "Test"
+hide_auto_list: true
 ---
 
 ## 1er sujet : CCINP PC 2025
