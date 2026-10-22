@@ -72,7 +72,7 @@ h1, h2, h3 {
   background: rgba(250, 249, 246, .94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  padding-left: 56px; /* place pour le hamburger */
+  padding-left: 56px;
 }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -151,7 +151,6 @@ body.sidebar-open { overflow: hidden; }
 .button-dark { background: var(--ink); color: #fff; }
 .button-outline { border: 1.5px solid var(--ink); color: var(--ink); }
 
-/* Boutons dorés (sous-rubriques) */
 .btn-grid {
   display: flex; flex-wrap: wrap; gap: 12px;
   margin: 24px auto 40px; justify-content: center; max-width: 900px;
@@ -282,7 +281,7 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   border-radius: 50%; background: var(--sky-soft); font-size: 18px;
 }
 
-/* ---------- Page d’une annale (single) ---------- */
+/* ---------- Page annale / fiche ---------- */
 .article { max-width: 820px; margin: 0 auto; padding: 32px 0 64px; }
 .article-content h2 { font-size: 24px; margin-top: 36px; }
 .article-content h3 { font-size: 19px; margin-top: 26px; }
@@ -296,6 +295,17 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   width: 100%; height: min(75vh, 820px);
   border: 1px solid var(--line); border-radius: 10px; background: #f1f3f4;
 }
+
+/* Thèmes d’une fiche */
+.fiche-themes, .fiche-liens { margin-top: 28px; }
+.fiche-themes ul {
+  margin: 8px 0 0;
+  padding-left: 1.25rem;
+  color: #344149;
+  line-height: 1.8;
+}
+.fiche-themes li { margin-bottom: 4px; }
+.fiche-liens .btn-grid { margin-top: 12px; justify-content: flex-start; }
 
 /* ---------- Pied de page ---------- */
 .site-footer { background: #111b22; color: #fff; padding: 28px 0; position: relative; z-index: 50; }
