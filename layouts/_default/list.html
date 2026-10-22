@@ -43,7 +43,7 @@
     </div>
   {{ end }}
 
-  {{ $pages := .RegularPages.ByDate.Reverse }}
+  {{ $pages := .RegularPages.ByTitle.Reverse }}
   {{ if $pages }}
 
     {{ $hasAnnale := false }}
@@ -106,7 +106,6 @@
             <div class="resource-card-content">
               <p class="tile-tag">RESSOURCE</p>
               <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-              {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
             </div>
             <a class="card-arrow" href="{{ .RelPermalink }}" aria-label="Consulter {{ .Title }}">→</a>
           </article>

@@ -4,7 +4,7 @@
   Front matter :
   - sujet : nom du PDF sujet (dans le dossier de la page) ou chemin /...
   - correction : nom du PDF corrigé
-  - summary
+  - note : note sur 5
 */}}
 {{ define "main" }}
 
@@ -47,10 +47,6 @@
 
   <p class="section-kicker">TOUT POUR CPGÉRER</p>
   <h1>{{ .Title }}</h1>
-
-  {{ with .Params.summary }}
-    <p class="summary">{{ . }}</p>
-  {{ end }}
 
   <div class="article-content">
     {{ .Content }}
