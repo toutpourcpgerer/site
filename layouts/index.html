@@ -1,18 +1,17 @@
 {{/* Page d’accueil */}}
 {{ define "main" }}
 
-<section class="hero">
-  <div class="hero-copy">
-    <h1>La prépa, avec <em>les bonnes ressources</em>.</h1>
+<section class="hero hero-full">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Ressources gratuites · CPGE physique-chimie</p>
+    <h1>Enfin un site qui rassemble vraiment tout ce qu’il te faut pour la prépa.</h1>
     <p class="hero-lead">
-      Bienvenue sur <strong>Tout pour Cpgérer</strong> :
-      un espace pour retrouver des fiches claires, des sujets d’annales
-      et des outils pour progresser en CPGE.
+      Fiches claires, annales commentées, outils pour les écrits et les oraux —
+      le tout gratuit, rangé proprement, et écrit par quelqu’un qui a fait la même prépa que toi.
     </p>
     <div class="hero-actions">
-      <a class="button button-dark" href="#ressources">
-        Explorer les ressources <span aria-hidden="true">↓</span>
-      </a>
+      <a class="button button-dark" href="#ressources">Voir les ressources <span aria-hidden="true">↓</span></a>
+      <a class="text-link" href="#apropos">Pourquoi ce site existe <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -25,28 +24,22 @@
 </section>
 
 <section class="intro-band" id="apropos">
-  <div class="section-kicker">BIENVENUE</div>
+  <div class="section-kicker">POURQUOI CE SITE</div>
   <div>
-    <h2>Un site pensé par et pour les préparationnaires</h2>
+    <h2>Parce que chercher des ressources fiables, ça ne devrait pas être un parcours du combattant.</h2>
     <p>
-      Trouver des ressources fiables quand on prépare les concours scientifiques
-      relève souvent du parcours du combattant : polycopiés introuvables, annales
-      éparpillées, fiches de qualité inégale. Face à ce constat,
-      <strong>Tout pour Cpgérer</strong> s’impose comme un point de passage
-      incontournable pour les élèves de prépa scientifique, particulièrement
-      en physique-chimie.
+      Polycopiés introuvables, annales éparpillées sur dix sites, fiches de qualité inégale…
+      Si tu es en prépa, tu connais déjà le problème. Tout pour Cpgérer est né de ce manque :
+      un endroit unique où tout est gratuit, centralisé, et pensé pour coller aux attentes des concours.
     </p>
     <p>
-      Derrière le projet se trouve Antoine Cornet, ancien élève de prépa PCSI puis PC*
-      au lycée Descartes de Tours, normalien (ENS Ulm, promotion 2021) et 4ᵉ à
-      l’agrégation externe de physique-chimie, option chimie, en 2025. Chaque contenu
-      répond à un besoin vécu : le site est né d’un manque personnel, et c’est
-      précisément ce qui en fait sa force.
+      Le site est tenu par Antoine Cornet — prépa PCSI puis PC* à Descartes (Tours), normalien
+      (ENS Ulm, 2021), 4ᵉ à l’agrégation de physique-chimie option chimie en 2025. Chaque fiche,
+      chaque corrigé répond à un besoin qu’il a vécu lui-même en tant qu’élève, puis en tant que prof.
     </p>
     <p>
-      Gratuité totale, couverture du programme (fiches, annales, oraux, informatique
-      physico-chimique…) et vocation d’égalité des chances : Tout pour Cpgérer
-      accompagne l’élève de la Sup jusqu’aux oraux des grandes écoles.
+      L’idée est simple : la différence de réussite ne devrait venir que de ton travail,
+      pas d’un manque d’accès aux bonnes ressources.
     </p>
   </div>
 </section>
@@ -60,12 +53,11 @@
   </div>
 
   <div class="resource-grid">
-    {{/* Blocs importants conservés : fiches et annales de chimie CPGE */}}
     {{ range $item := slice
       (dict "path" "chimie/fiches" "tag" "RÉVISER" "title" "Fiches de chimie"
-            "desc" "Des fiches synthétiques pour retrouver les notions, méthodes et résultats importants.")
+            "desc" "Des résumés de cours et de méthodes, pour retrouver vite l’essentiel — en PCSI, PC, MP, PT ou PSI.")
       (dict "path" "chimie/annales" "tag" "S’ENTRAÎNER" "title" "Annales de chimie"
-            "desc" "Travaille sur des sujets de concours pour t’entraîner et mieux comprendre les attentes.")
+            "desc" "Sujets de concours avec corrigés détaillés, remarques et notes d’utilité pour cibler ce qui compte vraiment.")
     }}
       {{ with site.GetPage $item.path }}
         <article class="resource-tile">
@@ -81,17 +73,31 @@
   </div>
 </section>
 
+<section class="guestbook-teaser" id="livre-dor">
+  <div class="guestbook-teaser-inner">
+    <div class="section-kicker">LIVRE D’OR</div>
+    <h2>C’est vous qui en parlez le mieux</h2>
+    <p>
+      Élèves, collègues, anciens de prépa : le livre d’or recueille vos retours sur le site
+      et les ressources. Un petit mot, une remarque, un encouragement — tout est le bienvenu.
+    </p>
+    <a class="button button-outline" href="{{ "livre-d-or/" | relURL }}">
+      Consulter le livre d’or <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
 <section class="thanks-band" id="remerciements">
   <div class="section-kicker">REMERCIEMENTS</div>
   <div>
     <h2>Merci à ceux qui ont rendu ce projet possible</h2>
     <ul class="thanks-list">
       <li>
-        <strong>Laurent Lepetit</strong> : mon professeur de physique de PCSI à Descartes.
-        Merci à toi qui a cru en moi et m’a fait me révéler.
+        <strong>Laurent Lepetit</strong> — mon professeur de physique de PCSI à Descartes.
+        Merci à toi qui as cru en moi et m’as fait me révéler.
       </li>
       <li>
-        <strong>Thibault Lemonnier</strong> : ancien directeur pédagogique d’Ipesup.
+        <strong>Thibault Lemonnier</strong> — ancien directeur pédagogique d’Ipesup.
         Merci de m’avoir fait confiance en tant que professeur à mon jeune âge.
       </li>
     </ul>

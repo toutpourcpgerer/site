@@ -56,6 +56,11 @@
       </div>
 
       <div class="sidebar-group">
+        <span class="sidebar-label">Le site</span>
+        <a href="{{ "livre-d-or/" | relURL }}"{{ if eq .Section "livre-d-or" }} class="is-active"{{ end }}>Livre d'or</a>
+      </div>
+
+      <div class="sidebar-group">
         <span class="sidebar-label">Liens externes</span>
         {{ with .Site.Params.bloggerURL }}
           <a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>
