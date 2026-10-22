@@ -17,15 +17,36 @@
   </div>
 </section>
 
+{{/* Compteur de jours avant les concours — même logique que le site originel */}}
+<section class="countdown-band" aria-live="polite">
+  <div id="countdown">
+    Concours 2027 : <span id="days">–</span> jours restants
+  </div>
+</section>
+
 <section class="intro-band" id="apropos">
   <div class="section-kicker">BIENVENUE</div>
   <div>
-    <h2>Un coup de pouce pour les grandes étapes de la prépa.</h2>
+    <h2>Un site pensé par et pour les préparationnaires</h2>
     <p>
-      Tout pour Cpgérer rassemble des ressources conçues pour t’aider
-      à consolider tes connaissances, t’entraîner sur des sujets exigeants
-      et aborder les notions avec méthode. Le contenu s’enrichit au fil du temps :
-      reviens régulièrement découvrir les nouveautés.
+      Trouver des ressources fiables quand on prépare les concours scientifiques
+      relève souvent du parcours du combattant : polycopiés introuvables, annales
+      éparpillées, fiches de qualité inégale. Face à ce constat,
+      <strong>Tout pour Cpgérer</strong> s’impose comme un point de passage
+      incontournable pour les élèves de prépa scientifique, particulièrement
+      en physique-chimie.
+    </p>
+    <p>
+      Derrière le projet se trouve Antoine Cornet, ancien élève de prépa PCSI puis PC*
+      au lycée Descartes de Tours, normalien (ENS Ulm, promotion 2021) et 4ᵉ à
+      l’agrégation externe de physique-chimie, option chimie, en 2025. Chaque contenu
+      répond à un besoin vécu : le site est né d’un manque personnel, et c’est
+      précisément ce qui en fait sa force.
+    </p>
+    <p>
+      Gratuité totale, couverture du programme (fiches, annales, oraux, informatique
+      physico-chimique…) et vocation d’égalité des chances : Tout pour Cpgérer
+      accompagne l’élève de la Sup jusqu’aux oraux des grandes écoles.
     </p>
   </div>
 </section>
@@ -39,7 +60,7 @@
   </div>
 
   <div class="resource-grid">
-    {{/* Pour ajouter une carte : copie un bloc dict et adapte path / tag / title / desc */}}
+    {{/* Blocs importants conservés : fiches et annales de chimie CPGE */}}
     {{ range $item := slice
       (dict "path" "chimie/fiches" "tag" "RÉVISER" "title" "Fiches de chimie"
             "desc" "Des fiches synthétiques pour retrouver les notions, méthodes et résultats importants.")
@@ -59,5 +80,48 @@
     {{ end }}
   </div>
 </section>
+
+<section class="thanks-band" id="remerciements">
+  <div class="section-kicker">REMERCIEMENTS</div>
+  <div>
+    <h2>Merci à ceux qui ont rendu ce projet possible</h2>
+    <ul class="thanks-list">
+      <li>
+        <strong>Laurent Lepetit</strong> : mon professeur de physique de PCSI à Descartes.
+        Merci à toi qui a cru en moi et m’a fait me révéler.
+      </li>
+      <li>
+        <strong>Thibault Lemonnier</strong> : ancien directeur pédagogique d’Ipesup.
+        Merci de m’avoir fait confiance en tant que professeur à mon jeune âge.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const countdownDate = new Date("April 14, 2027 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const daysEl = document.getElementById("days");
+      const countdownEl = document.getElementById("countdown");
+
+      if (!daysEl || !countdownEl) return;
+
+      if (distance < 0) {
+        countdownEl.innerText = "Concours terminé !";
+        return;
+      }
+
+      daysEl.innerText = days;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000 * 60 * 60 * 24);
+  })();
+</script>
 
 {{ end }}
