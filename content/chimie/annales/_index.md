@@ -1,6 +1,8 @@
 ---
 title: "Annales d'écrits de CPGE en chimie"
 description: "Sujets et corrigés d'épreuves de chimie de CPGE, classés par concours."
+back_to: "/"
+back_label: "Accueil"
 ---
 
 <div class="info-band">
@@ -27,3 +29,11 @@ La correction est complète : elle est notamment accompagnée de remarques (pour
     <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines</a>
   </div>
 -->
+
+## Annales pour PT
+
+<!-- À alimenter plus tard : sous-dossiers ou boutons manuels -->
+
+## Annales pour BCPST
+
+<!-- À alimenter plus tard : sous-dossiers ou boutons manuels -->

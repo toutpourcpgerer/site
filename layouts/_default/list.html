@@ -5,11 +5,14 @@
   - Articles annale : titre cliquable + note + Sujet (si renseigné)
     Le bouton Correction n’apparaît QUE si tu mets correction: "..." dans le front matter
   - hide_auto_list: true pour tout gérer à la main
+  - back_to / back_label dans le front matter pour forcer le lien de retour
 */}}
 {{ define "main" }}
 
 <div class="page-top">
-  {{ if .Parent }}
+  {{ if .Params.back_to }}
+    <a class="back-link" href="{{ .Params.back_to | relURL }}">← {{ .Params.back_label | default "Accueil" }}</a>
+  {{ else if .Parent }}
     <a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
   {{ else }}
     <a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
