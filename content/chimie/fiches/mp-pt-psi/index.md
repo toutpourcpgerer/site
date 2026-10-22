@@ -13,10 +13,10 @@ fiches:
   - title: "Fiche PSI"
     file: "Résumé_PSI.pdf"
 liens:
-  - title: "Informatique physico-chimique"
-    url: "/informatique-physico-chimique/"
-  - title: "Annales"
-    url: "/chimie/annales/"
+  - title: "Annales Mines MP/PSI"
+    url: "/chimie/annales/mines-mp/"
+  - title: "Annales Centrale PSI"
+    url: "/chimie/annales/centrale-autres/"
 ---
 
 Fiches de révision pour les filières **MP**, **PT** et **PSI** : l’essentiel des deux années de prépa, avec une variante dédiée à la PSI.
