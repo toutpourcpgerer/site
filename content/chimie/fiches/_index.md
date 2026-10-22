@@ -6,42 +6,54 @@ back_label: "Accueil"
 hide_auto_list: true
 ---
 
-## PC
-
-Une seule fiche : le résumé de tout le programme de spé.
-
-<div class="btn-grid">
-  <a class="btn-gold" href="/chimie/fiches/pc/">Fiche PC</a>
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>PC</h2>
+    <p>Une seule fiche : le résumé de tout le programme de spé.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/chimie/fiches/pc/">Fiche PC</a>
+  </div>
 </div>
 
-## MP / PT / PSI
-
-Une fiche pour résumer les deux années de prépa — idéale avant les concours.
-
-<div class="btn-grid">
-  <a class="btn-gold" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI</a>
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>MP / PT / PSI</h2>
+    <p>Une fiche pour résumer les deux années de prépa — idéale avant les concours.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI</a>
+  </div>
 </div>
 
-## Commun à toutes les filières
-
-Ne pas oublier les **capacités numériques**, très présentes aux concours.
-
-<div class="btn-grid">
-  <a class="btn-gold" href="/informatique-physico-chimique/">Cours d’informatique physico-chimique</a>
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>Commun à toutes les filières</h2>
+    <p>Ne pas oublier les <strong>capacités numériques</strong>, très présentes aux concours.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/informatique-physico-chimique/">Informatique physico-chimique</a>
+  </div>
 </div>
 
-## PCSI
-
-Un résumé de la **chimie inorganique**.  
-La chimie organique est surtout traitée via les sujets par chapitre.
-
-<div class="btn-grid">
-  <a class="btn-gold" href="/chimie/fiches/pcsi/">Essentiel inorganique PCSI</a>
-  <a class="btn-gold" href="/chimie/sujets_chapitres/">Sujets par chapitre</a>
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>PCSI</h2>
+    <p>Un résumé de la <strong>chimie inorganique</strong>.<br>
+    La chimie organique est surtout traitée via les sujets par chapitre.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/chimie/fiches/pcsi/">Essentiel inorganique PCSI</a>
+    <a class="btn-blue" href="/chimie/sujets_chapitres/">Sujets par chapitre</a>
+  </div>
 </div>
 
-## MPSI / PTSI
-
-<div class="btn-grid">
-  <a class="btn-gold" href="/chimie/fiches/mpsi-ptsi/">Fiches MPSI / PTSI (bientôt)</a>
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>MPSI / PTSI</h2>
+    <p>Fiches de révision pour la première année.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/chimie/fiches/mpsi-ptsi/">Fiches MPSI / PTSI</a>
+  </div>
 </div>
