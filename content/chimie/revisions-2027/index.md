@@ -13,9 +13,9 @@ Sujets et corrigés de chimie.
 <div class="fiche-row">
   <div class="fiche-row-text">
     <h2>PC & CCINP</h2>
-    <p></p>
+    <p>Idéal</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-blue" href="/chimie/annales/ccinp/">Mon plan de révision pour CCINP PC</a>
+    <a class="btn-blue" href="/chimie/revisions-2027/ccinp/">Mon plan de révision pour CCINP PC</a>
   </div>
 </div>
