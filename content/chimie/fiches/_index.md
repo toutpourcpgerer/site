@@ -1,14 +1,10 @@
 ---
 title: "Fiches de chimie"
-description: "Fiches résumées de chimie pour toutes les filières de CPGE."
+description: "Des fiches pour réviser l’essentiel du programme de chimie de CPGE. Choisis ta filière ci-dessous."
 back_to: "/"
 back_label: "Accueil"
 hide_auto_list: true
 ---
-
-<div class="info-band info-band-soft">
-  Des fiches pour réviser l’essentiel du programme. Choisis ta filière ci-dessous.
-</div>
 
 ## PC
 
@@ -23,7 +19,7 @@ Une seule fiche : le résumé de tout le programme de spé.
 Une fiche pour résumer les deux années de prépa — idéale avant les concours.
 
 <div class="btn-grid">
-  <a class="btn-gold" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI (bientôt)</a>
+  <a class="btn-gold" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI</a>
 </div>
 
 ## Commun à toutes les filières
