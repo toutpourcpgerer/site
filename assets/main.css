@@ -57,7 +57,7 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
-/* ---------- Bouton hamburger (ouvre le sommaire) ---------- */
+/* ---------- Bouton hamburger ---------- */
 .sidebar-toggle {
   position: fixed; top: 18px; left: 16px; z-index: 200;
   width: 42px; height: 42px;
@@ -143,7 +143,7 @@ body.sidebar-open { overflow: hidden; }
 .hero-lead strong { color: var(--ink); }
 .hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 
-/* ---------- Boutons génériques ---------- */
+/* ---------- Boutons ---------- */
 .button {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 12px 18px; border-radius: 9px;
@@ -168,7 +168,6 @@ body.sidebar-open { overflow: hidden; }
 }
 .btn-gold:hover { background: #e6b53a; transform: translateY(-1px); }
 
-/* Bouton bleu (page Fiches) — même esprit que le sky / hero */
 .btn-blue {
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 160px; padding: 12px 22px;
@@ -184,7 +183,7 @@ body.sidebar-open { overflow: hidden; }
   box-shadow: 0 6px 18px rgba(43, 136, 174, .28);
 }
 
-/* Ligne filière : texte à gauche, boutons à droite */
+/* Ligne filière (page Fiches) : texte gauche, boutons droite */
 .fiche-row {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -196,9 +195,10 @@ body.sidebar-open { overflow: hidden; }
   border-bottom: 1px solid var(--line);
 }
 .fiche-row:first-of-type { border-top: 1px solid var(--line); }
-.fiche-row-text h2 {
+.fiche-row-text h2,
+.content-block .fiche-row-text h2 {
   font-size: 22px;
-  color: #1a4a7a;
+  color: var(--gold-dark);
   margin: 0 0 6px;
   text-align: left;
 }
@@ -217,7 +217,7 @@ body.sidebar-open { overflow: hidden; }
   flex-shrink: 0;
 }
 
-/* ---------- Encadrés d’info (dans le Markdown) ---------- */
+/* ---------- Encadrés d’info ---------- */
 .info-band {
   background: #d6eaf5; border-radius: 8px;
   padding: 18px 22px; margin: 16px auto 24px;
@@ -285,7 +285,7 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 .badge-corrige { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
 .badge-sujet-seul { background: #f1f3f4; color: #5c6871; border: 1px solid #d0d5d8; }
 
-/* ---------- Accueil : présentation + cartes ressources ---------- */
+/* ---------- Accueil ---------- */
 .section-kicker {
   font-size: 16px; font-weight: 700; letter-spacing: 1.2px;
   text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px;
@@ -318,7 +318,6 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 }
 .tile-link span { font-size: 16px; color: #9c751f; }
 
-/* ---------- Liste de ressources générique ---------- */
 .resource-list { display: grid; gap: 12px; padding-bottom: 64px; max-width: 900px; margin: 0 auto; }
 .resource-card {
   display: flex; justify-content: space-between; align-items: center; gap: 20px;
@@ -372,7 +371,6 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   font-size: 12px; color: #8a959b;
 }
 
-/* ---------- États vides / 404 ---------- */
 .empty-state {
   text-align: center; padding: 48px 20px;
   background: var(--sky-soft); border-radius: 16px;
@@ -383,7 +381,6 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 .not-found { padding: 90px 0; text-align: center; }
 .not-found h1 { font-size: 32px; margin: 12px 0 16px; }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero { padding: 40px 0 48px; }
   .intro-band { grid-template-columns: 1fr; gap: 12px; padding: 36px 0; }
