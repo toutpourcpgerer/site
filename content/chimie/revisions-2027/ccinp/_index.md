@@ -3,12 +3,6 @@ title: "3 annales pour CCINP en PC"
 description: "Test"
 ---
 
-<div class="info-band">
-
-Sujets et corrigés de chimie.
-
-</div>
-
 ## 1er sujet : CCINP PC 2025
 
 <div class="fiche-row">
