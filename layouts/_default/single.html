@@ -1,7 +1,10 @@
 {{/*
-  PAGE D’UNE RESSOURCE INDIVIDUELLE
-  Si pdf est renseigné : lecteur intégré + bouton qui OUVRE le PDF
-  (pas de téléchargement forcé → meilleur pour le référencement)
+  PAGE D’UNE ANNALE / RESSOURCE
+
+  Front matter :
+  - sujet: chemin ou URL du PDF du sujet
+  - pdf: chemin ou URL du PDF du corrigé
+  - summary: court texte sous le titre
 */}}
 {{ define "main" }}
 
@@ -18,27 +21,59 @@
     <p class="summary">{{ . }}</p>
   {{ end }}
 
+  {{ $hasSujet := and .Params.sujet (ne .Params.sujet "") }}
+  {{ $hasPdf := and .Params.pdf (ne .Params.pdf "") }}
+
+  {{ if or $hasSujet $hasPdf }}
+    <div class="doc-actions">
+      {{ if $hasSujet }}
+        <a class="btn-outline-green" href="{{ .Params.sujet | relURL }}" target="_blank" rel="noopener">Ouvrir le sujet ↗</a>
+      {{ end }}
+      {{ if $hasPdf }}
+        <a class="btn-gold" href="{{ .Params.pdf | relURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
+      {{ end }}
+    </div>
+  {{ end }}
+
   <div class="article-content">
     {{ .Content }}
   </div>
 
-  {{ with .Params.pdf }}
+  {{ if $hasSujet }}
     <section class="pdf-section">
       <div class="pdf-heading">
         <div>
-          <p class="section-kicker">DOCUMENT À CONSULTER</p>
-          <h2>Le document PDF</h2>
+          <p class="section-kicker">SUJET</p>
+          <h2>Le sujet</h2>
         </div>
-        {{/* Pas d’attribut download : le lien ouvre le PDF dans le navigateur */}}
-        <a class="button button-dark" href="{{ . | relURL }}" target="_blank" rel="noopener">
-          Ouvrir le PDF ↗
+        <a class="button button-outline" href="{{ .Params.sujet | relURL }}" target="_blank" rel="noopener">
+          Ouvrir le sujet ↗
         </a>
       </div>
-
       <iframe
         class="pdf-viewer"
-        src="{{ . | relURL }}#view=FitH"
-        title="Lecteur PDF : {{ $.Title }}"
+        src="{{ .Params.sujet | relURL }}#view=FitH"
+        title="Sujet : {{ .Title }}"
+        loading="lazy">
+      </iframe>
+    </section>
+  {{ end }}
+
+  {{ if $hasPdf }}
+    <section class="pdf-section">
+      <div class="pdf-heading">
+        <div>
+          <p class="section-kicker">CORRIGÉ</p>
+          <h2>Le corrigé</h2>
+        </div>
+        <a class="button button-dark" href="{{ .Params.pdf | relURL }}" target="_blank" rel="noopener">
+          Ouvrir le corrigé ↗
+        </a>
+      </div>
+      <iframe
+        class="pdf-viewer"
+        src="{{ .Params.pdf | relURL }}#view=FitH"
+        title="Corrigé : {{ .Title }}"
         loading="lazy">
       </iframe>
     </section>

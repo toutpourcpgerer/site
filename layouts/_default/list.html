@@ -1,15 +1,14 @@
 {{/*
   PAGE DE RUBRIQUE — CONTENU LIBRE
 
-  Front matter utile :
+  Front matter page :
   - back_to / back_label
   - hide_auto_list: true → page 100 % manuelle
 
   Pages enfants (annales) — front matter :
-  - note: 5  ou  "5/5"  ou  "2/5"  → 5 étoiles (pleines / vides)
-  - sujet: "/pdfs/sujet.pdf" ou URL  → bouton Sujet
-  - correction: "..."  ou  pdf: "..."  → pastille « Corrigé » + trafic vers la page
-  - comment: texte libre sous le titre (optionnel)
+  - note: 5  ou  "5/5"  → étoiles
+  - sujet: "/pdfs/sujet.pdf"  → bouton Sujet (optionnel)
+  - pdf: "/pdfs/corrige.pdf"  ou  correction: "..."  → pastille ✓ Corrigé
 */}}
 {{ define "main" }}
 
@@ -51,7 +50,7 @@
 
     {{ $hasAnnale := false }}
     {{ range $pages }}
-      {{ if or .Params.note .Params.sujet .Params.correction .Params.pdf .Params.comment }}
+      {{ if or .Params.note .Params.sujet .Params.correction .Params.pdf }}
         {{ $hasAnnale = true }}
       {{ end }}
     {{ end }}
@@ -60,7 +59,6 @@
       <div class="annale-list">
         {{ range $pages }}
           {{ $page := . }}
-          {{/* Note → nombre d'étoiles pleines (0–5) */}}
           {{ $stars := 0 }}
           {{ with $page.Params.note }}
             {{ $raw := printf "%v" . }}
@@ -75,24 +73,16 @@
           {{ $hasCorrige := or $page.Params.correction $page.Params.pdf }}
           {{ $hasSujet := and $page.Params.sujet (ne $page.Params.sujet "") }}
 
-          <div class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}">
+          <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
             <div class="annale-main">
-              <div class="annale-title-line">
-                <a class="annale-title-link" href="{{ $page.RelPermalink }}">
-                  {{ $page.Title }}
-                  <span class="annale-open-hint">Voir l’annale →</span>
-                </a>
-                {{ if $hasCorrige }}
-                  <span class="badge badge-corrige" title="Corrigé disponible sur le site">✓ Corrigé</span>
-                {{ else }}
-                  <span class="badge badge-sujet-seul" title="Pas encore de corrigé sur le site">Sujet seul</span>
-                {{ end }}
-              </div>
-              {{ with $page.Params.comment }}
-                <p class="annale-comment">{{ . }}</p>
-              {{ end }}
+              <span class="annale-title-link">
+                {{ $page.Title }}
+                <span class="annale-open-hint">← Voir l’annale</span>
+              </span>
+            </div>
+            <div class="annale-meta">
               {{ if or (gt $stars 0) $page.Params.note }}
-                <div class="annale-stars" aria-label="Note {{ $stars }} sur 5">
+                <span class="annale-stars" aria-label="Note {{ $stars }} sur 5">
                   {{ range seq 1 5 }}
                     {{ if le . $stars }}
                       <span class="star star-full" aria-hidden="true">★</span>
@@ -100,23 +90,19 @@
                       <span class="star star-empty" aria-hidden="true">☆</span>
                     {{ end }}
                   {{ end }}
-                </div>
-              {{ end }}
-            </div>
-            <div class="annale-actions">
-              {{ if $hasSujet }}
-                <a class="btn-outline-green" href="{{ $page.Params.sujet | relURL }}" target="_blank" rel="noopener">Sujet</a>
+                </span>
               {{ end }}
               {{ if $hasCorrige }}
-                {{/* Priorité : lien correction explicite, sinon la page elle-même (où est le PDF) */}}
-                {{ $corrHref := $page.RelPermalink }}
-                {{ with $page.Params.correction }}
-                  {{ if . }}{{ $corrHref = . | relURL }}{{ end }}
-                {{ end }}
-                <a class="btn-gold-sm" href="{{ $corrHref }}">Corrigé</a>
+                <span class="badge badge-corrige">✓ Corrigé</span>
+              {{ else }}
+                <span class="badge badge-sujet-seul">Sujet seul</span>
+              {{ end }}
+              {{ if $hasSujet }}
+                <span class="btn-outline-green annale-sujet-btn"
+                  onclick="event.preventDefault(); event.stopPropagation(); window.open('{{ $page.Params.sujet | relURL }}', '_blank', 'noopener');">Sujet</span>
               {{ end }}
             </div>
-          </div>
+          </a>
         {{ end }}
       </div>
     {{ else }}
