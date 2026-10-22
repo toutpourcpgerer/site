@@ -15,7 +15,7 @@ hide_auto_list: true
 Une seule fiche : le résumé de tout le programme de spé.
 
 <div class="btn-grid">
-  <a class="btn-gold" href="#">Fiche PC (bientôt)</a>
+  <a class="btn-gold" href="chimie/fiches/pc/">Fiche PC</a>
 </div>
 
 ## MP / PT / PSI
