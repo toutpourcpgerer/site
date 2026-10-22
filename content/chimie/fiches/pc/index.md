@@ -1,7 +1,7 @@
 ---
 title: "Résumé de la chimie en PC"
 themes: "Tous"
-fiche: "Résumé_PC.pdf"
+fiche: "Résumé_Spé_PC.pdf"
 liens:
   - title: "Informatique physico-chimique"
     url: "/informatique-physico-chimique/"
