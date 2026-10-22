@@ -45,7 +45,6 @@
     <a href="{{ .CurrentSection.RelPermalink }}">← {{ .CurrentSection.Title }}</a>
   </p>
 
-  <p class="section-kicker">TOUT POUR CPGÉRER</p>
   <h1>{{ .Title }}</h1>
 
   <div class="article-content">
@@ -55,10 +54,7 @@
   {{ if $sujetURL }}
     <section class="pdf-section">
       <div class="pdf-heading">
-        <div>
-          <p class="section-kicker">SUJET</p>
-          <h2>Le sujet</h2>
-        </div>
+        <p class="section-kicker">SUJET</p>
         <a class="button button-outline" href="{{ $sujetURL }}" target="_blank" rel="noopener">Ouvrir le sujet ↗</a>
       </div>
       <iframe class="pdf-viewer" src="{{ $sujetURL }}#view=FitH" title="Sujet : {{ .Title }}" loading="lazy"></iframe>
@@ -68,10 +64,7 @@
   {{ if $corrigeURL }}
     <section class="pdf-section">
       <div class="pdf-heading">
-        <div>
-          <p class="section-kicker">CORRIGÉ</p>
-          <h2>Le corrigé</h2>
-        </div>
+        <p class="section-kicker">CORRIGÉ</p>
         <a class="button button-dark" href="{{ $corrigeURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
       </div>
       <iframe class="pdf-viewer" src="{{ $corrigeURL }}#view=FitH" title="Corrigé : {{ .Title }}" loading="lazy"></iframe>
