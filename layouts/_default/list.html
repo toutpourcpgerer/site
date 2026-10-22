@@ -1,21 +1,15 @@
 {{/*
   PAGE DE RUBRIQUE — CONTENU LIBRE
 
-  Tout le HTML/Markdown du _index.md est affiché tel quel.
-  Tu contrôles la mise en page (titres, boutons, listes) dans le fichier Markdown.
-
   Front matter utile :
-  - back_to / back_label : lien de retour (ex. "/" et "Accueil")
-  - hide_auto_list: true  → rien n’est ajouté après le contenu (recommandé pour une page sur mesure)
-  - sans hide_auto_list   → le template ajoute encore, en bas :
-      • un bouton doré par sous-dossier
-      • les pages enfants (lignes d’annales si note/sujet/correction, sinon cartes)
+  - back_to / back_label
+  - hide_auto_list: true → page 100 % manuelle
 
-  Exemple de boutons à coller dans le _index.md :
-  <div class="btn-grid">
-    <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines PC — Chimie</a>
-    <a class="btn-gold" href="/chimie/annales/centrale/">Sujets Centrale filière PC</a>
-  </div>
+  Pages enfants (annales) — front matter :
+  - note: 5  ou  "5/5"  ou  "2/5"  → 5 étoiles (pleines / vides)
+  - sujet: "/pdfs/sujet.pdf" ou URL  → bouton Sujet
+  - correction: "..."  ou  pdf: "..."  → pastille « Corrigé » + trafic vers la page
+  - comment: texte libre sous le titre (optionnel)
 */}}
 {{ define "main" }}
 
@@ -57,7 +51,7 @@
 
     {{ $hasAnnale := false }}
     {{ range $pages }}
-      {{ if or .Params.note .Params.sujet .Params.correction .Params.pdf }}
+      {{ if or .Params.note .Params.sujet .Params.correction .Params.pdf .Params.comment }}
         {{ $hasAnnale = true }}
       {{ end }}
     {{ end }}
@@ -66,23 +60,60 @@
       <div class="annale-list">
         {{ range $pages }}
           {{ $page := . }}
-          <div class="annale-row">
-            <div class="annale-title">
-              <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
-            </div>
-            <div class="annale-note">
-              {{ with $page.Params.note }}{{ . }}{{ end }}
+          {{/* Note → nombre d'étoiles pleines (0–5) */}}
+          {{ $stars := 0 }}
+          {{ with $page.Params.note }}
+            {{ $raw := printf "%v" . }}
+            {{ $raw = replace $raw "/5" "" }}
+            {{ $raw = replace $raw " " "" }}
+            {{ $n := int $raw }}
+            {{ if and (ge $n 0) (le $n 5) }}
+              {{ $stars = $n }}
+            {{ end }}
+          {{ end }}
+
+          {{ $hasCorrige := or $page.Params.correction $page.Params.pdf }}
+          {{ $hasSujet := and $page.Params.sujet (ne $page.Params.sujet "") }}
+
+          <div class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}">
+            <div class="annale-main">
+              <div class="annale-title-line">
+                <a class="annale-title-link" href="{{ $page.RelPermalink }}">
+                  {{ $page.Title }}
+                  <span class="annale-open-hint">Voir l’annale →</span>
+                </a>
+                {{ if $hasCorrige }}
+                  <span class="badge badge-corrige" title="Corrigé disponible sur le site">✓ Corrigé</span>
+                {{ else }}
+                  <span class="badge badge-sujet-seul" title="Pas encore de corrigé sur le site">Sujet seul</span>
+                {{ end }}
+              </div>
+              {{ with $page.Params.comment }}
+                <p class="annale-comment">{{ . }}</p>
+              {{ end }}
+              {{ if or (gt $stars 0) $page.Params.note }}
+                <div class="annale-stars" aria-label="Note {{ $stars }} sur 5">
+                  {{ range seq 1 5 }}
+                    {{ if le . $stars }}
+                      <span class="star star-full" aria-hidden="true">★</span>
+                    {{ else }}
+                      <span class="star star-empty" aria-hidden="true">☆</span>
+                    {{ end }}
+                  {{ end }}
+                </div>
+              {{ end }}
             </div>
             <div class="annale-actions">
-              {{ with $page.Params.sujet }}
-                {{ if . }}
-                  <a class="btn-outline-green" href="{{ . | relURL }}" target="_blank" rel="noopener">Sujet</a>
-                {{ end }}
+              {{ if $hasSujet }}
+                <a class="btn-outline-green" href="{{ $page.Params.sujet | relURL }}" target="_blank" rel="noopener">Sujet</a>
               {{ end }}
-              {{ with $page.Params.correction }}
-                {{ if . }}
-                  <a class="btn-gold-sm" href="{{ . | relURL }}">Correction</a>
+              {{ if $hasCorrige }}
+                {{/* Priorité : lien correction explicite, sinon la page elle-même (où est le PDF) */}}
+                {{ $corrHref := $page.RelPermalink }}
+                {{ with $page.Params.correction }}
+                  {{ if . }}{{ $corrHref = . | relURL }}{{ end }}
                 {{ end }}
+                <a class="btn-gold-sm" href="{{ $corrHref }}">Corrigé</a>
               {{ end }}
             </div>
           </div>
