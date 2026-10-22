@@ -18,15 +18,24 @@ La correction est complète : elle est notamment accompagnée de remarques (pour
 
 </div>
 
-## Annales pour PC (et MP/PSI)
+## Annales pour PC
 
 <div class="btn-grid">
-  <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines PC — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/ccinp/">Annales CCINP — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/mines-pc/">Annales Mines PC — Chimie</a>
   <a class="btn-gold" href="/chimie/annales/centrale/">Annales Centrale PC — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/x-ens/">Annales X-ENS-ESPCI — Chimie</a>
+</div>
+
+## Annales pour MP & PSI
+
+<div class="btn-grid">
+  <a class="btn-gold" href="/chimie/annales/mines-mp/">Annales Mines MP/PSI — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/centrale-psi/">Annales Centrale PSI (partie Chimie)</a>
 </div>
 
 ## Annales pour PT
 
-
-## Annales pour BCPST
-
+<div class="btn-grid">
+  <a class="btn-gold" href="/chimie/annales/banque-pt/">Annales Banque PT - Chimie</a>
+</div>
