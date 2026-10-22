@@ -1,38 +1,19 @@
-{{/*
-  ============================================================
-  PIED DE PAGE
-  ============================================================
-  Affiché en bas de toutes les pages.
-  Contient le nom du site, les liens externes et le copyright.
-
-  Les liens Instagram et Blogger sont définis dans hugo.toml
-  (section [params]).
-  ============================================================
-*/}}
+{{/* Pied de page — liens Instagram / Blogger dans hugo.toml [params] */}}
 <footer class="site-footer">
   <div class="container footer-inner">
-
-    {{/* Nom et courte description */}}
     <div>
       <strong>Tout pour Cpgérer</strong>
       <p>Des ressources pour avancer sereinement en CPGE.</p>
     </div>
-
-    {{/* Liens externes */}}
     <div class="footer-links">
       {{ with .Site.Params.bloggerURL }}
         <a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>
       {{ end }}
-
       {{ with .Site.Params.instagramURL }}
         <a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>
       {{ end }}
-
       <a href="{{ "index.xml" | relURL }}">Flux RSS</a>
     </div>
-
-    {{/* Copyright avec année automatique */}}
     <p class="copyright">© {{ now.Year }} Tout pour Cpgérer</p>
-
   </div>
 </footer>

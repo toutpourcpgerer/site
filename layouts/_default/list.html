@@ -1,15 +1,18 @@
 {{/*
-  PAGE DE RUBRIQUE — CONTENU LIBRE
+  PAGE DE RUBRIQUE (ex. /chimie/annales/, /chimie/annales/centrale/)
 
-  Front matter page : back_to / back_label / hide_auto_list
+  Front matter utile :
+    back_to / back_label  → lien de retour forcé (ex. "/" et "Accueil")
+    hide_auto_list: true  → n’affiche que le contenu du _index.md (pas de liste auto)
 
-  Pages enfants (annales) :
-  - note: 5
-  - sujet : PDF du sujet
-  - correction : PDF du corrigé
+  Pages enfants (annales) — front matter :
+    note: 5               → étoiles (0 à 5)
+    sujet: "fichier.pdf"  → PDF du sujet (dans le dossier de la page)
+    correction: "…pdf"    → PDF du corrigé → pastille « ✓ Corrigé »
 */}}
 {{ define "main" }}
 
+{{/* En-tête : retour + titre + description */}}
 <div class="page-top">
   {{ if .Params.back_to }}
     <a class="back-link" href="{{ .Params.back_to | relURL }}">← {{ .Params.back_label | default "Accueil" }}</a>
@@ -20,24 +23,22 @@
   {{ end }}
 
   <h1>{{ .Title }}</h1>
-
   {{ with .Description }}
     <p class="page-description">{{ . }}</p>
   {{ end }}
 </div>
 
+{{/* Contenu libre du _index.md (Markdown / HTML) */}}
 {{ with .Content }}
-  <div class="page-intro content-block">
-    {{ . }}
-  </div>
+  <div class="page-intro content-block">{{ . }}</div>
 {{ end }}
 
 {{ if not .Params.hide_auto_list }}
 
-  {{ $sections := .Sections }}
-  {{ if $sections }}
+  {{/* Boutons dorés = un par sous-dossier */}}
+  {{ with .Sections }}
     <div class="btn-grid">
-      {{ range $sections }}
+      {{ range . }}
         <a class="btn-gold" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
     </div>
@@ -46,30 +47,26 @@
   {{ $pages := .RegularPages.ByTitle.Reverse }}
   {{ if $pages }}
 
+    {{/* Détecte si on est sur une liste d’annales (présence de note/sujet/correction) */}}
     {{ $hasAnnale := false }}
     {{ range $pages }}
-      {{ if or .Params.note .Params.sujet .Params.correction }}
-        {{ $hasAnnale = true }}
-      {{ end }}
+      {{ if or .Params.note .Params.sujet .Params.correction }}{{ $hasAnnale = true }}{{ end }}
     {{ end }}
 
     {{ if $hasAnnale }}
       <div class="annale-list">
         {{ range $pages }}
           {{ $page := . }}
+
+          {{/* note → nombre d’étoiles pleines (0–5) */}}
           {{ $stars := 0 }}
           {{ with $page.Params.note }}
-            {{ $raw := printf "%v" . }}
-            {{ $raw = replace $raw "/5" "" }}
-            {{ $raw = replace $raw " " "" }}
+            {{ $raw := replace (replace (printf "%v" .) "/5" "") " " "" }}
             {{ $n := int $raw }}
-            {{ if and (ge $n 0) (le $n 5) }}
-              {{ $stars = $n }}
-            {{ end }}
+            {{ if and (ge $n 0) (le $n 5) }}{{ $stars = $n }}{{ end }}
           {{ end }}
 
-          {{ $hasCorrige := false }}
-          {{ with $page.Params.correction }}{{ if ne . "" }}{{ $hasCorrige = true }}{{ end }}{{ end }}
+          {{ $hasCorrige := and $page.Params.correction (ne $page.Params.correction "") }}
 
           <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
             <div class="annale-main">
@@ -82,11 +79,7 @@
               {{ if or (gt $stars 0) $page.Params.note }}
                 <span class="annale-stars" aria-label="Note {{ $stars }} sur 5">
                   {{ range seq 1 5 }}
-                    {{ if le . $stars }}
-                      <span class="star star-full" aria-hidden="true">★</span>
-                    {{ else }}
-                      <span class="star star-empty" aria-hidden="true">☆</span>
-                    {{ end }}
+                    <span class="star {{ if le . $stars }}star-full{{ else }}star-empty{{ end }}" aria-hidden="true">{{ if le . $stars }}★{{ else }}☆{{ end }}</span>
                   {{ end }}
                 </span>
               {{ end }}
@@ -99,7 +92,9 @@
           </a>
         {{ end }}
       </div>
+
     {{ else }}
+      {{/* Liste générique de ressources (hors annales) */}}
       <div class="resource-list">
         {{ range $pages }}
           <article class="resource-card">
@@ -113,14 +108,12 @@
       </div>
     {{ end }}
 
-  {{ else }}
-    {{ if and (not $sections) (not .Content) }}
-      <div class="empty-state">
-        <span>✳</span>
-        <h2>Les ressources arrivent bientôt</h2>
-        <p>Cette rubrique est en cours de préparation.</p>
-      </div>
-    {{ end }}
+  {{ else if and (not .Sections) (not .Content) }}
+    <div class="empty-state">
+      <span>✳</span>
+      <h2>Les ressources arrivent bientôt</h2>
+      <p>Cette rubrique est en cours de préparation.</p>
+    </div>
   {{ end }}
 
 {{ end }}

@@ -1,11 +1,7 @@
 {{/*
-  ============================================================
-  EN-TÊTE + SOMMAIRE RÉTRACTABLE
-  ============================================================
-  IMPORTANT : c’est ICI que tu modifies le menu / sommaire.
+  En-tête + sommaire latéral.
+  Pour modifier le menu : édite les liens dans <nav class="sidebar-nav">.
   Chaque lien doit correspondre à un dossier dans content/.
-  Structure alignée sur le Google Sites original.
-  ============================================================
 */}}
 
 <button type="button" class="sidebar-toggle" id="sidebar-toggle"
@@ -19,9 +15,7 @@
   <div class="container header-inner">
     <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Tout pour Cpgérer — Accueil">
       <img class="brand-logo" src="{{ "Logo_Site.png" | relURL }}" alt="Tout pour Cpgérer" width="48" height="48">
-      <span class="brand-words">
-        <strong>Tout pour Cpgérer</strong>
-      </span>
+      <span class="brand-words"><strong>Tout pour Cpgérer</strong></span>
     </a>
   </div>
 </header>
@@ -37,38 +31,30 @@
     </div>
 
     <nav class="sidebar-nav">
-
-      {{/* --- ACCUEIL --- */}}
       <a href="{{ .Site.Home.RelPermalink }}"{{ if .IsHome }} class="is-active"{{ end }}>Accueil</a>
 
-      {{/* --- CHIMIE (comme Google Sites) --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Chimie</span>
         <a href="{{ "chimie/annales/" | relURL }}">Annales</a>
       </div>
 
-      {{/* --- AGRÉGATION PHYSIQUE-CHIMIE --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Agrégation Physique-Chimie</span>
       </div>
 
-      {{/* --- INFORMATIQUE PHYSICO-CHIMIQUE (rubrique séparée) --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Informatique (physique-chimie)</span>
         <a href="{{ "informatique-physico-chimique/" | relURL }}"{{ if eq .Section "informatique-physico-chimique" }} class="is-active"{{ end }}>Cours</a>
       </div>
 
-      {{/* --- LYCÉE --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Lycée</span>
-        <a href="{{ "lycee/seconde/" | relURL }}"{{ if eq .Section "lycee" }} class="is-active"{{ end }}>Seconde</a>
-        <a href="{{ "lycee/seconde/" | relURL }}"{{ if eq .Section "lycee" }} class="is-active"{{ end }}>1ère Ens Scient</a>
-     </div>
+        <a href="{{ "lycee/seconde/" | relURL }}">Seconde</a>
+        <a href="{{ "lycee/seconde/" | relURL }}">1ère Ens Scient</a>
+      </div>
 
-      {{/* --- LIENS EXTERNES --- */}}
       <div class="sidebar-group">
         <span class="sidebar-label">Liens externes</span>
-        <a href="{}">Livre d'or</a>
         {{ with .Site.Params.bloggerURL }}
           <a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>
         {{ end }}
@@ -76,7 +62,6 @@
           <a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>
         {{ end }}
       </div>
-
     </nav>
   </div>
 </aside>

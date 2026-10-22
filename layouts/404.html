@@ -1,1 +1,8 @@
-{{ define "main" }}<section class="not-found"><p class="section-kicker">ERREUR 404</p><h1>Cette page est introuvable.</h1><p>Le lien a peut-être changé ou la ressource n'est pas encore publiée.</p><a class="button button-dark" href="{{ .Site.Home.RelPermalink }}">Retour à l'accueil</a></section>{{ end }}
+{{ define "main" }}
+<section class="not-found">
+  <p class="section-kicker">ERREUR 404</p>
+  <h1>Cette page est introuvable.</h1>
+  <p>Le lien a peut-être changé ou la ressource n’est pas encore publiée.</p>
+  <a class="button button-dark" href="{{ .Site.Home.RelPermalink }}">Retour à l’accueil</a>
+</section>
+{{ end }}

@@ -1,8 +1,4 @@
-{{/*
-  ============================================================
-  SQUELETTE DE TOUTES LES PAGES
-  ============================================================
-*/}}
+{{/* Squelette commun à toutes les pages */}}
 <!doctype html>
 <html lang="fr">
 <head>
@@ -16,6 +12,7 @@
   {{ $style := resources.Get "main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
+  {{/* MathJax pour les formules LaTeX dans le Markdown */}}
   <script>
     window.MathJax = {
       tex: {
@@ -38,10 +35,10 @@
 
   {{ partial "footer.html" . }}
 
-  {{/* Script pour ouvrir / fermer le sommaire */}}
+  {{/* Ouvre / ferme le menu latéral (sommaire) */}}
   <script>
     (function () {
-      var toggle  = document.getElementById('sidebar-toggle');
+      var toggle = document.getElementById('sidebar-toggle');
       var closeBtn = document.getElementById('sidebar-close');
       var sidebar = document.getElementById('sidebar');
       var overlay = document.getElementById('sidebar-overlay');
@@ -62,12 +59,11 @@
         toggle.setAttribute('aria-label', 'Ouvrir le sommaire');
       }
 
-      if (toggle)  toggle.addEventListener('click', function () {
+      if (toggle) toggle.addEventListener('click', function () {
         if (sidebar.hidden) openSidebar(); else closeSidebar();
       });
       if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
-      if (overlay)  overlay.addEventListener('click', closeSidebar);
-
+      if (overlay) overlay.addEventListener('click', closeSidebar);
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && !sidebar.hidden) closeSidebar();
       });

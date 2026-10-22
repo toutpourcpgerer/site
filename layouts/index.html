@@ -1,20 +1,6 @@
-{{/*
-  ============================================================
-  PAGE D’ACCUEIL
-  ============================================================
-  Contenu et structure de la page d’accueil du site.
-
-  Sections :
-  1. Hero (grande introduction)
-  2. Présentation du projet
-  3. Grille des ressources principales
-  4. Citation
-  5. Liens vers le blog / réseaux
-  ============================================================
-*/}}
+{{/* Page d’accueil */}}
 {{ define "main" }}
 
-{{/* ========== 1. HERO ========== */}}
 <section class="hero">
   <div class="hero-copy">
     <h1>La prépa, avec <em>les bonnes ressources</em>.</h1>
@@ -29,10 +15,8 @@
       </a>
     </div>
   </div>
-
 </section>
 
-{{/* ========== 2. PRÉSENTATION ========== */}}
 <section class="intro-band" id="apropos">
   <div class="section-kicker">BIENVENUE</div>
   <div>
@@ -46,7 +30,6 @@
   </div>
 </section>
 
-{{/* ========== 3. GRILLE DES RESSOURCES ========== */}}
 <section class="resources-section" id="ressources">
   <div class="section-heading">
     <div>
@@ -56,23 +39,12 @@
   </div>
 
   <div class="resource-grid">
-    {{/*
-      Les trois cartes sont définies ici manuellement.
-      Pour en ajouter une, copie un bloc (dict …) et adapte les valeurs.
-    */}}
+    {{/* Pour ajouter une carte : copie un bloc dict et adapte path / tag / title / desc */}}
     {{ range $item := slice
-      (dict
-        "path" "chimie/fiches"
-        "tag" "RÉVISER"
-        "title" "Fiches de chimie"
-        "desc" "Des fiches synthétiques pour retrouver les notions, méthodes et résultats importants."
-      )
-      (dict
-        "path" "chimie/annales"
-        "tag" "S’ENTRAÎNER"
-        "title" "Annales de chimie"
-        "desc" "Travaille sur des sujets de concours pour t’entraîner et mieux comprendre les attentes."
-      )
+      (dict "path" "chimie/fiches" "tag" "RÉVISER" "title" "Fiches de chimie"
+            "desc" "Des fiches synthétiques pour retrouver les notions, méthodes et résultats importants.")
+      (dict "path" "chimie/annales" "tag" "S’ENTRAÎNER" "title" "Annales de chimie"
+            "desc" "Travaille sur des sujets de concours pour t’entraîner et mieux comprendre les attentes.")
     }}
       {{ with site.GetPage $item.path }}
         <article class="resource-tile">

@@ -1,10 +1,13 @@
 {{/*
-  PAGE D’UNE ANNALE / RESSOURCE
+  PAGE D’UNE ANNALE (ex. centrale-pc-2024/)
 
   Front matter :
-  - sujet : nom du PDF sujet (dans le dossier de la page) ou chemin /...
-  - correction : nom du PDF corrigé
-  - note : note sur 5
+    sujet: "fichier.pdf"       → PDF du sujet (même dossier ou chemin /…)
+    correction: "fichier.pdf"  → PDF du corrigé
+    note: 5                    → utilisé sur la page liste, pas ici
+
+  Résolution d’URL : resource Hugo si le fichier est dans le dossier,
+  sinon chemin relatif à la page (mount content → static).
 */}}
 {{ define "main" }}
 
