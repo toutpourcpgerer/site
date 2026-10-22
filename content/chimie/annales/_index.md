@@ -22,17 +22,11 @@ La correction est complète : elle est notamment accompagnée de remarques (pour
 
 <div class="btn-grid">
   <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines PC — Chimie</a>
-  <a class="btn-gold" href="/chimie/annales/centrale/">Sujets Centrale filière PC</a>
+  <a class="btn-gold" href="/chimie/annales/Centrale/">Annales Centrale PC - Chimie</a>
 </div>
 
 ## Annales pour PT
 
-<!-- Ajoute ici tes boutons quand tu auras des pages, par exemple :
-<div class="btn-grid">
-  <a class="btn-gold" href="/chimie/annales/pt-centrale/">Centrale PT</a>
-</div>
--->
 
 ## Annales pour BCPST
 
-<!-- Idem : boutons ou texte libre, tout se gère dans ce fichier. -->
