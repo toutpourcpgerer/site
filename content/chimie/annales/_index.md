@@ -21,7 +21,7 @@ La correction est complète : elle est notamment accompagnée de remarques (pour
 ## Annales pour PC (et MP/PSI)
 
 <div class="btn-grid">
-  <a class="btn-gold" href="/chimie/annales/minespc/">Annales Mines PC — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/MinesPC/">Annales Mines PC — Chimie</a>
   <a class="btn-gold" href="/chimie/annales/centrale/">Annales Centrale PC — Chimie</a>
 </div>
 
