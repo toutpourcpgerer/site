@@ -1,7 +1,9 @@
 ---
 title: "3 annales pour réviser les écrits"
 description: "Test"
-back-to: "/"
+back_to: "/"
+back_label: "Accueil"
+hide_auto_list: true
 ---
 
 <div class="info-band">
