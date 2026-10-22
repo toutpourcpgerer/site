@@ -27,9 +27,6 @@
       <a class="button button-dark" href="#ressources">
         Explorer les ressources <span aria-hidden="true">↓</span>
       </a>
-      <a class="text-link" href="#apropos">
-        Découvrir le projet <span aria-hidden="true">↗</span>
-      </a>
     </div>
   </div>
 
@@ -56,7 +53,6 @@
       <div class="section-kicker">À EXPLORER</div>
       <h2>Les ressources principales</h2>
     </div>
-    <p>Va directement à l’essentiel.</p>
   </div>
 
   <div class="resource-grid">
@@ -66,36 +62,20 @@
     */}}
     {{ range $item := slice
       (dict
-        "path" "fiches-chimie"
-        "number" "01"
+        "path" "chimie/fiches"
         "tag" "RÉVISER"
         "title" "Fiches de chimie"
         "desc" "Des fiches synthétiques pour retrouver les notions, méthodes et résultats importants."
-        "symbol" "✳"
       )
       (dict
-        "path" "annales-centrale"
-        "number" "02"
+        "path" "chimie/annales"
         "tag" "S’ENTRAÎNER"
-        "title" "Annales de Centrale"
+        "title" "Annales de chimie"
         "desc" "Travaille sur des sujets de concours pour t’entraîner et mieux comprendre les attentes."
-        "symbol" "↗"
-      )
-      (dict
-        "path" "informatique-physico-chimique"
-        "number" "03"
-        "tag" "APPROFONDIR"
-        "title" "Informatique physico-chimique"
-        "desc" "Retrouve des ressources autour de la programmation et de ses applications en physique-chimie."
-        "symbol" "⌘"
       )
     }}
       {{ with site.GetPage $item.path }}
         <article class="resource-tile">
-          <div class="tile-top">
-            <span class="tile-number">{{ $item.number }}</span>
-            <span class="tile-symbol" aria-hidden="true">{{ $item.symbol }}</span>
-          </div>
           <p class="tile-tag">{{ $item.tag }}</p>
           <h3><a href="{{ .RelPermalink }}">{{ $item.title }}</a></h3>
           <p class="tile-description">{{ $item.desc }}</p>
@@ -106,27 +86,6 @@
       {{ end }}
     {{ end }}
   </div>
-</section>
-
-{{/* ========== 4. CITATION ========== */}}
-<section class="quote-band">
-  <span class="quote-mark" aria-hidden="true">“</span>
-  <div>
-    <p>La régularité et la méthode font souvent toute la différence.</p>
-    <span>Un pas après l’autre, un exercice après l’autre.</span>
-  </div>
-</section>
-
-{{/* ========== 5. LIENS EXTERNES ========== */}}
-<section class="follow-section">
-  <div>
-    <div class="section-kicker">RESTONS EN LIEN</div>
-    <h2>Le projet continue aussi ailleurs.</h2>
-    <p>Pour suivre les publications et les nouveautés, retrouve également le blog.</p>
-  </div>
-  <a class="button button-outline" href="{{ .Site.Params.bloggerURL }}" target="_blank" rel="noopener">
-    Lire le blog <span aria-hidden="true">↗</span>
-  </a>
 </section>
 
 {{ end }}
