@@ -8,9 +8,3 @@ pdf: "/pdfs/Cen_PC_2024_Corr.pdf"
 ---
 
 Corrigé de l'épreuve de chimie du concours **Centrale 2024** (filière PC).
-
-Pour ajouter le sujet : place le PDF dans `static/pdfs/` puis renseigne le front matter, par exemple :
-
-```yaml
-sujet: "/pdfs/Cen_PC_2024_Sujet.pdf"
-```
