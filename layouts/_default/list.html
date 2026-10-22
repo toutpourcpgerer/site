@@ -5,7 +5,7 @@
 
   Pages enfants (annales) :
   - note: 5
-  - sujet / pdf : nom de fichier dans le dossier de la page, ou chemin /...
+  - sujet / pdf (ou correction) : nom de fichier dans le dossier de la page
 */}}
 {{ define "main" }}
 
@@ -67,21 +67,9 @@
             {{ end }}
           {{ end }}
 
-          {{ $hasCorrige := or $page.Params.correction $page.Params.pdf }}
-          {{ $hasSujet := and $page.Params.sujet (ne $page.Params.sujet "") }}
-
-          {{ $sujetURL := "" }}
-          {{ if $hasSujet }}
-            {{ if or (hasPrefix $page.Params.sujet "/") (hasPrefix $page.Params.sujet "http") }}
-              {{ $sujetURL = $page.Params.sujet | relURL }}
-            {{ else }}
-              {{ with $page.Resources.GetMatch $page.Params.sujet }}
-                {{ $sujetURL = .RelPermalink }}
-              {{ else }}
-                {{ $sujetURL = path.Join $page.RelPermalink $page.Params.sujet | relURL }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
+          {{ $hasCorrige := false }}
+          {{ with $page.Params.pdf }}{{ if ne . "" }}{{ $hasCorrige = true }}{{ end }}{{ end }}
+          {{ with $page.Params.correction }}{{ if ne . "" }}{{ $hasCorrige = true }}{{ end }}{{ end }}
 
           <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
             <div class="annale-main">
@@ -106,10 +94,6 @@
                 <span class="badge badge-corrige">✓ Corrigé</span>
               {{ else }}
                 <span class="badge badge-sujet-seul">Sujet seul</span>
-              {{ end }}
-              {{ if and $hasSujet $sujetURL }}
-                <span class="btn-outline-green annale-sujet-btn"
-                  onclick="event.preventDefault(); event.stopPropagation(); window.open('{{ $sujetURL }}', '_blank', 'noopener');">Sujet</span>
               {{ end }}
             </div>
           </a>

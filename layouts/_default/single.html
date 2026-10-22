@@ -2,13 +2,12 @@
   PAGE D’UNE ANNALE / RESSOURCE
 
   Front matter :
-  - sujet / pdf : nom de fichier dans le dossier de la page (bundle)
-    ou chemin absolu type "/chimie/annales/centrale/fichier.pdf"
+  - sujet : nom du PDF sujet (dans le dossier de la page) ou chemin /...
+  - pdf ou correction : nom du PDF corrigé
   - summary
 */}}
 {{ define "main" }}
 
-{{/* Résout un param sujet/pdf → URL publique */}}
 {{ $sujetURL := "" }}
 {{ $pdfURL := "" }}
 
@@ -20,23 +19,26 @@
       {{ with $.Resources.GetMatch . }}
         {{ $sujetURL = .RelPermalink }}
       {{ else }}
-        {{/* Miroir static/ ou mount content→static */}}
         {{ $sujetURL = path.Join $.RelPermalink . | relURL }}
       {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ with .Params.pdf }}
-  {{ if ne . "" }}
-    {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
-      {{ $pdfURL = . | relURL }}
+{{ $corrigeName := "" }}
+{{ with .Params.pdf }}{{ if ne . "" }}{{ $corrigeName = . }}{{ end }}{{ end }}
+{{ if eq $corrigeName "" }}
+  {{ with .Params.correction }}{{ if ne . "" }}{{ $corrigeName = . }}{{ end }}{{ end }}
+{{ end }}
+
+{{ with $corrigeName }}
+  {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
+    {{ $pdfURL = . | relURL }}
+  {{ else }}
+    {{ with $.Resources.GetMatch . }}
+      {{ $pdfURL = .RelPermalink }}
     {{ else }}
-      {{ with $.Resources.GetMatch . }}
-        {{ $pdfURL = .RelPermalink }}
-      {{ else }}
-        {{ $pdfURL = path.Join $.RelPermalink . | relURL }}
-      {{ end }}
+      {{ $pdfURL = path.Join $.RelPermalink . | relURL }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -54,14 +56,9 @@
     <p class="summary">{{ . }}</p>
   {{ end }}
 
-  {{ if or $sujetURL $pdfURL }}
+  {{ if $pdfURL }}
     <div class="doc-actions">
-      {{ if $sujetURL }}
-        <a class="btn-outline-green" href="{{ $sujetURL }}" target="_blank" rel="noopener">Ouvrir le sujet ↗</a>
-      {{ end }}
-      {{ if $pdfURL }}
-        <a class="btn-gold" href="{{ $pdfURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
-      {{ end }}
+      <a class="btn-gold" href="{{ $pdfURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
     </div>
   {{ end }}
 
