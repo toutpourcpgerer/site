@@ -1,5 +1,5 @@
 ---
-title: "3 annales pour réviser les écrits"
+title: "3 annales pour CCINP en PC"
 description: "Test"
 ---
 
@@ -9,4 +9,14 @@ Sujets et corrigés de chimie.
 
 </div>
 
+## 1er sujet : CCINP PC 2025
 
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>CCINP PC 2025</h2>
+    <p>_Le choix de Tout pour Cpgérer :_ Un bon sujet actuel pour commencer.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/chimie/annales/centrale/centrale-pc-2025/">Sujet corrigé Centrale 2025</a>
+  </div>
+</div>
