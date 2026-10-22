@@ -1,18 +1,22 @@
 {{/*
-  PAGE D’UNE ANNALE (ex. centrale-pc-2024/)
+  PAGE UNIQUE — annale ou fiche
 
-  Front matter :
-    sujet: "fichier.pdf"       → PDF du sujet (même dossier ou chemin /…)
-    correction: "fichier.pdf"  → PDF du corrigé
-    note: 5                    → utilisé sur la page liste, pas ici
+  Annale :
+    sujet / correction : PDF sujet et corrigé
 
-  Résolution d’URL : resource Hugo si le fichier est dans le dossier,
-  sinon chemin relatif à la page (mount content → static).
+  Fiche :
+    fiche: "fichier.pdf"     → PDF de la fiche
+    themes: ["…", "…"]       → liste des thèmes abordés
+    liens:                   → liens vers d’autres pages du site
+      - title: "…"
+        url: "/chemin/"
 */}}
 {{ define "main" }}
 
+{{/* —— Résolution des URLs PDF —— */}}
 {{ $sujetURL := "" }}
 {{ $corrigeURL := "" }}
+{{ $ficheURL := "" }}
 
 {{ with .Params.sujet }}
   {{ if ne . "" }}
@@ -42,6 +46,20 @@
   {{ end }}
 {{ end }}
 
+{{ with .Params.fiche }}
+  {{ if ne . "" }}
+    {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
+      {{ $ficheURL = . | relURL }}
+    {{ else }}
+      {{ with $.Resources.GetMatch . }}
+        {{ $ficheURL = .RelPermalink }}
+      {{ else }}
+        {{ $ficheURL = path.Join $.RelPermalink . | relURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 <article class="article">
 
   <p class="breadcrumbs">
@@ -54,6 +72,42 @@
     {{ .Content }}
   </div>
 
+  {{/* —— Fiche : thèmes + liens + PDF —— */}}
+  {{ if $ficheURL }}
+
+    {{ with .Params.themes }}
+      <section class="fiche-themes">
+        <p class="section-kicker">THÈMES ABORDÉS</p>
+        <ul>
+          {{ range . }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    {{ with .Params.liens }}
+      <section class="fiche-liens">
+        <p class="section-kicker">VOIR AUSSI</p>
+        <div class="btn-grid">
+          {{ range . }}
+            <a class="btn-gold" href="{{ .url | relURL }}">{{ .title }}</a>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    <section class="pdf-section">
+      <div class="pdf-heading">
+        <p class="section-kicker">FICHE</p>
+        <a class="button button-dark" href="{{ $ficheURL }}" target="_blank" rel="noopener">Ouvrir la fiche ↗</a>
+      </div>
+      <iframe class="pdf-viewer" src="{{ $ficheURL }}#view=FitH" title="Fiche : {{ .Title }}" loading="lazy"></iframe>
+    </section>
+
+  {{ end }}
+
+  {{/* —— Annale : sujet + corrigé —— */}}
   {{ if $sujetURL }}
     <section class="pdf-section">
       <div class="pdf-heading">

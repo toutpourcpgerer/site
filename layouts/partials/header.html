@@ -1,7 +1,6 @@
 {{/*
   En-tête + sommaire latéral.
   Pour modifier le menu : édite les liens dans <nav class="sidebar-nav">.
-  Chaque lien doit correspondre à un dossier dans content/.
 */}}
 
 <button type="button" class="sidebar-toggle" id="sidebar-toggle"
@@ -35,6 +34,7 @@
 
       <div class="sidebar-group">
         <span class="sidebar-label">Chimie</span>
+        <a href="{{ "chimie/fiches/" | relURL }}">Fiches</a>
         <a href="{{ "chimie/annales/" | relURL }}">Annales</a>
       </div>
 
