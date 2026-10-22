@@ -23,7 +23,7 @@ Une seule fiche : le résumé de tout le programme de spé.
 Une fiche pour résumer les deux années de prépa — idéale avant les concours.
 
 <div class="btn-grid">
-  <a class="btn-gold" href="#">Fiche MP / PT / PSI (bientôt)</a>
+  <a class="btn-gold" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI (bientôt)</a>
 </div>
 
 ## Commun à toutes les filières
@@ -47,5 +47,5 @@ La chimie organique est surtout traitée via les sujets par chapitre.
 ## MPSI / PTSI
 
 <div class="btn-grid">
-  <a class="btn-gold" href="#">Fiches MPSI / PTSI (bientôt)</a>
+  <a class="btn-gold" href="/chimie/fiches/mpsi-ptsi/">Fiches MPSI / PTSI (bientôt)</a>
 </div>
