@@ -52,12 +52,6 @@
     <p class="summary">{{ . }}</p>
   {{ end }}
 
-  {{ if $corrigeURL }}
-    <div class="doc-actions">
-      <a class="btn-gold" href="{{ $corrigeURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
-    </div>
-  {{ end }}
-
   <div class="article-content">
     {{ .Content }}
   </div>
