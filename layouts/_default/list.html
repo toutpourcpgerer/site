@@ -5,7 +5,8 @@
 
   Pages enfants (annales) :
   - note: 5
-  - sujet / pdf (ou correction) : nom de fichier dans le dossier de la page
+  - sujet : PDF du sujet
+  - correction : PDF du corrigé
 */}}
 {{ define "main" }}
 
@@ -47,7 +48,7 @@
 
     {{ $hasAnnale := false }}
     {{ range $pages }}
-      {{ if or .Params.note .Params.sujet .Params.correction .Params.pdf }}
+      {{ if or .Params.note .Params.sujet .Params.correction }}
         {{ $hasAnnale = true }}
       {{ end }}
     {{ end }}
@@ -68,7 +69,6 @@
           {{ end }}
 
           {{ $hasCorrige := false }}
-          {{ with $page.Params.pdf }}{{ if ne . "" }}{{ $hasCorrige = true }}{{ end }}{{ end }}
           {{ with $page.Params.correction }}{{ if ne . "" }}{{ $hasCorrige = true }}{{ end }}{{ end }}
 
           <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">

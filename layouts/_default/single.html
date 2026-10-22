@@ -3,13 +3,13 @@
 
   Front matter :
   - sujet : nom du PDF sujet (dans le dossier de la page) ou chemin /...
-  - pdf ou correction : nom du PDF corrigé
+  - correction : nom du PDF corrigé
   - summary
 */}}
 {{ define "main" }}
 
 {{ $sujetURL := "" }}
-{{ $pdfURL := "" }}
+{{ $corrigeURL := "" }}
 
 {{ with .Params.sujet }}
   {{ if ne . "" }}
@@ -25,20 +25,16 @@
   {{ end }}
 {{ end }}
 
-{{ $corrigeName := "" }}
-{{ with .Params.pdf }}{{ if ne . "" }}{{ $corrigeName = . }}{{ end }}{{ end }}
-{{ if eq $corrigeName "" }}
-  {{ with .Params.correction }}{{ if ne . "" }}{{ $corrigeName = . }}{{ end }}{{ end }}
-{{ end }}
-
-{{ with $corrigeName }}
-  {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
-    {{ $pdfURL = . | relURL }}
-  {{ else }}
-    {{ with $.Resources.GetMatch . }}
-      {{ $pdfURL = .RelPermalink }}
+{{ with .Params.correction }}
+  {{ if ne . "" }}
+    {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
+      {{ $corrigeURL = . | relURL }}
     {{ else }}
-      {{ $pdfURL = path.Join $.RelPermalink . | relURL }}
+      {{ with $.Resources.GetMatch . }}
+        {{ $corrigeURL = .RelPermalink }}
+      {{ else }}
+        {{ $corrigeURL = path.Join $.RelPermalink . | relURL }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -56,9 +52,9 @@
     <p class="summary">{{ . }}</p>
   {{ end }}
 
-  {{ if $pdfURL }}
+  {{ if $corrigeURL }}
     <div class="doc-actions">
-      <a class="btn-gold" href="{{ $pdfURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
+      <a class="btn-gold" href="{{ $corrigeURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
     </div>
   {{ end }}
 
@@ -79,16 +75,16 @@
     </section>
   {{ end }}
 
-  {{ if $pdfURL }}
+  {{ if $corrigeURL }}
     <section class="pdf-section">
       <div class="pdf-heading">
         <div>
           <p class="section-kicker">CORRIGÉ</p>
           <h2>Le corrigé</h2>
         </div>
-        <a class="button button-dark" href="{{ $pdfURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
+        <a class="button button-dark" href="{{ $corrigeURL }}" target="_blank" rel="noopener">Ouvrir le corrigé ↗</a>
       </div>
-      <iframe class="pdf-viewer" src="{{ $pdfURL }}#view=FitH" title="Corrigé : {{ .Title }}" loading="lazy"></iframe>
+      <iframe class="pdf-viewer" src="{{ $corrigeURL }}#view=FitH" title="Corrigé : {{ .Title }}" loading="lazy"></iframe>
     </section>
   {{ end }}
 
