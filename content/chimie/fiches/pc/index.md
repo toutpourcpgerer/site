@@ -1,6 +1,6 @@
 ---
 title: "Résumé de la chimie en PC"
-themes: 'Tous"
+themes: "Tous"
 fiche: "Résumé_PC.pdf"
 liens:
   - title: "Informatique physico-chimique"
