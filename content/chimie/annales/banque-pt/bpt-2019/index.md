@@ -5,4 +5,5 @@ sujet: "BPT_2019.pdf"
 correction: ""
 ---
 
-Corrigé de l'épreuve de chimie du concours
+## 🔍 : l'avis de Tout pour Cpgérer
+Y'a mieux.
