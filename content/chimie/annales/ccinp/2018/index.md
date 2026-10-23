@@ -1,5 +1,5 @@
 ---
-title: "CCP PC 2018"
+title: "CCINP PC 2018"
 note: 4
 sujet: "CCP_PC_2018.pdf"
 correction: "CCP_PC_2018_Corr.pdf"
