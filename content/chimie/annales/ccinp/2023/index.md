@@ -6,3 +6,7 @@ correction: ""
 ---
 
 ## 🔍 : l'avis de Tout pour Cpgérer
+
+Sujet correct. Un peu simple.
+
+### 
