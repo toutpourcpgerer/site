@@ -1,6 +1,6 @@
 ---
 title: "CCINP PC 2022"
-note: 4.5
+note: 4
 sujet: "CCP_PC_2022.pdf"
 correction: "CCP_PC_2022_Corr.pdf"
 ---
