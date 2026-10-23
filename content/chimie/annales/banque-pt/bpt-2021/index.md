@@ -1,6 +1,6 @@
 ---
 title: "Banque PT 2021"
-note: 3
+note: 2
 sujet: "BPT_2021.pdf"
 correction: ""
 ---
