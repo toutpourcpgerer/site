@@ -9,4 +9,6 @@ correction: ""
 
 Sujet correct. Un peu simple.
 
-### 
+### Points intéressants
+- Problème 2, partie 2 : de niveau correct et ancré dans le classique
+- Problème 1 (chimie organique): assez intéressante
