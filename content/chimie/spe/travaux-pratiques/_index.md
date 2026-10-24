@@ -167,10 +167,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="/annee-impaire/TP1.pdf">Sujet TP1</a>
+    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1.pdf">Sujet TP1</a>
   </div>
   <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="https://drive.google.com/file/d/1FbU61eMTR5_RhEkZUcl3drIxTEwBj5F8/view" target="_blank" rel="noopener">Correction TP1</a>
+    <a class="btn-corrige" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1_Corr.pdf" target="_blank" rel="noopener">Correction TP1</a>
   </div>
 </div>
 
@@ -183,10 +183,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1wXmOI2Yus0M3qirCrS-LnJRcQZ-v8WJA/view" target="_blank" rel="noopener">Sujet TP2</a>
+    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2.pdf">Sujet TP2</a>
   </div>
   <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="https://drive.google.com/file/d/1-HDdAo2X4CKBFoRuIw7NpTBvSsGqJ9dw/view" target="_blank" rel="noopener">Correction TP2</a>
+    <a class="btn-corrige" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf">Correction TP2</a>
   </div>
 </div>
 
@@ -199,7 +199,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1ojm0qRmHTmOO4keeO6srUIiBP84CHgkn/view" target="_blank" rel="noopener">Sujet TP3</a>
+    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf">Sujet TP3</a>
   </div>
 </div>
 
@@ -213,7 +213,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates">7/11 – 14/11</div>
   <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1tX1nFP_rjuMN0rI3kbqHCt-QXv3wbzFE/view" target="_blank" rel="noopener">Sujet TP4</a>
+    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
   </div>
 </div>
 
@@ -227,7 +227,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates">21/11 – 28/11</div>
   <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/13oPHe0KYxlZ-ZbkQLN7RLYUtSdmPgKfP/view" target="_blank" rel="noopener">Sujet TP5</a>
+    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf">Sujet TP5</a>
   </div>
 </div>
 
