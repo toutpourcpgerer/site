@@ -9,8 +9,8 @@ hide_auto_list: true
 <style>
 .tp-row {
   display: grid;
-  grid-template-columns: 1fr 120px auto;
-  gap: 12px 16px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 20px;
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
@@ -43,8 +43,8 @@ hide_auto_list: true
   font-size: 13px;
   font-weight: 600;
   color: var(--muted);
-  text-align: right;
   white-space: nowrap;
+  margin-right: 4px;
 }
 .tp-row-actions {
   display: flex;
@@ -52,7 +52,6 @@ hide_auto_list: true
   gap: 8px;
   justify-content: flex-end;
   align-items: center;
-  min-width: 248px;
 }
 .btn-sujet {
   display: inline-flex;
@@ -105,10 +104,8 @@ hide_auto_list: true
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  .tp-dates { text-align: left; }
   .tp-row-actions {
     justify-content: flex-start;
-    min-width: 0;
     flex-wrap: wrap;
   }
 }
@@ -121,7 +118,6 @@ hide_auto_list: true
     <h3>Cours des Travaux Pratiques de chimie en CPGE (filière PC)</h3>
     <p class="tp-note">Remarque : les incertitudes sont traitées dans le cours d'<a href="/informatique-physico-chimique/">informatique physico-chimique</a>.</p>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-gold" href="https://drive.google.com/file/d/1o2CuipBbU-kV_qhlznAaWuleXbbHEFna/view" target="_blank" rel="noopener">Cours des TP</a>
   </div>
@@ -131,7 +127,6 @@ hide_auto_list: true
   <div class="tp-row-main">
     <h3>Fiche des Travaux Pratiques de chimie aux concours de CPGE (filière PC)</h3>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-gold" href="https://drive.google.com/file/d/1M8Jmdi0DS40Bb-8bTvXg8gHuiLGP2-Li/view" target="_blank" rel="noopener">Fiche « TP aux oraux »</a>
   </div>
@@ -141,7 +136,6 @@ hide_auto_list: true
   <div class="tp-row-main">
     <h3>Les TP de chimie aux <em>écrits</em> de CPGE (filière PC majoritairement)</h3>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1tJw25SOsg84gL_jo61ja0Jxr-yaXGsEB/view" target="_blank" rel="noopener">Sujet</a>
   </div>
@@ -158,7 +152,6 @@ hide_auto_list: true
       <li>Méthode de Job</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1LrSNaa4VXsJbkeS88SEmg6cnHGEiRvLN/view" target="_blank" rel="noopener">Sujet TP1</a>
     <a class="btn-corrige" href="https://drive.google.com/file/d/1FbU61eMTR5_RhEkZUcl3drIxTEwBj5F8/view" target="_blank" rel="noopener">Correction TP1</a>
@@ -172,7 +165,6 @@ hide_auto_list: true
       <li>Synthèse et purification de la DBA</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1wXmOI2Yus0M3qirCrS-LnJRcQZ-v8WJA/view" target="_blank" rel="noopener">Sujet TP2</a>
     <a class="btn-corrige" href="https://drive.google.com/file/d/1-HDdAo2X4CKBFoRuIw7NpTBvSsGqJ9dw/view" target="_blank" rel="noopener">Correction TP2</a>
@@ -186,7 +178,6 @@ hide_auto_list: true
       <li>Analyse d'un complexe de cuivre Cu(NH<sub>3</sub>)<sub>4</sub>(SO<sub>4</sub>)·H<sub>2</sub>O</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1ojm0qRmHTmOO4keeO6srUIiBP84CHgkn/view" target="_blank" rel="noopener">Sujet TP3</a>
   </div>
@@ -200,8 +191,8 @@ hide_auto_list: true
       <li>Détermination de la concentration micellaire critique du SDS</li>
     </ul>
   </div>
-  <div class="tp-dates">7/11 – 14/11</div>
   <div class="tp-row-actions">
+    <span class="tp-dates">7/11 – 14/11</span>
     <a class="btn-sujet" href="https://drive.google.com/file/d/1tX1nFP_rjuMN0rI3kbqHCt-QXv3wbzFE/view" target="_blank" rel="noopener">Sujet TP4</a>
   </div>
 </div>
@@ -214,8 +205,8 @@ hide_auto_list: true
       <li>Étude cinétique de la décoloration du BBT</li>
     </ul>
   </div>
-  <div class="tp-dates">21/11 – 28/11</div>
   <div class="tp-row-actions">
+    <span class="tp-dates">21/11 – 28/11</span>
     <a class="btn-sujet" href="https://drive.google.com/file/d/13oPHe0KYxlZ-ZbkQLN7RLYUtSdmPgKfP/view" target="_blank" rel="noopener">Sujet TP5</a>
   </div>
 </div>
@@ -227,8 +218,9 @@ hide_auto_list: true
       <li>À venir</li>
     </ul>
   </div>
-  <div class="tp-dates">5/12 – 12/12 – 19/12</div>
-  <div class="tp-row-actions"></div>
+  <div class="tp-row-actions">
+    <span class="tp-dates">5/12 – 12/12 – 19/12</span>
+  </div>
 </div>
 
 ## Quelques Travaux Pratiques de l'année 2025-2026 / annales de TP
@@ -241,7 +233,6 @@ hide_auto_list: true
       <li>Suivi cinétique de la réaction entre l'acide oxalique et le permanganate de potassium</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1nIwfwZiZXRjSdTfUCZexB_mtbRo3gJu9/view" target="_blank" rel="noopener">Sujet TP1</a>
     <a class="btn-corrige" href="https://drive.google.com/file/d/1UqlzZTqJbOkMsnK28LNN0xusp1O1zuuh/view" target="_blank" rel="noopener">Correction TP1</a>
@@ -257,9 +248,8 @@ hide_auto_list: true
       <li>Vérification de la stœchiométrie via le dosage A/B de NH<sub>3</sub> (pH-métrie)</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
-    <a class="btn-sujet" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème TP204</a>
+    <a class="btn-sujet" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème</a>
     <a class="btn-sujet" href="https://drive.google.com/file/d/12fizNCPUvop5W-dOCrxzPjzc3_tTjD_4/view" target="_blank" rel="noopener">Sujet TP204</a>
     <a class="btn-corrige" href="https://drive.google.com/file/d/1CULpnXXqaZQaa8zTSDOYXtp6j1bLLdF3/view" target="_blank" rel="noopener">Correction TP204</a>
   </div>
@@ -275,7 +265,6 @@ hide_auto_list: true
       <li>Titrage des ions chlorure à l'aide des ions argent (conductimétrie)</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1MYNdZaZWtnjEE__aIL8SDXauWjB-Juq8/view" target="_blank" rel="noopener">Sujet TP306</a>
     <a class="btn-corrige" href="https://drive.google.com/file/d/1xIous0kbJMBmzQ5ifjVHSuDS0zoY48d9/view" target="_blank" rel="noopener">Correction TP306</a>
