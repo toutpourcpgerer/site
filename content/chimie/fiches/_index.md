@@ -6,6 +6,8 @@ back_label: "Accueil"
 hide_auto_list: true
 ---
 
+# Fiches résumés de deuxième année 
+
 <div class="fiche-row">
   <div class="fiche-row-text">
     <h2>PC</h2>
@@ -26,6 +28,8 @@ hide_auto_list: true
   </div>
 </div>
 
+# Les \og à côté \fg{} qui tombent aux écrits
+
 <div class="fiche-row">
   <div class="fiche-row-text">
     <h2>Commun à toutes les filières</h2>
@@ -35,6 +39,18 @@ hide_auto_list: true
     <a class="btn-blue" href="/informatique-physico-chimique/">Informatique physico-chimique</a>
   </div>
 </div>
+
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>Travaux pratiques en PC</h2>
+    <p>Des notions de TP tombent souvent aux écrits, il faut récupérer ces points gratuits.</p>
+  </div>
+  <div class="fiche-row-actions">
+    <a class="btn-blue" href="/chimie/fiches/tp/">TP chimie</a>
+  </div>
+</div>
+
+# Fiches résumés de première année
 
 <div class="fiche-row">
   <div class="fiche-row-text">
