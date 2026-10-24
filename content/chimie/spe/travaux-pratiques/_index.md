@@ -269,9 +269,10 @@ hide_auto_list: true
       <li>Vérification de la stœchiométrie via le dosage A/B de NH<sub>3</sub> (pH-métrie)</li>
     </ul>
   </div>
-  <div class="tp-dates"></div>
-  <div class="tp-btn-sujet" style="display:flex;flex-direction:column;gap:6px;">
+  <div class="tp-dates">
     <a class="btn-sujet" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème</a>
+  </div>
+  <div class="tp-btn-sujet" style="display:flex;flex-direction:column;gap:6px;">
     <a class="btn-sujet" href="https://drive.google.com/file/d/12fizNCPUvop5W-dOCrxzPjzc3_tTjD_4/view" target="_blank" rel="noopener">Sujet TP204</a>
   </div>
   <div class="tp-btn-corrige">
