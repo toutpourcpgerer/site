@@ -8,4 +8,4 @@ correction:
 Corrigé de l'épreuve de la partie chimie de l'épreuve de **Physique-Chimie 2** du concours **Centrale PSI 2026**.
 
 ## 🔍 : l'avis de Tout pour Cpgérer
-
+Même idée que le sujet de 2025.
