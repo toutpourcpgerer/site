@@ -167,7 +167,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1LrSNaa4VXsJbkeS88SEmg6cnHGEiRvLN/view" target="_blank" rel="noopener">Sujet TP1</a>
+    <a class="btn-sujet" href="/annee-impaire/TP1.pdf">Sujet TP1</a>
   </div>
   <div class="tp-btn-corrige">
     <a class="btn-corrige" href="https://drive.google.com/file/d/1FbU61eMTR5_RhEkZUcl3drIxTEwBj5F8/view" target="_blank" rel="noopener">Correction TP1</a>
