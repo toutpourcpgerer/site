@@ -482,6 +482,37 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 .article-content h2 { font-size: 24px; margin-top: 36px; }
 .article-content h3 { font-size: 19px; margin-top: 26px; }
 .article-content a { color: #22799b; text-decoration: underline; text-underline-offset: 2px; }
+/* Boutons dans le contenu : ne pas écraser leur couleur de texte */
+.article-content a.btn-blue,
+.page-intro a.btn-blue,
+.content-block a.btn-blue {
+  color: #fff;
+  text-decoration: none;
+}
+.article-content a.btn-blue:hover,
+.page-intro a.btn-blue:hover,
+.content-block a.btn-blue:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.article-content a.btn-gold,
+.page-intro a.btn-gold,
+.content-block a.btn-gold {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.article-content a.btn-sujet,
+.page-intro a.btn-sujet,
+.content-block a.btn-sujet {
+  color: #2e7d32;
+  text-decoration: none;
+}
+.article-content a.btn-corrige,
+.page-intro a.btn-corrige,
+.content-block a.btn-corrige {
+  color: #1a1a1a;
+  text-decoration: none;
+}
 .breadcrumbs { margin-bottom: 12px; }
 .breadcrumbs a { font-size: 14px; font-weight: 600; color: var(--muted); }
 .breadcrumbs a:hover { color: var(--ink); }
