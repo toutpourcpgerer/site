@@ -361,10 +361,10 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 }
 .intro-band > .section-kicker {
   margin-bottom: 0;
-  padding-top: 8px; /* aligne le label avec le haut du titre */
+  padding-top: 8px;
 }
 .intro-band h2 { font-size: clamp(24px, 3vw, 30px); margin: 6px 0 12px; }
-.intro-band p { font-size: 15px; color: var(--muted); line-height: 1.8; max-width: 640px; margin: 0 0 14px; }
+.intro-band p { font-size: 15px; color: var(--muted); line-height: 1.8; max-width: none; margin: 0 0 14px; }
 .intro-band p:last-child { margin-bottom: 0; }
 .resources-section { padding: 64px 0 48px; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
@@ -403,7 +403,7 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: 640px;
+  max-width: none;
 }
 .thanks-list li {
   font-size: 15px;
@@ -453,7 +453,7 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   font-size: 15px;
   color: var(--muted);
   line-height: 1.75;
-  max-width: none; /* texte sur toute la largeur de la boîte */
+  max-width: none;
   margin: 0 0 22px;
 }
 .guestbook-entry {
