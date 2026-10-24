@@ -1,32 +1,24 @@
 {{/*
-  Layout spécifique Livre d'or :
-  - Titre + note (moyenne) côte à côte, centrés
-  - Grille de témoignages (iframe Apps Script)
+  Layout Livre d'or :
+  - Titre classique
+  - Note (moyenne) en dessous
+  - Grille de témoignages
   - Formulaire en bas
 */}}
 {{ define "main" }}
 
 <style>
-.livre-dor-top .livre-dor-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px 28px;
-  margin: 8px 0 4px;
-}
-.livre-dor-top .livre-dor-header h1 {
-  margin: 0;
-  font-size: clamp(28px, 4vw, 42px);
-  color: var(--gold-dark, #9a7b1e);
-}
 .livre-dor-note {
-  flex-shrink: 0;
+  text-align: center;
+  margin: 8px 0 20px;
   line-height: 0;
 }
 .livre-dor-note iframe {
-  display: block;
+  display: inline-block;
   max-width: 100%;
+  border: none;
+  overflow: hidden;
+  background: transparent;
 }
 .livre-dor-content {
   max-width: 1100px;
@@ -36,7 +28,11 @@
 }
 .livre-dor-avis iframe {
   display: block;
+  width: 100%;
+  min-height: 600px;
+  border: none;
   border-radius: 8px;
+  background: transparent;
 }
 .livre-dor-form {
   margin-top: 16px;
@@ -68,41 +64,28 @@
   border: none;
 }
 @media (max-width: 600px) {
-  .livre-dor-top .livre-dor-header {
-    flex-direction: column;
-    gap: 8px;
-  }
   .livre-dor-avis iframe {
     min-height: 900px;
   }
 }
 </style>
 
-<div class="page-top livre-dor-top">
-  {{ if .Params.back_to }}
-    <a class="back-link" href="{{ .Params.back_to | relURL }}">← {{ .Params.back_label | default "Accueil" }}</a>
-  {{ else }}
-    <a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
-  {{ end }}
-
-  <div class="livre-dor-header">
-    <h1>{{ .Title }}</h1>
-    <div class="livre-dor-note">
-      <iframe
-        src="https://script.google.com/macros/s/AKfycbweFC87qVfhCNKYEb5taI6x9uufoS4jLTURWIs4bGgooMY6U3-csOxuyNgOLss0atgT-Q/exec?type=moyenne"
-        width="180"
-        height="110"
-        frameborder="0"
-        scrolling="no"
-        title="Note moyenne du livre d'or"
-        style="border: none; overflow: hidden; background: transparent;">
-      </iframe>
-    </div>
-  </div>
-
+<div class="page-top">
+  <a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
+  <h1>{{ .Title }}</h1>
   {{ with .Description }}
     <p class="page-description">{{ . }}</p>
   {{ end }}
+  <div class="livre-dor-note">
+    <iframe
+      src="https://script.google.com/macros/s/AKfycbweFC87qVfhCNKYEb5taI6x9uufoS4jLTURWIs4bGgooMY6U3-csOxuyNgOLss0atgT-Q/exec?type=moyenne"
+      width="180"
+      height="110"
+      frameborder="0"
+      scrolling="no"
+      title="Note moyenne du livre d'or">
+    </iframe>
+  </div>
 </div>
 
 <div class="page-intro content-block livre-dor-content">
@@ -113,8 +96,7 @@
       width="100%"
       height="720"
       frameborder="0"
-      title="Avis du livre d'or"
-      style="border: none; width: 100%; min-height: 600px; background: transparent;">
+      title="Avis du livre d'or">
     </iframe>
   </section>
 
