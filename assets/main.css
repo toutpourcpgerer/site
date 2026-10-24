@@ -355,8 +355,13 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px;
 }
 .intro-band {
-  display: grid; grid-template-columns: .55fr 1.45fr; gap: 48px;
+  display: grid; grid-template-columns: auto 1fr; gap: 20px 28px;
   padding: 48px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.intro-band > .section-kicker {
+  margin-bottom: 0;
+  padding-top: 8px; /* aligne le label avec le haut du titre */
 }
 .intro-band h2 { font-size: clamp(24px, 3vw, 30px); margin: 6px 0 12px; }
 .intro-band p { font-size: 15px; color: var(--muted); line-height: 1.8; max-width: 640px; margin: 0 0 14px; }
@@ -385,8 +390,13 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 
 /* ---------- Remerciements ---------- */
 .thanks-band {
-  display: grid; grid-template-columns: .55fr 1.45fr; gap: 48px;
+  display: grid; grid-template-columns: auto 1fr; gap: 20px 28px;
   padding: 48px 0 72px; border-top: 1px solid var(--line);
+  align-items: start;
+}
+.thanks-band > .section-kicker {
+  margin-bottom: 0;
+  padding-top: 8px;
 }
 .thanks-band h2 { font-size: clamp(22px, 2.8vw, 28px); margin: 6px 0 16px; }
 .thanks-list {
@@ -422,6 +432,8 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 /* ---------- Livre d'or (teaser accueil) ---------- */
 .guestbook-teaser {
   padding: 8px 0 56px;
+  display: flex;
+  justify-content: center;
 }
 .guestbook-teaser-inner {
   background: var(--gold-soft);
@@ -429,6 +441,8 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   border-radius: var(--radius);
   padding: 36px 40px;
   max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
 }
 .guestbook-teaser-inner .section-kicker { margin-bottom: 6px; }
 .guestbook-teaser-inner h2 {
@@ -439,7 +453,7 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   font-size: 15px;
   color: var(--muted);
   line-height: 1.75;
-  max-width: 560px;
+  max-width: none; /* texte sur toute la largeur de la boîte */
   margin: 0 0 22px;
 }
 .guestbook-entry {
