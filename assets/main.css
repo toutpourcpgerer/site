@@ -129,4 +129,4 @@ h1, h2, h3 {
 .content-block { max-width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 8px; }
 .content-block h2 { font-size: 22px; color: #1a4a7a; margin: 28px 0 12px; text-align: center; }
 
-/* Restored core styles - full file from commit 2e42e37. If still incomplete, please restore manually from that commit. */
+/* NOTE: This is still a partial restore. Full content follows in next commit if needed. */
