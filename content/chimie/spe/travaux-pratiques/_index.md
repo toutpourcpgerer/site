@@ -7,42 +7,100 @@ hide_auto_list: true
 ---
 
 <style>
-.tp-toc{display:flex;flex-direction:column;gap:8px;max-width:640px;margin:0 auto 28px;padding:8px 0 20px}
-.tp-toc a{color:#1a6a9a;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:2px}
-.tp-toc a:hover{color:#0d3a66}
-.tp-section-banner{background:#c5e4f3;border-radius:6px;padding:14px 20px;margin:36px auto 8px;max-width:960px;text-align:center}
-.tp-section-banner h2{margin:0;font-size:clamp(18px,2.4vw,22px);color:#1a4a7a;font-family:'Source Serif 4',Georgia,serif}
-.tp-row{display:grid;grid-template-columns:1fr auto;gap:16px 24px;align-items:center;max-width:960px;margin:0 auto;padding:18px 8px;border-bottom:1px solid var(--line);background:#fff8f0}
-.tp-row-main{min-width:0}
-.tp-row-main h3{font-size:16px;font-family:'Source Sans 3',system-ui,sans-serif;font-weight:600;color:#1a4a7a;margin:0 0 4px}
-.tp-note{margin:4px 0 0;font-size:13px;color:var(--muted);font-style:italic}
-.tp-note a{color:#1a6a9a;text-decoration:underline}
-.tp-dates{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--muted)}
-.tp-row-main details summary{cursor:pointer;list-style:none;font-size:15px;color:#1a4a7a;font-weight:600}
-.tp-row-main details summary::-webkit-details-marker{display:none}
-.tp-row-main details summary::after{content:" ▾";font-size:12px;color:var(--muted)}
-.tp-row-main details[open] summary::after{content:" ▴"}
-.tp-row-main details ul{margin:10px 0 0;padding-left:1.2rem;font-size:14px;color:var(--ink-soft);line-height:1.6}
-.tp-row-main details li{margin-bottom:2px}
-.tp-row-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;align-items:center;flex-shrink:0}
-.btn-sujet{display:inline-flex;align-items:center;justify-content:center;min-width:110px;padding:9px 16px;background:#fff;color:#2e7d32;font-size:13px;font-weight:700;border-radius:6px;border:1.5px solid #2e7d32;transition:background .15s,transform .15s;white-space:nowrap}
-.btn-sujet:hover{background:var(--green-soft);transform:translateY(-1px)}
-.btn-corrige{display:inline-flex;align-items:center;justify-content:center;min-width:110px;padding:9px 16px;background:#f0c14b;color:#1a1a1a;font-size:13px;font-weight:700;border-radius:6px;border:1px solid #d4a82e;transition:background .15s,transform .15s;white-space:nowrap}
-.btn-corrige:hover{background:#e6b53a;transform:translateY(-1px)}
-.tp-empty-note{max-width:960px;margin:16px auto 48px;padding:12px 8px;font-size:14px;color:var(--muted);font-style:italic;text-align:center}
-@media (max-width:700px){.tp-row{grid-template-columns:1fr;gap:12px}.tp-row-actions{justify-content:flex-start}.btn-sujet,.btn-corrige{flex:1 1 auto}}
+.tp-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px 24px;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--line);
+}
+.tp-row:first-of-type { border-top: 1px solid var(--line); }
+.tp-row-main { min-width: 0; }
+.tp-row-main h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.tp-row-main ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.tp-row-main li { margin-bottom: 2px; }
+.tp-note {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+.tp-note a { color: #1a6a9a; text-decoration: underline; }
+.tp-dates {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.tp-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.btn-sujet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 9px 16px;
+  background: #fff;
+  color: #2e7d32;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1.5px solid #2e7d32;
+  transition: background .15s, transform .15s;
+  white-space: nowrap;
+}
+.btn-sujet:hover {
+  background: var(--green-soft);
+  transform: translateY(-1px);
+}
+.btn-corrige {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 9px 16px;
+  background: #f0c14b;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #d4a82e;
+  transition: background .15s, transform .15s;
+  white-space: nowrap;
+}
+.btn-corrige:hover {
+  background: #e6b53a;
+  transform: translateY(-1px);
+}
+@media (max-width: 700px) {
+  .tp-row { grid-template-columns: 1fr; gap: 12px; }
+  .tp-row-actions { justify-content: flex-start; }
+  .btn-sujet, .btn-corrige { flex: 1 1 auto; }
+}
 </style>
 
-<nav class="tp-toc">
-  <a href="#ressources">Ressources pour les Travaux Pratiques</a>
-  <a href="#annee-2026-2027">Travaux Pratiques de l'année 2026-2027</a>
-  <a href="#annales-tp">Quelques Travaux Pratiques de l'année 2025-2026 / annales de TP</a>
-  <a href="#notion">Travaux Pratiques complets pour comprendre une notion</a>
-</nav>
-
-<div class="tp-section-banner" id="ressources">
-  <h2>Ressources pour les Travaux Pratiques</h2>
-</div>
+## Ressources pour les Travaux Pratiques
 
 <div class="tp-row">
   <div class="tp-row-main">
@@ -72,20 +130,16 @@ hide_auto_list: true
   </div>
 </div>
 
-<div class="tp-section-banner" id="annee-2026-2027">
-  <h2>Travaux Pratiques de l'année 2026-2027</h2>
-</div>
+## Travaux Pratiques de l'année 2026-2027
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP1 (TP 202 annale Mines-Ponts)</strong> : On voit rouge dès le début</summary>
-      <ul>
-        <li>Le rouge du ketchup</li>
-        <li>Fer et ortho-phénanthroline</li>
-        <li>Méthode de Job</li>
-      </ul>
-    </details>
+    <h3>TP1 (TP 202 annale Mines-Ponts) : On voit rouge dès le début</h3>
+    <ul>
+      <li>Le rouge du ketchup</li>
+      <li>Fer et ortho-phénanthroline</li>
+      <li>Méthode de Job</li>
+    </ul>
   </div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1LrSNaa4VXsJbkeS88SEmg6cnHGEiRvLN/view" target="_blank" rel="noopener">Sujet TP1</a>
@@ -95,12 +149,10 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP2</strong> : Une crème solaire en automne</summary>
-      <ul>
-        <li>Synthèse et purification de la DBA</li>
-      </ul>
-    </details>
+    <h3>TP2 : Une crème solaire en automne</h3>
+    <ul>
+      <li>Synthèse et purification de la DBA</li>
+    </ul>
   </div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1wXmOI2Yus0M3qirCrS-LnJRcQZ-v8WJA/view" target="_blank" rel="noopener">Sujet TP2</a>
@@ -110,12 +162,10 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP3</strong> : Tunnel de dosages</summary>
-      <ul>
-        <li>Analyse d'un complexe de cuivre Cu(NH<sub>3</sub>)<sub>4</sub>(SO<sub>4</sub>)·H<sub>2</sub>O</li>
-      </ul>
-    </details>
+    <h3>TP3 : Tunnel de dosages</h3>
+    <ul>
+      <li>Analyse d'un complexe de cuivre Cu(NH<sub>3</sub>)<sub>4</sub>(SO<sub>4</sub>)·H<sub>2</sub>O</li>
+    </ul>
   </div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1ojm0qRmHTmOO4keeO6srUIiBP84CHgkn/view" target="_blank" rel="noopener">Sujet TP3</a>
@@ -124,13 +174,11 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP4</strong> : Une lessive odeur menthe</summary>
-      <ul>
-        <li>Hydrodistillation des feuilles de menthe</li>
-        <li>Détermination de la concentration micellaire critique du SDS</li>
-      </ul>
-    </details>
+    <h3>TP4 : Une lessive odeur menthe</h3>
+    <ul>
+      <li>Hydrodistillation des feuilles de menthe</li>
+      <li>Détermination de la concentration micellaire critique du SDS</li>
+    </ul>
     <span class="tp-dates">7/11 – 14/11</span>
   </div>
   <div class="tp-row-actions">
@@ -140,13 +188,11 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP5</strong> : Constante d'acidité et de solubilité</summary>
-      <ul>
-        <li>Détermination du Ks de AgCl</li>
-        <li>Étude cinétique de la décoloration du BBT</li>
-      </ul>
-    </details>
+    <h3>TP5 : Constante d'acidité et de solubilité</h3>
+    <ul>
+      <li>Détermination du Ks de AgCl</li>
+      <li>Étude cinétique de la décoloration du BBT</li>
+    </ul>
     <span class="tp-dates">21/11 – 28/11</span>
   </div>
   <div class="tp-row-actions">
@@ -156,30 +202,24 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP6</strong> : Sujet type oral (4h, seul)</summary>
-      <ul>
-        <li>À venir</li>
-      </ul>
-    </details>
+    <h3>TP6 : Sujet type oral (4h, seul)</h3>
+    <ul>
+      <li>À venir</li>
+    </ul>
     <span class="tp-dates">5/12 – 12/12 – 19/12</span>
   </div>
   <div class="tp-row-actions"></div>
 </div>
 
-<div class="tp-section-banner" id="annales-tp">
-  <h2>Quelques Travaux Pratiques de l'année 2025-2026 / annales de TP</h2>
-</div>
+## Quelques Travaux Pratiques de l'année 2025-2026 / annales de TP
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP1 (TP112 annale CCINP)</strong> : La vie en violet</summary>
-      <ul>
-        <li>Dosage du permanganate de potassium</li>
-        <li>Suivi cinétique de la réaction entre l'acide oxalique et le permanganate de potassium</li>
-      </ul>
-    </details>
+    <h3>TP1 (TP112 annale CCINP) : La vie en violet</h3>
+    <ul>
+      <li>Dosage du permanganate de potassium</li>
+      <li>Suivi cinétique de la réaction entre l'acide oxalique et le permanganate de potassium</li>
+    </ul>
   </div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1nIwfwZiZXRjSdTfUCZexB_mtbRo3gJu9/view" target="_blank" rel="noopener">Sujet TP1</a>
@@ -189,14 +229,12 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP4 (TP204 annale Mines-Ponts)</strong> : Un complexe peu complexe</summary>
-      <ul>
-        <li>Titrage d'une solution d'ammoniaque par HCl (colorimétrie)</li>
-        <li>Détermination de la constante de formation et de la stœchiométrie du complexe argent-ammoniac (potentiométrie)</li>
-        <li>Vérification de la stœchiométrie via le dosage A/B de NH<sub>3</sub> (pH-métrie)</li>
-      </ul>
-    </details>
+    <h3>TP4 (TP204 annale Mines-Ponts) : Un complexe peu complexe</h3>
+    <ul>
+      <li>Titrage d'une solution d'ammoniaque par HCl (colorimétrie)</li>
+      <li>Détermination de la constante de formation et de la stœchiométrie du complexe argent-ammoniac (potentiométrie)</li>
+      <li>Vérification de la stœchiométrie via le dosage A/B de NH<sub>3</sub> (pH-métrie)</li>
+    </ul>
   </div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème TP204</a>
@@ -207,15 +245,13 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <details>
-      <summary><strong>TP8 (TP306 annale Centrale)</strong> : Une vie de desséchant</summary>
-      <ul>
-        <li>Détermination de la valeur en eau d'un calorimètre</li>
-        <li>Détermination du transfert thermique de la dissolution du chlorure de calcium</li>
-        <li>Titrage complexométrique des ions calcium (EDTA)</li>
-        <li>Titrage des ions chlorure à l'aide des ions argent (conductimétrie)</li>
-      </ul>
-    </details>
+    <h3>TP8 (TP306 annale Centrale) : Une vie de desséchant</h3>
+    <ul>
+      <li>Détermination de la valeur en eau d'un calorimètre</li>
+      <li>Détermination du transfert thermique de la dissolution du chlorure de calcium</li>
+      <li>Titrage complexométrique des ions calcium (EDTA)</li>
+      <li>Titrage des ions chlorure à l'aide des ions argent (conductimétrie)</li>
+    </ul>
   </div>
   <div class="tp-row-actions">
     <a class="btn-sujet" href="https://drive.google.com/file/d/1MYNdZaZWtnjEE__aIL8SDXauWjB-Juq8/view" target="_blank" rel="noopener">Sujet TP306</a>
@@ -223,8 +259,6 @@ hide_auto_list: true
   </div>
 </div>
 
-<div class="tp-section-banner" id="notion">
-  <h2>Travaux Pratiques complets pour comprendre une notion</h2>
-</div>
+## Travaux Pratiques complets pour comprendre une notion
 
-<p class="tp-empty-note">Section à compléter — tu pourras y ajouter des TP ciblés (un par notion) avec les mêmes boutons Sujet / Corrigé.</p>
+Section à compléter — tu pourras y ajouter des TP ciblés (un par notion) avec les mêmes boutons Sujet / Corrigé.
