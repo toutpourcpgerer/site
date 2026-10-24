@@ -4,6 +4,5 @@ description: "Sujets et corrections des annales de chimie du concours Centrale-S
 back_label: "Annales de chimie"
 ---
 
-<div class="info-band info-band-soft">
+### Evolution de l'épreuve
 Le concours a beaucoup évolué depuis la réforme de 2023 — voir <a href="https://toutpourcpgerer.blogspot.com/2026/07/CentraleChimiePC.html" target="_blank" rel="noopener">l’article Blogger associé</a>.
-</div>
