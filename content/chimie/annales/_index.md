@@ -21,10 +21,10 @@ La correction est complète : elle est notamment accompagnée de remarques (pour
 ## Annales pour PC
 
 <div class="btn-grid">
-  <a class="btn-gold" href="/chimie/annales/ccinp/">Annales CCINP — Chimie</a>
-  <a class="btn-gold" href="/chimie/annales/mines-pc/">Annales Mines PC — Chimie</a>
-  <a class="btn-gold" href="/chimie/annales/centrale/">Annales Centrale PC — Chimie</a>
-  <a class="btn-gold" href="/chimie/annales/x-ens/">Annales X-ENS-ESPCI — Chimie</a>
+  <a class="btn-gold" href="/chimie/annales/ccinp/">Annales CCINP</a>
+  <a class="btn-gold" href="/chimie/annales/mines-pc/">Annales Mines</a>
+  <a class="btn-gold" href="/chimie/annales/centrale/">Annales Centrale</a>
+  <a class="btn-gold" href="/chimie/annales/x-ens/">Annales X-ENS-ESPCI</a>
 </div>
 
 ## Annales pour MP & PSI
