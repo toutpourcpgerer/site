@@ -6,6 +6,33 @@ back_label: "Accueil"
 hide_auto_list: true
 ---
 
+<style>
+.tp-toc{display:flex;flex-direction:column;gap:8px;max-width:640px;margin:0 auto 28px;padding:8px 0 20px}
+.tp-toc a{color:#1a6a9a;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.tp-toc a:hover{color:#0d3a66}
+.tp-section-banner{background:#c5e4f3;border-radius:6px;padding:14px 20px;margin:36px auto 8px;max-width:960px;text-align:center}
+.tp-section-banner h2{margin:0;font-size:clamp(18px,2.4vw,22px);color:#1a4a7a;font-family:'Source Serif 4',Georgia,serif}
+.tp-row{display:grid;grid-template-columns:1fr auto;gap:16px 24px;align-items:center;max-width:960px;margin:0 auto;padding:18px 8px;border-bottom:1px solid var(--line);background:#fff8f0}
+.tp-row-main{min-width:0}
+.tp-row-main h3{font-size:16px;font-family:'Source Sans 3',system-ui,sans-serif;font-weight:600;color:#1a4a7a;margin:0 0 4px}
+.tp-note{margin:4px 0 0;font-size:13px;color:var(--muted);font-style:italic}
+.tp-note a{color:#1a6a9a;text-decoration:underline}
+.tp-dates{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--muted)}
+.tp-row-main details summary{cursor:pointer;list-style:none;font-size:15px;color:#1a4a7a;font-weight:600}
+.tp-row-main details summary::-webkit-details-marker{display:none}
+.tp-row-main details summary::after{content:" ▾";font-size:12px;color:var(--muted)}
+.tp-row-main details[open] summary::after{content:" ▴"}
+.tp-row-main details ul{margin:10px 0 0;padding-left:1.2rem;font-size:14px;color:var(--ink-soft);line-height:1.6}
+.tp-row-main details li{margin-bottom:2px}
+.tp-row-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;align-items:center;flex-shrink:0}
+.btn-sujet{display:inline-flex;align-items:center;justify-content:center;min-width:110px;padding:9px 16px;background:#fff;color:#2e7d32;font-size:13px;font-weight:700;border-radius:6px;border:1.5px solid #2e7d32;transition:background .15s,transform .15s;white-space:nowrap}
+.btn-sujet:hover{background:var(--green-soft);transform:translateY(-1px)}
+.btn-corrige{display:inline-flex;align-items:center;justify-content:center;min-width:110px;padding:9px 16px;background:#f0c14b;color:#1a1a1a;font-size:13px;font-weight:700;border-radius:6px;border:1px solid #d4a82e;transition:background .15s,transform .15s;white-space:nowrap}
+.btn-corrige:hover{background:#e6b53a;transform:translateY(-1px)}
+.tp-empty-note{max-width:960px;margin:16px auto 48px;padding:12px 8px;font-size:14px;color:var(--muted);font-style:italic;text-align:center}
+@media (max-width:700px){.tp-row{grid-template-columns:1fr;gap:12px}.tp-row-actions{justify-content:flex-start}.btn-sujet,.btn-corrige{flex:1 1 auto}}
+</style>
+
 <nav class="tp-toc">
   <a href="#ressources">Ressources pour les Travaux Pratiques</a>
   <a href="#annee-2026-2027">Travaux Pratiques de l'année 2026-2027</a>
@@ -137,9 +164,7 @@ hide_auto_list: true
     </details>
     <span class="tp-dates">5/12 – 12/12 – 19/12</span>
   </div>
-  <div class="tp-row-actions">
-    <!-- Boutons à ajouter quand le sujet / corrigé sera disponible -->
-  </div>
+  <div class="tp-row-actions"></div>
 </div>
 
 <div class="tp-section-banner" id="annales-tp">
