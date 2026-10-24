@@ -3,8 +3,11 @@ title: "Annales Mines MP/PSI — Chimie"
 description: "Sujets et corrigés de chimie du concours Mines-Ponts filière MP & PSI."
 ---
 
-<div class="info-band">
+### Format de l'épreuve
+1h30, une grosse vingtaine de questions proches du cours
 
-Sujets et corrigés de chimie.
+### 🔄 Les classiques
+Thermochimie, E-pH, cinétique
 
-</div>
+### 🥇 Réussir l'épreuve
+Etre solide sur la base de tous les chapitres. Pour cela, on peut bosser la 
