@@ -1,0 +1,68 @@
+{{/*
+  Layout spécifique Livre d'or :
+  - Titre + note (moyenne) côte à côte, centrés
+  - Grille de témoignages (iframe Apps Script)
+  - Formulaire en bas
+*/}}
+{{ define "main" }}
+
+<div class="page-top livre-dor-top">
+  {{ if .Params.back_to }}
+    <a class="back-link" href="{{ .Params.back_to | relURL }}">← {{ .Params.back_label | default "Accueil" }}</a>
+  {{ else }}
+    <a class="back-link" href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
+  {{ end }}
+
+  <div class="livre-dor-header">
+    <h1>{{ .Title }}</h1>
+    <div class="livre-dor-note">
+      <iframe
+        src="https://script.google.com/macros/s/AKfycbweFC87qVfhCNKYEb5taI6x9uufoS4jLTURWIs4bGgooMY6U3-csOxuyNgOLss0atgT-Q/exec?type=moyenne"
+        width="180"
+        height="110"
+        frameborder="0"
+        scrolling="no"
+        title="Note moyenne du livre d'or"
+        style="border: none; overflow: hidden; background: transparent;">
+      </iframe>
+    </div>
+  </div>
+
+  {{ with .Description }}
+    <p class="page-description">{{ . }}</p>
+  {{ end }}
+</div>
+
+<div class="page-intro content-block livre-dor-content">
+
+  <section class="livre-dor-avis" aria-label="Témoignages">
+    <iframe
+      src="https://script.google.com/macros/s/AKfycbweFC87qVfhCNKYEb5taI6x9uufoS4jLTURWIs4bGgooMY6U3-csOxuyNgOLss0atgT-Q/exec?type=avis"
+      width="100%"
+      height="720"
+      frameborder="0"
+      title="Avis du livre d'or"
+      style="border: none; width: 100%; min-height: 600px; background: transparent;">
+    </iframe>
+  </section>
+
+  <section class="livre-dor-form" aria-label="Laisser un message">
+    <h2>Laisser un message</h2>
+    <p class="form-hint">Votre message apparaîtra dans le livre d'or après validation.</p>
+    <div class="form-embed">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc4WoRVuJKcKUY0QSxztitUBVJiVlJEfGjuIt4lN-p4uge4OA/viewform?embedded=true"
+        width="100%"
+        height="720"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Formulaire Livre d'or">
+        Chargement…
+      </iframe>
+    </div>
+  </section>
+
+</div>
+
+{{ end }}
