@@ -28,7 +28,7 @@ hide_auto_list: true
   </div>
 </div>
 
-# Les \og à côté \fg{} qui tombent aux écrits
+# Les « à côté » qui tombent aux écrits
 
 <div class="fiche-row">
   <div class="fiche-row-text">
