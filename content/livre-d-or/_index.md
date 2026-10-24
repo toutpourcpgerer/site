@@ -4,17 +4,6 @@ description: "Retours d'élèves, de collègues et d'anciens de prépa sur Tout 
 hide_auto_list: true
 ---
 
-## Témoignages
-
-<iframe
-  src="https://script.google.com/macros/s/AKfycbweFC87qVfhCNKYEb5taI6x9uufoS4jLTURWIs4bGgooMY6U3-csOxuyNgOLss0atgT-Q/exec?type=avis"
-  width="100%"
-  height="720"
-  frameborder="0"
-  title="Avis du livre d'or"
-  style="border: none; width: 100%; min-height: 600px; background: transparent;">
-</iframe>
-
 ## Note moyenne
 
 <div style="text-align: center; margin: 24px 0;">
@@ -28,6 +17,17 @@ hide_auto_list: true
     style="border: none; overflow: hidden; background: transparent;">
   </iframe>
 </div>
+
+## Témoignages
+
+<iframe
+  src="https://script.google.com/macros/s/AKfycbweFC87qVfhCNKYEb5taI6x9uufoS4jLTURWIs4bGgooMY6U3-csOxuyNgOLss0atgT-Q/exec?type=avis"
+  width="100%"
+  height="720"
+  frameborder="0"
+  title="Avis du livre d'or"
+  style="border: none; width: 100%; min-height: 600px; background: transparent;">
+</iframe>
 
 ## Laisser un message
 
