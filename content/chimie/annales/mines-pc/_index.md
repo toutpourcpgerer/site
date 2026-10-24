@@ -3,8 +3,11 @@ title: "Annales Mines PC — Chimie"
 description: "Sujets et corrigés de chimie du concours Mines PC."
 ---
 
-<div class="info-band">
+### Format de l'épreuve
+Quatre heures, deux problèmes : un d'inorga et un d'orga.
 
-Sujets et corrigés de chimie pour le concours **Mines** (filières PC & MP/PSI).
+### 🔄 Les classiques
+L'épreuve est toujours assez exotique. La chimie organique est souvent de bonne qualité. La partie chimie inorganique, ça dépend.
 
-</div>
+### 🥇 Réussir l'épreuve
+Aller chercher des points partout où vous pouvez et se laisser guider par le sujet.
