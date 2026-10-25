@@ -15,7 +15,7 @@ description: "Des ressources sur les capacités numérique du programme de physi
     </ul>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-blue" href="/informatique-physico-chimique/Cours_Info_Complété.pdf">Cours</a>
+    <a class="btn-blue" href="/informatique-physico-chimique/Cours_Info_PhyChi_Complété.pdf">Cours</a>
   </div>
 </div>
 
