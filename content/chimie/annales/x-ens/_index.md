@@ -1,4 +1,5 @@
 ---
+group_by_title: true
 title: "Annales X-ENS-ESPCI PC — Chimie"
 description: "Sujets et corrigés de chimie du concours X-ENS-ESPCI PC."
 ---

@@ -4,6 +4,8 @@
   Front matter utile :
     back_to / back_label  → lien de retour forcé (ex. "/" et "Accueil")
     hide_auto_list: true  → n’affiche que le contenu du _index.md (pas de liste auto)
+    group_by_title: true  → regroupe les annales par préfixe de titre
+                            (Chimie A / Ulm / Lyon) — utile pour X-ENS
 
   Pages enfants (annales) — front matter :
     note: 5               → étoiles (0 à 5)
@@ -54,44 +56,109 @@
     {{ end }}
 
     {{ if $hasAnnale }}
-      <div class="annale-list">
+
+      {{ if .Params.group_by_title }}
+        {{/* Option A : regroupement par préfixe de titre (X-ENS) */}}
+        {{ $chia := slice }}
+        {{ $ulm := slice }}
+        {{ $lyon := slice }}
+        {{ $autres := slice }}
         {{ range $pages }}
-          {{ $page := . }}
-
-          {{/* note → nombre d’étoiles pleines (0–5) */}}
-          {{ $stars := 0 }}
-          {{ with $page.Params.note }}
-            {{ $raw := replace (replace (printf "%v" .) "/5" "") " " "" }}
-            {{ $n := int $raw }}
-            {{ if and (ge $n 0) (le $n 5) }}{{ $stars = $n }}{{ end }}
+          {{ if in .Title "Chimie A" }}
+            {{ $chia = $chia | append . }}
+          {{ else if in .Title "Ulm" }}
+            {{ $ulm = $ulm | append . }}
+          {{ else if in .Title "Lyon" }}
+            {{ $lyon = $lyon | append . }}
+          {{ else }}
+            {{ $autres = $autres | append . }}
           {{ end }}
-
-          {{ $hasCorrige := and $page.Params.correction (ne $page.Params.correction "") }}
-
-          <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
-            <div class="annale-main">
-              <span class="annale-title-link">
-                {{ $page.Title }}
-                <span class="annale-open-hint">← Voir l’annale</span>
-              </span>
-            </div>
-            <div class="annale-meta">
-              {{ if or (gt $stars 0) $page.Params.note }}
-                <span class="annale-stars" aria-label="Note {{ $stars }} sur 5">
-                  {{ range seq 1 5 }}
-                    <span class="star {{ if le . $stars }}star-full{{ else }}star-empty{{ end }}" aria-hidden="true">{{ if le . $stars }}★{{ else }}☆{{ end }}</span>
-                  {{ end }}
-                </span>
-              {{ end }}
-              {{ if $hasCorrige }}
-                <span class="badge badge-corrige">✓ Corrigé</span>
-              {{ else }}
-                <span class="badge badge-sujet-seul">Sujet seul</span>
-              {{ end }}
-            </div>
-          </a>
         {{ end }}
-      </div>
+
+        {{ $groups := slice
+          (dict "title" "Chimie A" "pages" $chia)
+          (dict "title" "Ulm / Chimie B" "pages" $ulm)
+          (dict "title" "Lyon-Saclay" "pages" $lyon)
+          (dict "title" "Autres" "pages" $autres)
+        }}
+
+        {{ range $groups }}
+          {{ if .pages }}
+            <h2 class="annale-group-title">{{ .title }}</h2>
+            <div class="annale-list">
+              {{ range .pages }}
+                {{ $page := . }}
+                {{ $stars := 0 }}
+                {{ with $page.Params.note }}
+                  {{ $raw := replace (replace (printf "%v" .) "/5" "") " " "" }}
+                  {{ $n := int $raw }}
+                  {{ if and (ge $n 0) (le $n 5) }}{{ $stars = $n }}{{ end }}
+                {{ end }}
+                {{ $hasCorrige := and $page.Params.correction (ne $page.Params.correction "") }}
+                <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
+                  <div class="annale-main">
+                    <span class="annale-title-link">
+                      {{ $page.Title }}
+                      <span class="annale-open-hint">← Voir l’annale</span>
+                    </span>
+                  </div>
+                  <div class="annale-meta">
+                    {{ if or (gt $stars 0) $page.Params.note }}
+                      <span class="annale-stars" aria-label="Note {{ $stars }} sur 5">
+                        {{ range seq 1 5 }}
+                          <span class="star {{ if le . $stars }}star-full{{ else }}star-empty{{ end }}" aria-hidden="true">{{ if le . $stars }}★{{ else }}☆{{ end }}</span>
+                        {{ end }}
+                      </span>
+                    {{ end }}
+                    {{ if $hasCorrige }}
+                      <span class="badge badge-corrige">✓ Corrigé</span>
+                    {{ else }}
+                      <span class="badge badge-sujet-seul">Sujet seul</span>
+                    {{ end }}
+                  </div>
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+
+      {{ else }}
+        {{/* Liste plate (comportement habituel) */}}
+        <div class="annale-list">
+          {{ range $pages }}
+            {{ $page := . }}
+            {{ $stars := 0 }}
+            {{ with $page.Params.note }}
+              {{ $raw := replace (replace (printf "%v" .) "/5" "") " " "" }}
+              {{ $n := int $raw }}
+              {{ if and (ge $n 0) (le $n 5) }}{{ $stars = $n }}{{ end }}
+            {{ end }}
+            {{ $hasCorrige := and $page.Params.correction (ne $page.Params.correction "") }}
+            <a class="annale-row{{ if $hasCorrige }} has-corrige{{ end }}" href="{{ $page.RelPermalink }}">
+              <div class="annale-main">
+                <span class="annale-title-link">
+                  {{ $page.Title }}
+                  <span class="annale-open-hint">← Voir l’annale</span>
+                </span>
+              </div>
+              <div class="annale-meta">
+                {{ if or (gt $stars 0) $page.Params.note }}
+                  <span class="annale-stars" aria-label="Note {{ $stars }} sur 5">
+                    {{ range seq 1 5 }}
+                      <span class="star {{ if le . $stars }}star-full{{ else }}star-empty{{ end }}" aria-hidden="true">{{ if le . $stars }}★{{ else }}☆{{ end }}</span>
+                    {{ end }}
+                  </span>
+                {{ end }}
+                {{ if $hasCorrige }}
+                  <span class="badge badge-corrige">✓ Corrigé</span>
+                {{ else }}
+                  <span class="badge badge-sujet-seul">Sujet seul</span>
+                {{ end }}
+              </div>
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
 
     {{ else }}
       {{/* Liste générique de ressources (hors annales) */}}
