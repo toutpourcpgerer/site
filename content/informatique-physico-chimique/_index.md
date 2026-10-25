@@ -7,7 +7,7 @@ description: "Des ressources sur les capacités numérique du programme de physi
 
 <div class="fiche-row">
   <div class="fiche-row-text">
-    <h2>Cours complet (avec extraits des sujets de concours)</h2>
+    <h3>Cours complet (avec extraits des sujets de concours)</h3>
     <ul>
       <li>Chapitre 1 : Dichotomie, méthode de Newton</li>
       <li>Chapitre 2 : Résolution d'équations différentielles via la méthode d'Euler</li>
@@ -23,7 +23,7 @@ description: "Des ressources sur les capacités numérique du programme de physi
 
 <div class="fiche-row">
   <div class="fiche-row-text">
-    <h2>TD d'extraits de concours</h2>
+    <h3>TD d'extraits de concours</h3>
     <p>Incluant les méthodes de calcul d'intégrale, hors-programme, mais beaucoup posées.</p>
   </div>
   <div class="fiche-row-actions">
