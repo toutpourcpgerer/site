@@ -6,121 +6,6 @@ back_label: "Accueil"
 hide_auto_list: true
 ---
 
-<style>
-.tp-row {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 10px 12px;
-  align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 18px 4px;
-  border-bottom: 1px solid var(--line);
-}
-.tp-row:first-of-type { border-top: 1px solid var(--line); }
-
-.tp-row-main {
-  grid-column: 1 / 7;
-  min-width: 0;
-}
-.tp-row-main h3 {
-  font-size: 18px;
-  margin: 0 0 6px;
-  color: var(--ink);
-}
-.tp-row-main ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.65;
-}
-.tp-row-main li { margin-bottom: 2px; }
-.tp-note {
-  margin: 6px 0 0;
-  font-size: 14px;
-  color: var(--muted);
-  font-style: italic;
-}
-.tp-note a { color: #1a6a9a; text-decoration: underline; }
-
-.tp-dates {
-  grid-column: 7 / 9;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-  text-align: center;
-  white-space: nowrap;
-}
-
-.tp-btn-sujet {
-  grid-column: 9 / 11;
-  display: flex;
-  justify-content: stretch;
-}
-.tp-btn-corrige {
-  grid-column: 11 / 13;
-  display: flex;
-  justify-content: stretch;
-}
-/* Ligne ressources : un seul bouton or qui occupe 9-12 */
-.tp-btn-wide {
-  grid-column: 9 / 13;
-  display: flex;
-  justify-content: stretch;
-}
-
-.btn-sujet,
-.btn-corrige,
-.tp-row .btn-gold {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 9px 10px;
-  font-size: 13px;
-  font-weight: 700;
-  border-radius: 6px;
-  transition: background .15s, transform .15s;
-  white-space: nowrap;
-  box-sizing: border-box;
-  text-align: center;
-}
-.btn-sujet {
-  background: #fff;
-  color: #2e7d32;
-  border: 1.5px solid #2e7d32;
-}
-.btn-sujet:hover {
-  background: var(--green-soft);
-  transform: translateY(-1px);
-}
-.btn-corrige {
-  background: #f0c14b;
-  color: #1a1a1a;
-  border: 1px solid #d4a82e;
-}
-.btn-corrige:hover {
-  background: #e6b53a;
-  transform: translateY(-1px);
-}
-.tp-row .btn-gold {
-  min-width: 0;
-}
-
-@media (max-width: 700px) {
-  .tp-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 10px;
-  }
-  .tp-row-main { grid-column: 1 / -1; }
-  .tp-dates { grid-column: 1 / -1; text-align: left; }
-  .tp-btn-sujet { grid-column: 1 / 2; }
-  .tp-btn-corrige { grid-column: 2 / 3; }
-  .tp-btn-wide { grid-column: 1 / -1; }
-}
-</style>
-
 ## Ressources pour les Travaux Pratiques
 
 <div class="tp-row">
@@ -129,7 +14,7 @@ hide_auto_list: true
     <p class="tp-note">Remarque : les incertitudes sont traitées dans le cours d'<a href="/informatique-physico-chimique/">informatique physico-chimique</a>.</p>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-wide">
+  <div class="tp-col-wide">
     <a class="btn-gold" href="https://drive.google.com/file/d/1o2CuipBbU-kV_qhlznAaWuleXbbHEFna/view" target="_blank" rel="noopener">Cours des TP</a>
   </div>
 </div>
@@ -139,7 +24,7 @@ hide_auto_list: true
     <h3>Fiche des Travaux Pratiques de chimie aux concours de CPGE (filière PC)</h3>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-wide">
+  <div class="tp-col-wide">
     <a class="btn-gold" href="https://drive.google.com/file/d/1M8Jmdi0DS40Bb-8bTvXg8gHuiLGP2-Li/view" target="_blank" rel="noopener">Fiche « TP aux oraux »</a>
   </div>
 </div>
@@ -149,8 +34,8 @@ hide_auto_list: true
     <h3>Les TP de chimie aux <em>écrits</em> de CPGE (filière PC majoritairement)</h3>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1tJw25SOsg84gL_jo61ja0Jxr-yaXGsEB/view" target="_blank" rel="noopener">Sujet</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="https://drive.google.com/file/d/1tJw25SOsg84gL_jo61ja0Jxr-yaXGsEB/view" target="_blank" rel="noopener">Sujet</a>
   </div>
 </div>
 
@@ -166,11 +51,11 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1.pdf">Sujet TP1</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1.pdf">Sujet TP1</a>
   </div>
-  <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1_Corr.pdf" target="_blank" rel="noopener">Correction TP1</a>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1_Corr.pdf" target="_blank" rel="noopener">Correction TP1</a>
   </div>
 </div>
 
@@ -182,11 +67,11 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2.pdf">Sujet TP2</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2.pdf">Sujet TP2</a>
   </div>
-  <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf">Correction TP2</a>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf">Correction TP2</a>
   </div>
 </div>
 
@@ -198,8 +83,8 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf">Sujet TP3</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf">Sujet TP3</a>
   </div>
 </div>
 
@@ -212,8 +97,8 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates">7/11 – 14/11</div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
   </div>
 </div>
 
@@ -226,8 +111,8 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates">21/11 – 28/11</div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf">Sujet TP5</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf">Sujet TP5</a>
   </div>
 </div>
 
@@ -252,11 +137,11 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1nIwfwZiZXRjSdTfUCZexB_mtbRo3gJu9/view" target="_blank" rel="noopener">Sujet TP1</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="https://drive.google.com/file/d/1nIwfwZiZXRjSdTfUCZexB_mtbRo3gJu9/view" target="_blank" rel="noopener">Sujet TP1</a>
   </div>
-  <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="https://drive.google.com/file/d/1UqlzZTqJbOkMsnK28LNN0xusp1O1zuuh/view" target="_blank" rel="noopener">Correction TP1</a>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="https://drive.google.com/file/d/1UqlzZTqJbOkMsnK28LNN0xusp1O1zuuh/view" target="_blank" rel="noopener">Correction TP1</a>
   </div>
 </div>
 
@@ -270,13 +155,13 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates">
-    <a class="btn-sujet" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème</a>
+    <a class="btn-vert" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème</a>
   </div>
-  <div class="tp-btn-sujet" style="display:flex;flex-direction:column;gap:6px;">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/12fizNCPUvop5W-dOCrxzPjzc3_tTjD_4/view" target="_blank" rel="noopener">Sujet TP204</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="https://drive.google.com/file/d/12fizNCPUvop5W-dOCrxzPjzc3_tTjD_4/view" target="_blank" rel="noopener">Sujet TP204</a>
   </div>
-  <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="https://drive.google.com/file/d/1CULpnXXqaZQaa8zTSDOYXtp6j1bLLdF3/view" target="_blank" rel="noopener">Correction TP204</a>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="https://drive.google.com/file/d/1CULpnXXqaZQaa8zTSDOYXtp6j1bLLdF3/view" target="_blank" rel="noopener">Correction TP204</a>
   </div>
 </div>
 
@@ -291,11 +176,11 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates"></div>
-  <div class="tp-btn-sujet">
-    <a class="btn-sujet" href="https://drive.google.com/file/d/1MYNdZaZWtnjEE__aIL8SDXauWjB-Juq8/view" target="_blank" rel="noopener">Sujet TP306</a>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="https://drive.google.com/file/d/1MYNdZaZWtnjEE__aIL8SDXauWjB-Juq8/view" target="_blank" rel="noopener">Sujet TP306</a>
   </div>
-  <div class="tp-btn-corrige">
-    <a class="btn-corrige" href="https://drive.google.com/file/d/1xIous0kbJMBmzQ5ifjVHSuDS0zoY48d9/view" target="_blank" rel="noopener">Correction TP306</a>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="https://drive.google.com/file/d/1xIous0kbJMBmzQ5ifjVHSuDS0zoY48d9/view" target="_blank" rel="noopener">Correction TP306</a>
   </div>
 </div>
 
