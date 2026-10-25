@@ -1,6 +1,6 @@
 ---
 title: "Ulm PC 2025"
-note: 4
+note: 2
 sujet: "Ulm_2025.pdf"
 correction: ""
 ---
