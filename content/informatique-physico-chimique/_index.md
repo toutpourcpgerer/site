@@ -1,6 +1,6 @@
 ---
 title: "Informatique physico-chimique"
-description: "Des ressources sur la programmation et ses applications à la physique et à la chimie."
+description: "Des ressources sur les capacités numérique du programme de physique et de chimie."
+hide_auto_list = true
 ---
 
-Retrouve dans cette rubrique les cours, explications et supports autour de l'informatique physico-chimique. Les ressources seront organisées en pages individuelles pour faciliter la lecture et la recherche.
