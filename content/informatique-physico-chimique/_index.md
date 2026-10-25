@@ -28,6 +28,9 @@ hide_auto_list: true
     <p>Incluant les méthodes de calcul d'intégrale, hors-programme, mais beaucoup posées.</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-blue" href="/informatique-physico-chimique/Cours_Info_Complété.pdf">Cours</a>
+    <a class="btn-vert" href="/informatique-physico-chimique/TD_Info_PhyChi.pdf">Sujet</a>
+    <a class="btn-gold" href="/informatique-physico-chimique/TD_Info_PhyChi_Corr.pdf">Corrigé</a>
   </div>
 </div>
+
+## Annales de CCINP Modélisation
