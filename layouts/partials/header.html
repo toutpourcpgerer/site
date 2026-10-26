@@ -77,20 +77,18 @@
 
       {{/* ── Informatique (intitulé sans lien) ── */}}
       <details class="sidebar-fold">
-        <summary>Informatique physico-chimique</summary>
-        <a href="{{ "informatique-physico-chimique/" | relURL }}"{{ if in .RelPermalink "informatique-physico-chimique" }} class="is-active"{{ end }}>Capacités numériques</a>
+        <summary>
+        <a href="{{ "informatique-physico-chimique/" | relURL }}">Capacités numériques</a>
+        </summary>
       </details>
 
       {{/* ── Agrégation : intitulé AVEC lien + enfants ── */}}
-      <div class="sidebar-fold sidebar-fold--linked">
-        <div class="sidebar-fold-head">
+      <details class="sidebar-fold">
+        <summary>
           <a href="{{ "agreg/" | relURL }}"{{ if and (in .RelPermalink "agreg") (not (in .RelPermalink "agreg/annales")) }} class="is-active"{{ end }}>Agrégation chimie</a>
-          <button type="button" class="sidebar-fold-toggle" aria-expanded="false" aria-label="Déplier la rubrique">▸</button>
-        </div>
-        <div class="sidebar-fold-body" hidden>
-          <a href="{{ "agreg/annales-chimie/" | relURL }}"{{ if in .RelPermalink "agreg/annales-chimie" }} class="is-active"{{ end }}>Annales</a>
-        </div>
-      </div>
+        </summary>
+        <a href="{{ "agreg/annales-chimie/" | relURL }}"{{ if in .RelPermalink "agreg/annales-chimie" }} class="is-active"{{ end }}>Annales</a>
+      </details>
 
       {{/*
       <details class="sidebar-fold">
