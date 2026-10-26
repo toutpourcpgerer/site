@@ -1,6 +1,30 @@
 {{/*
-  En-tête + sommaire latéral.
-  Pour modifier le menu : édite les liens dans <nav class="sidebar-nav">.
+  En-tête + sommaire latéral (menu déroulant).
+
+  COMMENT MODIFIER LE MENU
+  ────────────────────────
+  Deux motifs pour chaque rubrique :
+
+  1) Intitulé SANS lien (ouvre/ferme seulement) :
+     <details class="sidebar-fold">
+       <summary>Chimie</summary>
+       <a href="…">Fiches</a>
+       …
+     </details>
+
+  2) Intitulé AVEC lien + enfants déroulants :
+     <div class="sidebar-fold sidebar-fold--linked">
+       <div class="sidebar-fold-head">
+         <a href="{{ "agreg/" | relURL }}">Agrégation chimie</a>
+         <button type="button" class="sidebar-fold-toggle" aria-expanded="false" aria-label="Déplier">▸</button>
+       </div>
+       <div class="sidebar-fold-body" hidden>
+         <a href="…">Annales</a>
+       </div>
+     </div>
+
+  Sous-niveau (ex. Spé sous Chimie) : imbriquer un <details class="sidebar-fold">
+  à l’intérieur d’un autre. L’intitulé du sous-niveau peut être sans lien.
 */}}
 
 <button type="button" class="sidebar-toggle" id="sidebar-toggle"
@@ -30,50 +54,67 @@
     </div>
 
     <nav class="sidebar-nav">
-      
-      <div class="sidebar-group">
-        <span class="sidebar-label">Chimie</span>
-        <a href="{{ "chimie/spe/travaux-pratiques/" | relURL }}">Spé — Travaux Pratiques</a>
-        <a href="{{ "chimie/fiches/" | relURL }}">Fiches</a>
-        <a href="{{ "chimie/annales/" | relURL }}">Annales</a>
-<---
+
+      <a href="{{ .Site.Home.RelPermalink }}"{{ if .IsHome }} class="is-active"{{ end }}>Accueil</a>
+
+      {{/* ── Chimie (intitulé sans lien) ── */}}
+      <details class="sidebar-fold" open>
+        <summary>Chimie</summary>
+
+        {{/* Sous-niveau Spé : intitulé sans lien, seul TP a un lien */}}
+        <details class="sidebar-fold">
+          <summary>Spé</summary>
+          <a href="{{ "chimie/spe/travaux-pratiques/" | relURL }}"{{ if in .RelPermalink "chimie/spe/travaux-pratiques" }} class="is-active"{{ end }}>Travaux pratiques</a>
+        </details>
+
+        <a href="{{ "chimie/fiches/" | relURL }}"{{ if in .RelPermalink "chimie/fiches" }} class="is-active"{{ end }}>Fiches</a>
+        <a href="{{ "chimie/annales/" | relURL }}"{{ if in .RelPermalink "chimie/annales" }} class="is-active"{{ end }}>Annales</a>
+        {{/*
         <a href="{{ "chimie/sujets_chapitres/" | relURL }}">Sujets par chapitres</a>
         <a href="{{ "chimie/revisions-2027/" | relURL }}">Révisions 2027</a>
--->
+        */}}
+      </details>
+
+      {{/* ── Informatique (intitulé sans lien) ── */}}
+      <details class="sidebar-fold">
+        <summary>Informatique physico-chimique</summary>
+        <a href="{{ "informatique-physico-chimique/" | relURL }}"{{ if in .RelPermalink "informatique-physico-chimique" }} class="is-active"{{ end }}>Capacités numériques</a>
+      </details>
+
+      {{/* ── Agrégation : intitulé AVEC lien + enfants ── */}}
+      <div class="sidebar-fold sidebar-fold--linked">
+        <div class="sidebar-fold-head">
+          <a href="{{ "agreg/" | relURL }}"{{ if and (in .RelPermalink "agreg") (not (in .RelPermalink "agreg/annales")) }} class="is-active"{{ end }}>Agrégation chimie</a>
+          <button type="button" class="sidebar-fold-toggle" aria-expanded="false" aria-label="Déplier la rubrique">▸</button>
+        </div>
+        <div class="sidebar-fold-body" hidden>
+          <a href="{{ "agreg/annales-chimie/" | relURL }}"{{ if in .RelPermalink "agreg/annales-chimie" }} class="is-active"{{ end }}>Annales</a>
+        </div>
       </div>
 
-      <div class="sidebar-group">
-         <span class="sidebar-label">Informatique Physico-Chimique</span>
-        <a href="{{ "informatique-physico-chimique/" | relURL }}">Capacités numériques</a>
-      </div>
-      
-      <div class="sidebar-group">
-        <a href="{{ "agreg/" | relURL }}">Agrégation chimie</a>
-        <a href="{{ "agreg/annales-chimie/" | relURL }}">Annales</a>
-      </div>
-
-{{/*
-      <div class="sidebar-group">
-        <span class="sidebar-label">Lycée</span>
+      {{/*
+      <details class="sidebar-fold">
+        <summary>Lycée</summary>
         <a href="{{ "lycee/seconde/" | relURL }}">Seconde</a>
         <a href="{{ "lycee/seconde/" | relURL }}">1ère Ens Scient</a>
-      </div>
-*/}}
+      </details>
+      */}}
 
-      <div class="sidebar-group">
-        <span class="sidebar-label">Le site</span>
+      <details class="sidebar-fold">
+        <summary>Le site</summary>
         <a href="{{ "livre-d-or/" | relURL }}"{{ if eq .Section "livre-d-or" }} class="is-active"{{ end }}>Livre d'or</a>
-      </div>
+      </details>
 
-      <div class="sidebar-group">
-        <span class="sidebar-label">Liens externes</span>
+      <details class="sidebar-fold">
+        <summary>Liens externes</summary>
         {{ with .Site.Params.bloggerURL }}
           <a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>
         {{ end }}
         {{ with .Site.Params.instagramURL }}
           <a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>
         {{ end }}
-      </div>
+      </details>
+
     </nav>
   </div>
 </aside>

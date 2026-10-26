@@ -35,7 +35,7 @@
 
   {{ partial "footer.html" . }}
 
-  {{/* Ouvre / ferme le menu latéral (sommaire) */}}
+  {{/* Ouvre / ferme le menu latéral (sommaire) + plis liés */}}
   <script>
     (function () {
       var toggle = document.getElementById('sidebar-toggle');
@@ -66,6 +66,18 @@
       if (overlay) overlay.addEventListener('click', closeSidebar);
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && !sidebar.hidden) closeSidebar();
+      });
+
+      /* Plis dont l’intitulé est un lien (bouton ▸ à part) */
+      document.querySelectorAll('.sidebar-fold-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var body = btn.closest('.sidebar-fold--linked').querySelector('.sidebar-fold-body');
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          if (body) body.hidden = open;
+        });
       });
     })();
   </script>
