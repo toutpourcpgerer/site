@@ -3,19 +3,16 @@
 
   COMMENT MODIFIER LE MENU
   ────────────────────────
-  Deux motifs pour chaque rubrique :
-
-  1) Intitulé SANS lien (ouvre/ferme seulement) :
+  1) Section SANS lien (ouvre/ferme seulement) :
      <details class="sidebar-fold">
        <summary>Chimie</summary>
        <a href="…">Fiches</a>
-       …
      </details>
 
-  2) Intitulé AVEC lien + enfants déroulants :
+  2) Section AVEC lien + enfants :
      <div class="sidebar-fold sidebar-fold--linked">
        <div class="sidebar-fold-head">
-         <a href="{{ "agreg/" | relURL }}">Agrégation chimie</a>
+         <a href="…">Agrégation chimie</a>
          <button type="button" class="sidebar-fold-toggle" aria-expanded="false" aria-label="Déplier">▸</button>
        </div>
        <div class="sidebar-fold-body" hidden>
@@ -23,8 +20,10 @@
        </div>
      </div>
 
-  Sous-niveau (ex. Spé sous Chimie) : imbriquer un <details class="sidebar-fold">
-  à l’intérieur d’un autre. L’intitulé du sous-niveau peut être sans lien.
+  3) Page simple (lien seul, pas de section) :
+     <a href="…">Capacités numériques</a>
+
+  Sous-niveau : imbriquer un <details class="sidebar-fold"> dans un autre.
 */}}
 
 <button type="button" class="sidebar-toggle" id="sidebar-toggle"
@@ -57,11 +56,10 @@
 
       <a href="{{ .Site.Home.RelPermalink }}"{{ if .IsHome }} class="is-active"{{ end }}>Accueil</a>
 
-      {{/* ── Chimie (intitulé sans lien) ── */}}
+      {{/* ── Chimie (section sans lien) ── */}}
       <details class="sidebar-fold" open>
         <summary>Chimie</summary>
 
-        {{/* Sous-niveau Spé : intitulé sans lien, seul TP a un lien */}}
         <details class="sidebar-fold">
           <summary>Spé</summary>
           <a href="{{ "chimie/spe/travaux-pratiques/" | relURL }}"{{ if in .RelPermalink "chimie/spe/travaux-pratiques" }} class="is-active"{{ end }}>Travaux pratiques</a>
@@ -75,24 +73,24 @@
         */}}
       </details>
 
-      {{/* ── Informatique (intitulé sans lien) ── */}}
-      <details class="sidebar-fold">
-        <a href="{{ "informatique-physico-chimique/" | relURL }}">Capacités numériques</a>
-      </details>
+      {{/* ── Page simple (pas une section) ── */}}
+      <a href="{{ "informatique-physico-chimique/" | relURL }}"{{ if in .RelPermalink "informatique-physico-chimique" }} class="is-active"{{ end }}>Capacités numériques</a>
 
-      {{/* ── Agrégation : intitulé AVEC lien + enfants ── */}}
-      <details class="sidebar-fold">
-        <summary>
+      {{/* ── Agrégation : section AVEC lien + enfants ── */}}
+      <div class="sidebar-fold sidebar-fold--linked">
+        <div class="sidebar-fold-head">
           <a href="{{ "agreg/" | relURL }}"{{ if and (in .RelPermalink "agreg") (not (in .RelPermalink "agreg/annales")) }} class="is-active"{{ end }}>Agrégation chimie</a>
-        </summary>
-        <a href="{{ "agreg/annales-chimie/" | relURL }}"{{ if in .RelPermalink "agreg/annales-chimie" }} class="is-active"{{ end }}>Annales</a>
-      </details>
+          <button type="button" class="sidebar-fold-toggle" aria-expanded="false" aria-label="Déplier la rubrique">▸</button>
+        </div>
+        <div class="sidebar-fold-body" hidden>
+          <a href="{{ "agreg/annales-chimie/" | relURL }}"{{ if in .RelPermalink "agreg/annales-chimie" }} class="is-active"{{ end }}>Annales</a>
+        </div>
+      </div>
 
       {{/*
       <details class="sidebar-fold">
         <summary>Lycée</summary>
         <a href="{{ "lycee/seconde/" | relURL }}">Seconde</a>
-        <a href="{{ "lycee/seconde/" | relURL }}">1ère Ens Scient</a>
       </details>
       */}}
 
