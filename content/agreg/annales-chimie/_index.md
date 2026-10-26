@@ -16,3 +16,6 @@ description: "Sujets et corrigés des épreuves de l'agrégation externe de phys
 - Format : 6h, 80 questions, il y a deux types de sujet :
   - Soit une notion très exotique : la difficulté vient de comprendre ce qui se passe; cependant les questions sont "relativement" simples.
   - Soit basé sur le programme de L3 mais en très dur.
+ 
+### Evolution du concours
+Les épreuves du concours tendent à être de plus en plus simples (notamment les épreuves A). C'est pour cela qu'aucune annale avant 2023 n'est présentée car elles ne reflètent pas le niveau attendu.
