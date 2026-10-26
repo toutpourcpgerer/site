@@ -519,35 +519,49 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   .annale-open-hint { display: none; }
 }
 
-/* --- Menu déroulant (sommaire) --- */
-.sidebar-fold { margin-top: 4px; }
+/* --- Menu déroulant (sommaire) — style type Google Sites --- */
+/* Sections (summary) et pages (a) : même police / taille ; sections grises, pages blanches */
+.sidebar-fold { margin-top: 2px; }
 .sidebar-fold > summary {
   list-style: none;
   display: flex; align-items: center; justify-content: space-between;
   padding: 10px 12px; border-radius: 8px;
-  font-size: 13px; font-weight: 700; letter-spacing: .4px;
-  text-transform: uppercase; color: var(--sidebar-muted);
+  font-size: 14px; font-weight: 400; letter-spacing: 0;
+  text-transform: none; color: var(--sidebar-muted);
   cursor: pointer; user-select: none;
   transition: background .15s, color .15s;
 }
 .sidebar-fold > summary::-webkit-details-marker { display: none; }
 .sidebar-fold > summary::after {
-  content: "▸"; font-size: 11px; color: var(--sidebar-muted);
+  content: "▸";
+  font-size: 11px; color: var(--sidebar-muted);
   transition: transform .2s;
 }
 .sidebar-fold[open] > summary::after { transform: rotate(90deg); }
 .sidebar-fold > summary:hover {
-  background: rgba(255, 255, 255, .06); color: var(--sidebar-text);
+  background: rgba(255, 255, 255, .06);
+  color: #c5ced4;
 }
+/* Indentation des enfants */
 .sidebar-fold > a,
-.sidebar-fold > .sidebar-fold { margin-left: 8px; }
-.sidebar-fold .sidebar-fold > summary {
-  font-size: 12px; padding: 8px 12px;
-  text-transform: none; letter-spacing: 0; font-weight: 600;
+.sidebar-fold > .sidebar-fold,
+.sidebar-fold-body > a {
+  margin-left: 12px;
 }
-.sidebar-fold--linked { margin-top: 4px; }
-.sidebar-fold-head { display: flex; align-items: center; gap: 2px; }
-.sidebar-fold-head > a { flex: 1; min-width: 0; }
+/* Sous-niveaux : même style que le niveau 1 */
+.sidebar-fold .sidebar-fold > summary {
+  font-size: 14px; font-weight: 400; padding: 10px 12px;
+  text-transform: none; letter-spacing: 0; color: var(--sidebar-muted);
+}
+/* Fold dont l’intitulé est un lien (blanc, comme les pages) */
+.sidebar-fold--linked { margin-top: 2px; }
+.sidebar-fold-head {
+  display: flex; align-items: center; gap: 2px;
+}
+.sidebar-fold-head > a {
+  flex: 1; min-width: 0;
+  font-size: 14px; font-weight: 400; color: var(--sidebar-text);
+}
 .sidebar-fold-toggle {
   flex-shrink: 0; width: 36px; height: 36px;
   display: grid; place-items: center;
@@ -559,5 +573,5 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   background: rgba(255, 255, 255, .08); color: var(--sidebar-text);
 }
 .sidebar-fold-toggle[aria-expanded="true"] { transform: rotate(90deg); }
-.sidebar-fold-body { margin-left: 8px; }
+.sidebar-fold-body { margin-left: 0; }
 .sidebar-fold-body[hidden] { display: none; }
