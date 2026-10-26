@@ -5,7 +5,8 @@
     back_to / back_label  → lien de retour forcé (ex. "/" et "Accueil")
     hide_auto_list: true  → n’affiche que le contenu du _index.md (pas de liste auto)
     group_by_title: true  → regroupe les annales par préfixe de titre
-                            (Chimie A / Ulm / Lyon) — utile pour X-ENS
+                            (Chimie A / Ulm / Lyon pour X-ENS ;
+                             Épreuve A / B / C pour l’agrégation)
 
   Pages enfants (annales) — front matter :
     note: 5               → étoiles (0 à 5)
@@ -58,10 +59,16 @@
     {{ if $hasAnnale }}
 
       {{ if .Params.group_by_title }}
-        {{/* Option A : regroupement par préfixe de titre (X-ENS) */}}
+        {{/* Regroupement par préfixe de titre
+             - X-ENS : "Chimie A…", "Ulm…", "Lyon…"
+             - Agrég  : "A 20xx", "B 20xx", "C 20xx"
+        */}}
         {{ $chia := slice }}
         {{ $ulm := slice }}
         {{ $lyon := slice }}
+        {{ $epA := slice }}
+        {{ $epB := slice }}
+        {{ $epC := slice }}
         {{ $autres := slice }}
         {{ range $pages }}
           {{ if in .Title "Chimie A" }}
@@ -70,6 +77,12 @@
             {{ $ulm = $ulm | append . }}
           {{ else if in .Title "Lyon" }}
             {{ $lyon = $lyon | append . }}
+          {{ else if or (hasPrefix .Title "A ") (eq .Title "A") }}
+            {{ $epA = $epA | append . }}
+          {{ else if or (hasPrefix .Title "B ") (eq .Title "B") }}
+            {{ $epB = $epB | append . }}
+          {{ else if or (hasPrefix .Title "C ") (eq .Title "C") }}
+            {{ $epC = $epC | append . }}
           {{ else }}
             {{ $autres = $autres | append . }}
           {{ end }}
@@ -79,6 +92,9 @@
           (dict "title" "Chimie A" "pages" $chia)
           (dict "title" "Ulm / Chimie B" "pages" $ulm)
           (dict "title" "Lyon-Saclay" "pages" $lyon)
+          (dict "title" "Épreuve A" "pages" $epA)
+          (dict "title" "Épreuve B" "pages" $epB)
+          (dict "title" "Épreuve C" "pages" $epC)
           (dict "title" "Autres" "pages" $autres)
         }}
 
