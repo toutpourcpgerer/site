@@ -1,6 +1,6 @@
 ---
-title: "Informatique physico-chimique"
-description: "Des ressources sur les capacités numérique du programme de physique et de chimie."
+title: "Physique"
+description: "Quelques ressources de physique pour CPGE"
 hide_auto_list: true
 ---
 
