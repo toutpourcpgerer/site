@@ -1,6 +1,8 @@
 ---
 title: "Cours Chimie PC"
 description: "Polycopiés de cours de chimie pour la filière PC en CPGE."
+back_to: "/"
+back_label: "Accueil"
 hide_auto_list: true
 ---
 
