@@ -14,9 +14,9 @@ Ces polycopiés datent de l'année 2023-2024, lorsque j'étais professeur de chi
     <p class="tp-note"></p>
   </div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="" target="_blank" rel="noopener">Polycopié à trous</a>
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours OAOM PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="" target="_blank" rel="noopener">Polycopié rempli</a>
+    <a class="btn-gold" href="/chimie/spe/cours/rempli/Cours_OAOM_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
   </div>
 </div>
