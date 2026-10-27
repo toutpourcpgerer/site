@@ -10,15 +10,13 @@ hide_auto_list: true
 
 Ces polycopiés datent de l'année 2023-2024, lorsque j'étais professeur de chimie en PC. Vous trouverez la version à trous et le polycopié prof annoté.
 
-<div class="tp-row">
-  <div class="tp-row-main">
-    <h3>Chapitre 1 & 2 : Orbitales atomiques et moléculaires</h3>
-    <p class="tp-note"></p>
+<div class="fiche-row">
+  <div class="fiche-row-text">
+    <h2>Chapitre 1 & 2 : Orbitales atomiques et moléculaires</h2>
+    <p></p>
   </div>
-  <div class="tp-col-sujet">
+  <div class="fiche-row-actions">
     <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours OAOM PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
-  </div>
-  <div class="tp-col-corrige">
     <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_OAOM_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
   </div>
 </div>
