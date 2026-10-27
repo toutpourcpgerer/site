@@ -15,7 +15,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-wide">
-    <a class="btn-gold" href="https://drive.google.com/file/d/1o2CuipBbU-kV_qhlznAaWuleXbbHEFna/view" target="_blank" rel="noopener">Cours des TP</a>
+    <a class="btn-gold" href="/chimie/fiches/tp/Cours_TP.pdf" target="_blank" rel="noopener">Cours des TP</a>
   </div>
 </div>
 
@@ -25,7 +25,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-wide">
-    <a class="btn-gold" href="https://drive.google.com/file/d/1M8Jmdi0DS40Bb-8bTvXg8gHuiLGP2-Li/view" target="_blank" rel="noopener">Fiche « TP aux oraux »</a>
+    <a class="btn-gold" href="/chimie/fiches/tp/Fiche_TP_Oraux.pdf" target="_blank" rel="noopener">Fiche « TP aux oraux »</a>
   </div>
 </div>
 
@@ -35,7 +35,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="https://drive.google.com/file/d/1tJw25SOsg84gL_jo61ja0Jxr-yaXGsEB/view" target="_blank" rel="noopener">Sujet</a>
+    <a class="btn-vert" href="/chimie/fiches/tp/Rev_TP_Ecrits.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
 </div>
 
