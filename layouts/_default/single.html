@@ -13,6 +13,9 @@
     liens:
       - title: "…"
         url: "/chemin/"
+
+  Front matter optionnel :
+    back_to / back_label  → lien de retour forcé (ex. "/" et "Accueil")
 */}}
 {{ define "main" }}
 
@@ -69,7 +72,15 @@
 <article class="article">
 
   <p class="breadcrumbs">
-    <a href="{{ .CurrentSection.RelPermalink }}">← {{ .CurrentSection.Title }}</a>
+    {{ if .Params.back_to }}
+      <a href="{{ .Params.back_to | relURL }}">← {{ .Params.back_label | default "Accueil" }}</a>
+    {{ else if .Parent }}
+      <a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+    {{ else if .CurrentSection }}
+      <a href="{{ .CurrentSection.RelPermalink }}">← {{ .CurrentSection.Title }}</a>
+    {{ else }}
+      <a href="{{ .Site.Home.RelPermalink }}">← Accueil</a>
+    {{ end }}
   </p>
 
   <h1>{{ .Title }}</h1>
