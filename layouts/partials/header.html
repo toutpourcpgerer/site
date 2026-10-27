@@ -77,6 +77,13 @@
       {{/* ── Page simple (pas une section) ── */}}
       <a href="{{ "informatique-physico-chimique/" | relURL }}"{{ if in .RelPermalink "informatique-physico-chimique" }} class="is-active"{{ end }}>Capacités numériques</a>
 
+      <a href="{{ "physique/" | relURL }}">Physique</a>
+    
+      <details class="sidebar-fold">
+        <summary>Intégration</summary>
+        <a href="{{ "integration/oraux-x/" | relURL }}">Objectif oraux de l'X !</a>
+      </details>
+
       {{/* ── Agrégation : section AVEC lien + enfants ── */}}
       <div class="sidebar-fold sidebar-fold--linked">
         <div class="sidebar-fold-head">
