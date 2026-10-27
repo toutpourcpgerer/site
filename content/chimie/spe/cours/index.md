@@ -165,3 +165,5 @@ Ces polycopiés datent de l'année 2023-2024, lorsque j'étais professeur de chi
     <a class="btn-gold" href="/chimie/spe/cours/complet/Cours Reacteurs Ouverts PC Complet 23-24.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
   </div>
 </div>
+
+## Chapitres hors-programme
