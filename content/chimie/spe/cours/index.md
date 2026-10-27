@@ -187,3 +187,13 @@ Ces polycopiés datent de l'année 2023-2024, lorsque j'étais professeur de chi
     <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_Wittig_Metathese_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
   </div>
 </div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Hors-programme classique de l'X</h3>
+    <p class="tp-note">Polycopié rassemblant des annales d'oraux de l'X en chimie, en physique et en maths</p>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/integration/oraux-x/" target="_blank" rel="noopener">Poly oraux X</a>
+  </div>
+</div>
