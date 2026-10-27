@@ -249,7 +249,7 @@ body.sidebar-open { overflow: hidden; }
 .info-band-soft { background: #eef6fa; }
 .info-band a { color: #1a6a9a; text-decoration: underline; }
 .content-block { max-width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 8px; }
-.content-block h2 { font-size: 22px; color: #1a4a7a; margin: 28px 0 12px; text-align: center; }
+.content-block h2 { font-size: 22px; color: #1a4a7a; margin: 28px 0 24px; text-align: center; }
 
 /* ---------- En-tête de page de rubrique ---------- */
 .page-top {
@@ -562,7 +562,6 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 .sidebar-fold-head:hover {
   background: rgba(255, 255, 255, .06);
 }
-/* Même padding gauche (12px) que summary et les liens → alignement identique */
 .sidebar-fold-head > a {
   flex: 1;
   min-width: 0;
