@@ -33,3 +33,133 @@ Ces polycopiés datent de l'année 2023-2024, lorsque j'étais professeur de chi
     <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_Thermochimie_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
   </div>
 </div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 6 : Réactivité</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Réactivité PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_Réactivité_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 7 : Réaction de Diels-Alder</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours DA PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_DA_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 8 : Enolates</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Enolates PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_Enolates_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 9 : Additions nucléophiles suivies d'éliminations</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours AE PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_AE_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 10 : Addition sur les hydrocarbures insaturés</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours AddCC PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_AddCC_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 11 : Conversion par oxydo-réduction</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Orga Redox PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_Orga_OxRed_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 12 : Diagrammes binaires liquide-vapeur</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Binaires PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours Binaires PC Complet 23-24.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 13 & 14 : Les complexes</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Complexes PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours_Complexes_PC_23_24_Scan.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 15 & 16 : Electrochimie</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Electrochimie PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours Electrochimie PC 23-24 Complet.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Chapitre 18 : Réacteurs ouverts</h3>
+    <p class="tp-note"></p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Reacteurs Ouverts PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="/chimie/spe/cours/complet/Cours Reacteurs Ouverts PC Complet 23-24.pdf" target="_blank" rel="noopener">Polycopié rempli</a>
+  </div>
+</div>
