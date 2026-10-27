@@ -1,7 +1,7 @@
 ---
 title: "Objectif oraux de l'X !"
 description: "Des ressources pour atteindre puis réussir les oraux de Polytechnique (en PC)"
-back_to: "\"
+back_to: "/"
 back_label: "Accueil"
 hide_auto_list: true
 ---
