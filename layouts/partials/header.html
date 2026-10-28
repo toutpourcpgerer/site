@@ -103,12 +103,8 @@
       */}}
 
       <details class="sidebar-fold">
-        <summary>Le site</summary>
+        <summary>Autour du site</summary>
         <a href="{{ "livre-d-or/" | relURL }}"{{ if eq .Section "livre-d-or" }} class="is-active"{{ end }}>Livre d'or</a>
-      </details>
-
-      <details class="sidebar-fold">
-        <summary>Liens externes</summary>
         {{ with .Site.Params.bloggerURL }}
           <a href="{{ . }}" target="_blank" rel="noopener">Le blog</a>
         {{ end }}
