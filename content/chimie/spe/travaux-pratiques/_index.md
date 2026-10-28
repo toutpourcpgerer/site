@@ -138,10 +138,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="https://drive.google.com/file/d/1nIwfwZiZXRjSdTfUCZexB_mtbRo3gJu9/view" target="_blank" rel="noopener">Sujet TP1</a>
+    <a class="btn-vert" href="/chimie/tp-oraux/ccinp/sujets/TP112.pdf" target="_blank" rel="noopener">Sujet TP1</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="https://drive.google.com/file/d/1UqlzZTqJbOkMsnK28LNN0xusp1O1zuuh/view" target="_blank" rel="noopener">Correction TP1</a>
+    <a class="btn-gold" href="/chimie/tp-oraux/ccinp/corriges/TP112_Corr.pdf" target="_blank" rel="noopener">Corrigé TP1</a>
   </div>
 </div>
 
@@ -155,13 +155,13 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates">
-    <a class="btn-vert" href="https://docs.google.com/spreadsheets/d/13RZec8hm3R6lpKtFdWH5Tqpjel0OqvfV/edit" target="_blank" rel="noopener">Barème</a>
+    <a class="btn-vert" href="/chimie/tp-oraux/mines/corriges/TP204_Barème.pdf" target="_blank" rel="noopener">Barème</a>
   </div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="https://drive.google.com/file/d/12fizNCPUvop5W-dOCrxzPjzc3_tTjD_4/view" target="_blank" rel="noopener">Sujet TP204</a>
+    <a class="btn-vert" href="/chimie/tp-oraux/mines/sujets/TP204.pdf" target="_blank" rel="noopener">Sujet TP204</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="https://drive.google.com/file/d/1CULpnXXqaZQaa8zTSDOYXtp6j1bLLdF3/view" target="_blank" rel="noopener">Correction TP204</a>
+    <a class="btn-gold" href="/chimie/tp-oraux/mines/corriges/TP204_Corr.pdf" target="_blank" rel="noopener">Corrigé TP204</a>
   </div>
 </div>
 
@@ -177,10 +177,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="https://drive.google.com/file/d/1MYNdZaZWtnjEE__aIL8SDXauWjB-Juq8/view" target="_blank" rel="noopener">Sujet TP306</a>
+    <a class="btn-vert" href="/chimie/tp-oraux/centrale-pc/sujets/TP306.pdf" target="_blank" rel="noopener">Sujet TP306</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="https://drive.google.com/file/d/1xIous0kbJMBmzQ5ifjVHSuDS0zoY48d9/view" target="_blank" rel="noopener">Correction TP306</a>
+    <a class="btn-gold" href="/chimie/tp-oraux/centrale-pc/corriges/TP306_Corr.pdf" target="_blank" rel="noopener">Corrigé TP306</a>
   </div>
 </div>
 
