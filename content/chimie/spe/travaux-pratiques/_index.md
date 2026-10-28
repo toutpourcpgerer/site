@@ -192,9 +192,9 @@ hide_auto_list: true
     <p>Ce TP traite de l'analyse d'une eau minérale, notamment de la détermination de la teneur en calcium et magnésium. Des explications détaillées autour de l'EDTA et les indicateurs colorés sont inclues dans ce TP.</p>
   </div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="" target="_blank" rel="noopener">Sujet</a>
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/tp-complets/TP_EDTA.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="" target="_blank" rel="noopener">Corrigé</a>
+    <a class="btn-gold" href="/chimie/spe/travaux-pratiques/tp-complets/TP_EDTA_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
   </div>
 </div>
