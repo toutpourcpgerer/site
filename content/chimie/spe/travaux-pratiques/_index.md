@@ -186,4 +186,15 @@ hide_auto_list: true
 
 ## Travaux Pratiques complets pour comprendre une notion
 
-Section à compléter — tu pourras y ajouter des TP ciblés (un par notion) avec les mêmes boutons Sujet / Corrigé.
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>Autour de l'EDTA</h3>
+    <p>Ce TP traite de l'analyse d'une eau minérale, notamment de la détermination de la teneur en calcium et magnésium. Des explications détaillées autour de l'EDTA et les indicateurs colorés sont inclues dans ce TP.</p>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="" target="_blank" rel="noopener">Sujet</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-gold" href="" target="_blank" rel="noopener">Corrigé</a>
+  </div>
+</div>
