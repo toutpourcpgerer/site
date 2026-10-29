@@ -26,8 +26,8 @@ hide_auto_list: true
     <p class="poly-card-note">Reprends toutes les méthodes : pH-métrie, conductimétrie, iodométie, complexométrie, dosage par étalonnage. _adapté d'après CAPES 2010_ </p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol1.pdf">Sujet</a>
-    <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol1_Corr.pdf">Corrigé</a>
+    <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_1.pdf">Sujet</a>
+    <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_1_Corr.pdf">Corrigé</a>
   </div>
 </div>
 
@@ -37,8 +37,8 @@ hide_auto_list: true
     <p class="poly-card-note">Diagramme de distribution, régression linéaire, incertitudes _d'après Centrale PC 2025_ </p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol2.pdf">Sujet</a>
-    <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol2_Corr.pdf">Corrigé</a>
+    <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_2.pdf">Sujet</a>
+    <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_2_Corr.pdf">Corrigé</a>
   </div>
 </div>
 
@@ -48,7 +48,7 @@ hide_auto_list: true
     <p class="poly-card-note">Résine échangeuse d'ions, etc ..; _d'après G2E 2014_ </p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol3.pdf">Sujet</a>
-    <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol3_Corr.pdf">Corrigé</a>
+    <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_3.pdf">Sujet</a>
+    <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_3_Corr.pdf">Corrigé</a>
   </div>
 </div>
