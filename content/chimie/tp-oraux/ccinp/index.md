@@ -8,7 +8,7 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <h3>TP112 : Suivi cinétique réaction entre KMnO4 et acide oxalique</h3>
+    <h3>TP112 : Suivi cinétique réaction entre \( \ce{KMnO4} \) et acide oxalique</h3>
     <p>Pas de grande difficulté, à part la compréhension de la dernière question.</p>
   </div>
   <div class="tp-dates"></div>
