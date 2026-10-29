@@ -3,10 +3,12 @@ title: "Annales de Travaux Pratiques de chimie"
 description: "Les travaux pratiques de chimie posés aux concours ont été répertoriés et réécrits."
 back_to: "/"
 back_label: "Accueil"
-publishDate: 2027-05-01
-expiryDate: 2027-08-01
 hide_auto_list: true
 ---
+<--
+publishDate: 2027-05-01
+expiryDate: 2027-08-01
+-->
 
 <div class="fiche-row">
   <div class="fiche-row-text">
