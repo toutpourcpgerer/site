@@ -81,7 +81,7 @@ hide_auto_list: true
     <p class="poly-card-note">Chimie macroscopique à plusieurs réactifs. D'après Banque PT 2023.</p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/chimie/annales/bpt/2023/">Sujet</a>
+    <a class="btn-vert" href="/chimie/annales/banque-pt/bpt-2023/">Sujet</a>
   </div>
 </div>
 
