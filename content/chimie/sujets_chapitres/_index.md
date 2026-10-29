@@ -6,6 +6,5 @@ back_label: "Fiches de chimie"
 hide_auto_list: true
 ---
 
-<div class="info-band info-band-soft">
-  Cette rubrique regroupe des sujets pour travailler chapitre par chapitre. Le contenu arrive progressivement.
-</div>
+## Concours blanc bilan de sup
+
