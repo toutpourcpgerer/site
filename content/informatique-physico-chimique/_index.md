@@ -21,12 +21,12 @@ description: "Des ressources sur les capacités numérique du programme de physi
 
 ## Travaux Dirigés
 
-<div class="fiche-row">
-  <div class="fiche-row-text">
-    <h2>TD d'extraits de concours</h2>
-    <p>Incluant les méthodes de calcul d'intégrale, hors-programme, mais beaucoup posées.</p>
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">TD d'extraits de concours</h3>
+    <p class="poly-card-note">Incluant les méthodes de calcul d'intégrale, hors-programme, mais beaucoup posées.</p>
   </div>
-  <div class="fiche-row-actions">
+  <div class="poly-card-actions">
     <a class="btn-vert" href="/informatique-physico-chimique/TD_Info_PhyChi.pdf">Sujet</a>
     <a class="btn-gold" href="/informatique-physico-chimique/TD_Info_PhyChi_Corr.pdf">Corrigé</a>
   </div>
