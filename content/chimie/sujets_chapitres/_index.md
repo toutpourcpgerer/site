@@ -52,3 +52,46 @@ hide_auto_list: true
     <a class="btn-gold" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_3_Corr.pdf">Corrigé</a>
   </div>
 </div>
+
+## Chimie organique
+
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Sujet 1 : Complet et actuel</h3>
+    <p class="poly-card-note">Cf sujet CCB </p>
+  </div>
+</div>
+
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Sujet 2 : Actuel et introduction à la spé</h3>
+    <p class="poly-card-note">Sujet plus exotique. Introduction à quelques mécanismes de spé. Question sur la dangerosité. Adapté d'après CCINP PC 2024</p>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-vert" href="/chimie/sujets_chapitres/orgasup/Complet_OrgaSup3.pdf">Sujet</a>
+    <a class="btn-gold" href="/chimie/sujets_chapitres/orgasup/Complet_OrgaSup3_Corr.pdf">Corrigé</a>
+  </div>
+</div>
+
+## Cinétique
+
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Type MP/PT/PSI</h3>
+    <p class="poly-card-note">Chimie macroscopique à plusieurs réactifs. D'après Banque PT 2023.</p>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-vert" href="/chimie/annales/bpt/2023/">Sujet</a>
+  </div>
+</div>
+
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Type PC : centré sur tendances actielles</h3>
+    <p class="poly-card-note">Axé mécanismes et Michaelis-Menten. D'après Agro-Véto 2009 & Centrale PC 2025</p>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-vert" href="/chimie/sujets_chapitres/cinetique/Sujet_Cin_PC.pdf">Sujet</a>
+    <a class="btn-gold" href="/chimie/sujets_chapitres/cinetique/Sujet_Cin_PC_Corr.pdf">Corrigé</a>
+  </div>
+</div>
