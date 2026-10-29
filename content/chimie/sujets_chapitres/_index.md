@@ -23,7 +23,7 @@ hide_auto_list: true
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Sujet 1 : Complet et relativement simple</h3>
-    <p class="poly-card-note">Reprends toutes les méthodes : pH-métrie, conductimétrie, iodométie, complexométrie, dosage par étalonnage. _adapté d'après CAPES 2010_ </p>
+    <p class="poly-card-note">Reprends toutes les méthodes : pH-métrie, conductimétrie, iodométie, complexométrie, dosage par étalonnage. <em>adapté d'après CAPES 2010</em> </p>
   </div>
   <div class="poly-card-actions">
     <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_1.pdf">Sujet</a>
@@ -34,7 +34,7 @@ hide_auto_list: true
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Sujet 2 : Ancré dans l'actuel</h3>
-    <p class="poly-card-note">Diagramme de distribution, régression linéaire, incertitudes _d'après Centrale PC 2025_ </p>
+    <p class="poly-card-note">Diagramme de distribution, régression linéaire, incertitudes <em>d'après Centrale PC 2025</em> </p>
   </div>
   <div class="poly-card-actions">
     <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_2.pdf">Sujet</a>
@@ -45,7 +45,7 @@ hide_auto_list: true
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Sujet 3 : Dur mais formateur</h3>
-    <p class="poly-card-note">Résine échangeuse d'ions, etc ..; _d'après G2E 2014_ </p>
+    <p class="poly-card-note">Résine échangeuse d'ions, etc ..; <em>d'après G2E 2014</em> </p>
   </div>
   <div class="poly-card-actions">
     <a class="btn-vert" href="/chimie/sujets_chapitres/chisol/Sujet_ChiSol_3.pdf">Sujet</a>

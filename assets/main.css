@@ -239,7 +239,19 @@ body.sidebar-open { overflow: hidden; }
 .info-band-soft { background: #eef6fa; }
 .info-band a { color: #1a6a9a; text-decoration: underline; }
 .content-block { max-width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 8px; }
-.content-block h2 { font-size: 22px; color: #1a4a7a; margin: 28px 0 24px; text-align: center; }
+.content-block h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  text-align: left;
+  margin: 36px 0 18px;
+  padding: 14px 18px;
+  background: linear-gradient(90deg, var(--gold-soft) 0%, #faf9f6 100%);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  letter-spacing: -.2px;
+}
+.content-block h2:first-of-type { margin-top: 12px; }
 
 .page-top {
   text-align: center; padding: 40px 0 28px;
@@ -581,15 +593,10 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
 .sidebar-fold-toggle[aria-expanded="true"] {
   transform: rotate(90deg);
 }
-.sidebar-fold-body {
-  margin-left: 0;
-}
-.sidebar-fold-body > a {
-  margin-left: 12px;
-}
+.sidebar-fold-body { margin-left: 0; }
+.sidebar-fold-body > a { margin-left: 12px; }
 .sidebar-fold-body[hidden] { display: none; }
 
-/* ---------- Cartes polycopiés ---------- */
 .poly-list {
   display: flex;
   flex-direction: column;
@@ -635,6 +642,10 @@ a.annale-row:hover .annale-open-hint { opacity: 1; }
   font-style: italic;
 }
 .poly-card-note:empty { display: none; }
+.poly-card-note em {
+  font-style: italic;
+  color: var(--muted);
+}
 .poly-card-actions {
   display: flex;
   flex-wrap: wrap;
