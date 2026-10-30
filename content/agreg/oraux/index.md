@@ -9,18 +9,36 @@ hide_auto_list: true
 Certaines questions des écrits de l'agrégation sont classiques et sont répertoriées ici.
 
 <ul>
-  <li>[Quizlet sur les questions de cours en chimie](https://quizlet.com/fr-fr/fiches-de-memorisation/questions-pointilleuses-en-chimie-953806264) (définitions, ...) tombées aux écrits</li>
-  <li>[Quizlet sur des notions subtiles classiques](https://quizlet.com/fr-fr/fiches-de-memorisation/random-connaissance-agreg-994903225) déjà tombées aux écrits</li>
-  <li>[Quizlet sur les définitions en physique](https://quizlet.com/fr-fr/fiches-de-memorisation/definitions-en-physique-949946962) </li>
+  <li>[Quizlet sur les Prix Nobel](https://quizlet.com/fr/949942611/prix-nobel-en-chimie-flash-cards/?i=5lt8uz&x=1jqt) 
 </ul>
 
-## Structure de la matière et interaction avec la lumière
+## Montages de chimie
+<div class="poly-list">
+  
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Méthode du montage de chimie</h3>
+    <p class="poly-card-note">Conseils et méthode pour comprendre et réussir l'épreuve de montage de chimie très particulière.</p>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-gold" href="/agreg/oraux/Fiche_Méthode_MC.pdf">Fiche méthode</a>
+  </div>
+</div>
 
 <div class="poly-card">
   <div class="poly-card-body">
-    <h3 class="poly-card-title">Théorie des groupes et méthode de Hückel (L3)</h3>
+    <h3 class="poly-card-title">Annales des montages de chimie, et proposition d'expériences</h3>
+    <p class="poly-card-note">Un plan et au moins deux expériences sont proposées ainsi que sourcées.</p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="http://129.199.240.8/Bibliographie/agreg-theorie.pdf">Cours (N. Chéron)</a>
+    <a class="btn-gold" href="/agreg/oraux/Resume_MC.pdf">Annales corrigées</a>
   </div>
 </div>
+
+</div>
+
+<ul>
+  <li>[Excel sur les modifications de protocole](https://docs.google.com/spreadsheets/d/1W4syeAZRi0nVXfBiT-2g__uCaBRNjaZ-TU4lu9tOlnc/edit?gid=491716492#gid=491716492)
+  <li>[Excel sur quelques astuces de TP](https://docs.google.com/spreadsheets/d/126sMQCNMiAe37uC1rnuCAhIC4asKVGw1ZGmZ5rovkuI/edit?usp=sharing)</li>
+</ul>
+
