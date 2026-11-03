@@ -55,7 +55,7 @@ hide_auto_list: true
     <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1.pdf">Sujet TP1</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1_Corr.pdf" target="_blank" rel="noopener">Correction TP1</a>
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1_Corr.pdf" target="_blank" rel="noopener">Correction TP1</a>
   </div>
 </div>
 
@@ -71,77 +71,20 @@ hide_auto_list: true
     <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2.pdf">Sujet TP2</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf">Correction TP2</a>
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf">Correction TP2</a>
   </div>
 </div>
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <h3>TP3 : Tunnel de dosages</h3>
-    <ul>
-      <li>Analyse d'un complexe de cuivre Cu(NH<sub>3</sub>)<sub>4</sub>(SO<sub>4</sub>)·H<sub>2</sub>O</li>
-    </ul>
-  </div>
-  <div class="tp-dates"></div>
-  <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf">Sujet TP3</a>
-  </div>
-</div>
-
-<div class="tp-row">
-  <div class="tp-row-main">
-    <h3>TP4 : Une lessive odeur menthe</h3>
-    <ul>
-      <li>Hydrodistillation des feuilles de menthe</li>
-      <li>Détermination de la concentration micellaire critique du SDS</li>
-    </ul>
-  </div>
-  <div class="tp-dates">7/11 – 14/11</div>
-  <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
-  </div>
-</div>
-
-<div class="tp-row">
-  <div class="tp-row-main">
-    <h3>TP5 : Constante d'acidité et de solubilité</h3>
-    <ul>
-      <li>Détermination du Ks de AgCl</li>
-      <li>Étude cinétique de la décoloration du BBT</li>
-    </ul>
-  </div>
-  <div class="tp-dates">21/11 – 28/11</div>
-  <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf">Sujet TP5</a>
-  </div>
-</div>
-
-<div class="tp-row">
-  <div class="tp-row-main">
-    <h3>TP6 : Sujet type oral (4h, seul)</h3>
-    <ul>
-      <li>À venir</li>
-    </ul>
-  </div>
-  <div class="tp-dates">5/12 – 12/12 – 19/12</div>
-</div>
-
-## Quelques Travaux Pratiques de l'année 2025-2026 / annales de TP
-
-<div class="tp-row">
-  <div class="tp-row-main">
-    <h3>TP1 (TP112 annale CCINP) : La vie en violet</h3>
-    <ul>
-      <li>Dosage du permanganate de potassium</li>
-      <li>Suivi cinétique de la réaction entre l'acide oxalique et le permanganate de potassium</li>
-    </ul>
+    <h3>TP1 (TP112 annale CCINP) : Extraction et titrage de l'aspirine</h3>
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
     <a class="btn-vert" href="/chimie/tp-oraux/ccinp/sujets/TP112.pdf" target="_blank" rel="noopener">Sujet TP1</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="/chimie/tp-oraux/ccinp/corriges/TP112_Corr.pdf" target="_blank" rel="noopener">Corrigé TP1</a>
+    <a class="btn-blue" href="/chimie/tp-oraux/ccinp/corriges/TP112_Corr.pdf" target="_blank" rel="noopener">Corrigé TP1</a>
   </div>
 </div>
 
@@ -161,7 +104,7 @@ hide_auto_list: true
     <a class="btn-vert" href="/chimie/tp-oraux/mines/sujets/TP204.pdf" target="_blank" rel="noopener">Sujet TP204</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="/chimie/tp-oraux/mines/corriges/TP204_Corr.pdf" target="_blank" rel="noopener">Corrigé TP204</a>
+    <a class="btn-blue" href="/chimie/tp-oraux/mines/corriges/TP204_Corr.pdf" target="_blank" rel="noopener">Corrigé TP204</a>
   </div>
 </div>
 
@@ -180,7 +123,7 @@ hide_auto_list: true
     <a class="btn-vert" href="/chimie/tp-oraux/centrale-pc/sujets/TP306.pdf" target="_blank" rel="noopener">Sujet TP306</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="/chimie/tp-oraux/centrale-pc/corriges/TP306_Corr.pdf" target="_blank" rel="noopener">Corrigé TP306</a>
+    <a class="btn-blue" href="/chimie/tp-oraux/centrale-pc/corriges/TP306_Corr.pdf" target="_blank" rel="noopener">Corrigé TP306</a>
   </div>
 </div>
 
@@ -195,6 +138,6 @@ hide_auto_list: true
     <a class="btn-vert" href="/chimie/spe/travaux-pratiques/tp-complets/TP_EDTA.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-gold" href="/chimie/spe/travaux-pratiques/tp-complets/TP_EDTA_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/tp-complets/TP_EDTA_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
   </div>
 </div>
