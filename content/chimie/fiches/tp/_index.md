@@ -33,8 +33,8 @@ Des questions aux écrits abordent les capacités expérimentales : Incertitudes
 Ce qui tombe et des exercices associés sont récapitulés ci-dessous :
 
 <center>
-  <a class="btn-blue" href="/chimie/fiches/tp/Rev_TP_Ecrits.pdf">Sujet</a>
-  <a class="btn-blue" href="/chimie/fiches/tp/Rev_TP_Ecrits_Corr.pdf">Corrigé</a>
+  <a class="btn-vert" href="/chimie/fiches/tp/Rev_TP_Ecrits.pdf">Sujet</a>
+  <a class="btn-gold" href="/chimie/fiches/tp/Rev_TP_Ecrits_Corr.pdf">Corrigé</a>
 </center>
 
 ## Les sujets tombés aux oraux de TP
