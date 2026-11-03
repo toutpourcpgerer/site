@@ -10,4 +10,4 @@ description: "Sujets et corrigés de chimie du concours Mines-Ponts filière MP 
 Thermochimie, E-pH, cinétique, cristallographie
 
 ### 🥇 Réussir l'épreuve
-Etre solide sur la base de tous les chapitres. Pour cela, on peut bosser la  <a href="/chimie/fiches/mp-pt-psi/">la fiche résumé de chimie (filière MP/PSI/PT)</a>
+Etre solide sur la base de tous les chapitres. Pour cela, on peut bosser <a href="/chimie/fiches/mp-pt-psi/">la fiche résumé de chimie (filière MP/PSI/PT)</a>
