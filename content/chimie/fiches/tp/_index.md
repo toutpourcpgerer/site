@@ -38,7 +38,7 @@ Ce qui tombe et des exercices associés sont récapitulés ci-dessous :
 </center>
 
 ## Les sujets tombés aux oraux de TP
-En attendant la période des oraux où tous les sujets tombés récemment sont répertoririés et parfois rédigés et corrigés, certains de ces sujets sont posés en spé.
+En attendant la période des oraux où tous les sujets tombés récemment sont répertoriés et parfois rédigés et corrigés, certains de ces sujets sont posés en spé.
 
 <center>
 <a class="btn-blue" href="/chimie/spe/travaux-pratiques/">TP chimie PC</a>
