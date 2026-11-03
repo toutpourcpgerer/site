@@ -11,7 +11,7 @@ Cours complet et synthétique sur les compétences expérimentales demandées en
 Le cours est complémenté est techniques hors-programme tombées aux TP des concours.
 
 <center>
-  <a class="btn-blue" href="/chimie/fiches/tp/Cours_TP.pdf">Cours TP chimie</a>
+  <a class="btn-gold" href="/chimie/fiches/tp/Cours_TP.pdf">Cours TP chimie</a>
 </center>
 
 ## Fiche des oraux de TP de chimie
@@ -23,7 +23,7 @@ Fiche comprenant :
 - les questions classiques de l'examinateur sur chaque type de manipulation.
 
 <center>
-  <a class="btn-blue" href="/chimie/fiches/tp/Fiche_TP_Oraux.pdf">Oraux de TP de chimie</a>
+  <a class="btn-gold" href="/chimie/fiches/tp/Fiche_TP_Oraux.pdf">Oraux de TP de chimie</a>
 </center>
 
 ## TD de préparation aux écrits
@@ -34,12 +34,12 @@ Ce qui tombe et des exercices associés sont récapitulés ci-dessous :
 
 <center>
   <a class="btn-vert" href="/chimie/fiches/tp/Rev_TP_Ecrits.pdf">Sujet</a>
-  <a class="btn-gold" href="/chimie/fiches/tp/Rev_TP_Ecrits_Corr.pdf">Corrigé</a>
+  <a class="btn-blue" href="/chimie/fiches/tp/Rev_TP_Ecrits_Corr.pdf">Corrigé</a>
 </center>
 
 ## Les sujets tombés aux oraux de TP
 En attendant la période des oraux où tous les sujets tombés récemment sont répertoriés et parfois rédigés et corrigés, certains de ces sujets sont posés en spé.
 
 <center>
-<a class="btn-blue" href="/chimie/spe/travaux-pratiques/">TP chimie PC</a>
+<a class="btn-gris" href="/chimie/spe/travaux-pratiques/">TP chimie PC</a>
 </center>
