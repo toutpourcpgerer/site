@@ -4,9 +4,8 @@ description: "Trois ressources pour masteriser les écrits, les oraux et les TP 
 hide_auto_list: true
 ---
 
-
-
 ## Cours des TP de chimie
+
 Cours complet et synthétique sur les compétences expérimentales demandées en TP de chimie en CPGE.
 
 Le cours est complémenté est techniques hors-programme tombées aux TP des concours.
@@ -16,6 +15,7 @@ Le cours est complémenté est techniques hors-programme tombées aux TP des con
 </center>
 
 ## Fiche des oraux de TP de chimie
+
 Fiche comprenant :
 
 - le format des oraux de TP chimie aux différents concours ;
@@ -27,6 +27,7 @@ Fiche comprenant :
 </center>
 
 ## TD de préparation aux écrits
+
 Des questions aux écrits abordent les capacités expérimentales : Incertitudes & Monte-Carlo, titrages, protocoles de chimie organique, ...
 
 Ce qui tombe et des exercices associés sont récapitulés ci-dessous :
