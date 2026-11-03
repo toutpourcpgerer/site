@@ -11,6 +11,14 @@
 
   {{ $style := resources.Get "main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  {{ with resources.Get "main-more.css" }}
+    {{ $more := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $more.RelPermalink }}" integrity="{{ $more.Data.Integrity }}">
+  {{ end }}
+  {{ with resources.Get "main-end.css" }}
+    {{ $end := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $end.RelPermalink }}" integrity="{{ $end.Data.Integrity }}">
+  {{ end }}
   {{ with resources.Get "buttons.css" }}
     {{ $buttons := . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $buttons.RelPermalink }}" integrity="{{ $buttons.Data.Integrity }}">
@@ -72,7 +80,6 @@
         if (e.key === 'Escape' && !sidebar.hidden) closeSidebar();
       });
 
-      /* Plis dont l’intitulé est un lien (bouton ▸ à part) */
       document.querySelectorAll('.sidebar-fold-toggle').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
           e.preventDefault();
