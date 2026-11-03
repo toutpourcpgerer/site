@@ -23,6 +23,10 @@
     {{ $buttons := . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $buttons.RelPermalink }}" integrity="{{ $buttons.Data.Integrity }}">
   {{ end }}
+  {{ with resources.Get "sidebar.css" }}
+    {{ $sidebar := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $sidebar.RelPermalink }}" integrity="{{ $sidebar.Data.Integrity }}">
+  {{ end }}
 
   {{/* MathJax pour les formules LaTeX dans le Markdown */}}
   <script>
