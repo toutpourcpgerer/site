@@ -1,0 +1,143 @@
+/* Sommaire latéral — style Google Sites (sections grises, pages normales) */
+
+.sidebar-fold { margin-top: 2px; }
+
+.sidebar-fold > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--sidebar-muted);
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s, color .15s;
+}
+
+.sidebar-fold > summary::-webkit-details-marker { display: none; }
+
+.sidebar-fold > summary::after {
+  content: "▸";
+  font-size: 11px;
+  color: var(--sidebar-muted);
+  transition: transform .2s;
+}
+
+.sidebar-fold[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.sidebar-fold > summary:hover {
+  background: rgba(255, 255, 255, .06);
+  color: #c5ced4;
+}
+
+/* Indentation des pages et sous-sections sous un fold */
+.sidebar-fold > a,
+.sidebar-fold > .sidebar-fold,
+.sidebar-fold-body > a {
+  margin-left: 12px;
+}
+
+/* Sous-section (ex. Spé dans Chimie) — même style grisé */
+.sidebar-fold .sidebar-fold > summary {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--sidebar-muted);
+}
+
+/* Section avec lien + bouton déplier (Agrégation) */
+.sidebar-fold--linked { margin-top: 2px; }
+
+.sidebar-fold-head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.sidebar-fold-head:hover {
+  background: rgba(255, 255, 255, .06);
+}
+
+.sidebar-fold-head > a {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 4px 10px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--sidebar-text);
+  border-radius: 8px 0 0 8px;
+}
+
+.sidebar-fold-head > a:hover {
+  background: transparent;
+}
+
+.sidebar-fold-head > a.is-active {
+  background: rgba(201, 162, 39, .2);
+  color: #f0d78a;
+  font-weight: 600;
+}
+
+.sidebar-fold-toggle {
+  flex-shrink: 0;
+  width: 36px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  color: var(--sidebar-muted);
+  font-size: 11px;
+  cursor: pointer;
+  transition: color .15s, transform .2s;
+}
+
+.sidebar-fold-toggle:hover {
+  color: var(--sidebar-text);
+}
+
+.sidebar-fold-toggle[aria-expanded="true"] {
+  transform: rotate(90deg);
+}
+
+.sidebar-fold-body { margin-left: 0; }
+.sidebar-fold-body > a { margin-left: 12px; }
+.sidebar-fold-body[hidden] { display: none; }
+
+/* Liens dans le sommaire — padding homogène */
+.sidebar-nav > a,
+.sidebar-group a,
+.sidebar-fold a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--sidebar-text);
+  transition: background .15s;
+}
+
+.sidebar-nav > a:hover,
+.sidebar-group a:hover,
+.sidebar-fold a:hover {
+  background: rgba(255, 255, 255, .08);
+}
+
+.sidebar-nav a.is-active,
+.sidebar-fold a.is-active {
+  background: rgba(201, 162, 39, .2);
+  color: #f0d78a;
+  font-weight: 600;
+}
