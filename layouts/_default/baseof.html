@@ -11,6 +11,10 @@
 
   {{ $style := resources.Get "main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  {{ with resources.Get "buttons.css" }}
+    {{ $buttons := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $buttons.RelPermalink }}" integrity="{{ $buttons.Data.Integrity }}">
+  {{ end }}
 
   {{/* MathJax pour les formules LaTeX dans le Markdown */}}
   <script>
