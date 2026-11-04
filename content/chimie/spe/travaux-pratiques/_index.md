@@ -77,6 +77,70 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
+    <h3>TP3 : Tunnel de dosages</h3>
+      <p>Analyse du complexe \( \ce{Cu(NH3)_4SO4 . H2O} \) </p>
+  </div>
+  <div class="tp-dates">10/10 - 17/10</div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf">Sujet TP3</a>
+  </div>
+  <div class="tp-col-corrige">
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3_Corr.pdf">Correction TP3</a>
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>TP4 : Une lessive odeur menthe</h3>
+    <ul>
+      <li>Hydrodistillation des feuilles de menthe</li>
+      <li>Détermination de la concentration micellaire critique du SDS</li>
+    </ul>
+  </div>
+  <div class="tp-dates">7/11 - 14/11</div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
+  </div>
+  <div class="tp-col-corrige">
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>TP5 : Constante d'acidité et de solubilité</h3>
+    <ul>
+      <li>Détermination du produit de solubilité de AgCl</li>
+      <li>Etude cinétique de la décoloration du BBT</li>
+    </ul>
+  </div>
+  <div class="tp-dates">21/11 - 28/11</div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf">Sujet TP5</a>
+  </div>
+  <div class="tp-col-corrige">
+  </div>
+</div>
+
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>TP6 : Sujet type oral</h3>
+    <ul>
+      <li>Surprise</li>
+    </ul>
+  </div>
+  <div class="tp-dates">5/12 - 12/12 - 19/12</div>
+  <div class="tp-col-sujet">
+  </div>
+  <div class="tp-col-corrige">
+  </div>
+</div>
+
+
+
+## Annales de travaux pratiques 
+
+<div class="tp-row">
+  <div class="tp-row-main">
     <h3>TP1 (TP112 annale CCINP) : Extraction et titrage de l'aspirine</h3>
   </div>
   <div class="tp-dates"></div>
@@ -98,7 +162,7 @@ hide_auto_list: true
     </ul>
   </div>
   <div class="tp-dates">
-    <a class="btn-vert" href="/chimie/tp-oraux/mines/corriges/TP204_Barème.pdf" target="_blank" rel="noopener">Barème</a>
+    <a class="btn-gris" href="/chimie/tp-oraux/mines/corriges/TP204_Barème.pdf" target="_blank" rel="noopener">Barème</a>
   </div>
   <div class="tp-col-sujet">
     <a class="btn-vert" href="/chimie/tp-oraux/mines/sujets/TP204.pdf" target="_blank" rel="noopener">Sujet TP204</a>
