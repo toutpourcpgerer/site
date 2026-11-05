@@ -58,6 +58,9 @@
 
     {{ if $hasAnnale }}
 
+      {{/* Séparation visuelle conseils → liste d’annales */}}
+      <h2 class="annale-section-title">Sujets et corrigés</h2>
+
       {{ if .Params.group_by_title }}
         {{/* Regroupement par préfixe de titre
              - X-ENS : "Chimie A…", "Ulm…", "Lyon…"
