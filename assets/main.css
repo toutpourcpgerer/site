@@ -241,8 +241,8 @@ body.sidebar-open { overflow: hidden; }
 }
 
 .info-band {
-  background: #d6eaf5; border-radius: 8px; padding: 18px 22px; margin: 16px auto 24px;
-  font-size: 15px; line-height: 1.7; color: #1a3a4a; max-width: 820px; text-align: left;
+  background: #d6eaf5; border-radius: 8px; padding: 18px 22px; margin: 16px 0 24px;
+  font-size: 15px; line-height: 1.7; color: #1a3a4a; max-width: 100%; text-align: left;
 }
 .info-band-soft { background: #eef6fa; }
 .info-band a { color: #1a6a9a; text-decoration: underline; }
