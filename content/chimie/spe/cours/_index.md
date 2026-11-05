@@ -124,7 +124,7 @@ Ces polycopiés datent de l'année 2023-2024, lorsque j'étais professeur de chi
 
 <div class="poly-card">
   <div class="poly-card-body">
-    <h3 class="poly-card-title">Chapitre 18 : Réacteurs ouverts</h3>
+    <h3 class="poly-card-title">Chapitre 17 : Réacteurs ouverts</h3>
   </div>
   <div class="poly-card-actions">
     <a class="btn-vert" href="/chimie/spe/cours/atrou/Cours Reacteurs Ouverts PC.pdf" target="_blank" rel="noopener">Polycopié à trous</a>
