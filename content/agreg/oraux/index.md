@@ -9,7 +9,7 @@ hide_auto_list: true
 Certaines questions des écrits de l'agrégation sont classiques et sont répertoriées ici.
 
 <ul>
-  <li>[Quizlet sur les Prix Nobel](https://quizlet.com/fr/949942611/prix-nobel-en-chimie-flash-cards/?i=5lt8uz&x=1jqt) 
+  <li><a href="https://quizlet.com/fr/949942611/prix-nobel-en-chimie-flash-cards/?i=5lt8uz&amp;x=1jqt">Quizlet sur les Prix Nobel</a></li>
 </ul>
 
 ## Montages de chimie
@@ -38,7 +38,6 @@ Certaines questions des écrits de l'agrégation sont classiques et sont répert
 </div>
 
 <ul>
-  <li>[Excel sur les modifications de protocole](https://docs.google.com/spreadsheets/d/1W4syeAZRi0nVXfBiT-2g__uCaBRNjaZ-TU4lu9tOlnc/edit?gid=491716492#gid=491716492)
-  <li>[Excel sur quelques astuces de TP](https://docs.google.com/spreadsheets/d/126sMQCNMiAe37uC1rnuCAhIC4asKVGw1ZGmZ5rovkuI/edit?usp=sharing)</li>
+  <li><a href="https://docs.google.com/spreadsheets/d/1W4syeAZRi0nVXfBiT-2g__uCaBRNjaZ-TU4lu9tOlnc/edit?gid=491716492#gid=491716492">Excel sur les modifications de protocole</a></li>
+  <li><a href="https://docs.google.com/spreadsheets/d/126sMQCNMiAe37uC1rnuCAhIC4asKVGw1ZGmZ5rovkuI/edit?usp=sharing">Excel sur quelques astuces de TP</a></li>
 </ul>
-

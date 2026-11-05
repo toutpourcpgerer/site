@@ -15,9 +15,9 @@ Des fiches résumé de cours sont déjà disponibles sur le programme de chimie 
 Certaines questions des écrits de l'agrégation sont classiques et sont répertoriées ici.
 
 <ul>
-  <li>[Quizlet sur les questions de cours en chimie](https://quizlet.com/fr-fr/fiches-de-memorisation/questions-pointilleuses-en-chimie-953806264) (définitions, ...) tombées aux écrits</li>
-  <li>[Quizlet sur des notions subtiles classiques](https://quizlet.com/fr-fr/fiches-de-memorisation/random-connaissance-agreg-994903225) déjà tombées aux écrits</li>
-  <li>[Quizlet sur les définitions en physique](https://quizlet.com/fr-fr/fiches-de-memorisation/definitions-en-physique-949946962) </li>
+  <li><a href="https://quizlet.com/fr-fr/fiches-de-memorisation/questions-pointilleuses-en-chimie-953806264">Quizlet sur les questions de cours en chimie</a> (définitions, ...) tombées aux écrits</li>
+  <li><a href="https://quizlet.com/fr-fr/fiches-de-memorisation/random-connaissance-agreg-994903225">Quizlet sur des notions subtiles classiques</a> déjà tombées aux écrits</li>
+  <li><a href="https://quizlet.com/fr-fr/fiches-de-memorisation/definitions-en-physique-949946962">Quizlet sur les définitions en physique</a></li>
 </ul>
 
 ## Structure de la matière et interaction avec la lumière
@@ -78,7 +78,7 @@ Fiches en attente :
       <li>Réacteurs ouverts : vu en CPGE</li>
       <li>Culture générale : cf fiche</li>
       <li>Diagramme d'Ellingham : cf fiche</li>
-      <li>Distillation (diagrammes de McCabe & Thiele) : cf Wikipedia & [lien](https://nte.mines-albi.fr/Thermo/fr/co/Module_Distillation.html)</li>
+      <li>Distillation (diagrammes de McCabe &amp; Thiele) : cf Wikipedia &amp; <a href="https://nte.mines-albi.fr/Thermo/fr/co/Module_Distillation.html">lien</a></li>
     </ul>
     </p>
   </div>
