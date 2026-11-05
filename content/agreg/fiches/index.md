@@ -73,14 +73,14 @@ Fiches en attente :
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Chimie industrielle (L2)</h3>
-    <p class="poly-card-note">Divers chapitres :
+    <div class="poly-card-note">Divers chapitres :
     <ul>
       <li>Réacteurs ouverts : vu en CPGE</li>
       <li>Culture générale : cf fiche</li>
       <li>Diagramme d'Ellingham : cf fiche</li>
       <li>Distillation (diagrammes de McCabe &amp; Thiele) : cf Wikipedia &amp; <a href="https://nte.mines-albi.fr/Thermo/fr/co/Module_Distillation.html">lien</a></li>
     </ul>
-    </p>
+    </div>
   </div>
   <div class="poly-card-actions">
     <a class="btn-gold" href="/agreg/fiches/pdf/Fiche_Chi_Indus_HP.pdf">Fiche</a>
