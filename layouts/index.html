@@ -13,35 +13,35 @@
     </div>
 
     <div class="hero-molecule" aria-hidden="true">
-      {{/* Dopamine — structure correcte (catéchol + chaîne éthylamine) */}}
-      <svg viewBox="0 0 260 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Benzene ring (hexagon) -->
-        <path d="M95 55 L145 55 L170 95 L145 135 L95 135 L70 95 Z"
-              stroke="#c9a227" stroke-width="2.4" stroke-linejoin="round" fill="none"/>
-        <!-- Double bonds -->
-        <path d="M102 62 L138 62" stroke="#c9a227" stroke-width="1.7" opacity="0.55"/>
-        <path d="M155 102 L155 108" stroke="#c9a227" stroke-width="1.7" opacity="0.55"/>
-        <path d="M138 128 L102 128" stroke="#c9a227" stroke-width="1.7" opacity="0.55"/>
+      {{/* Dopamine — structure squelettique correcte */}}
+      <svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Cycle benzénique (hexagone régulier) -->
+        <path d="M120 40 L175 72 L175 136 L120 168 L65 136 L65 72 Z"
+              stroke="#c9a227" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
 
-        <!-- OH en position 3 (meta-ish / ortho catechol) — left -->
-        <circle cx="70" cy="95" r="3.5" fill="#c9a227"/>
-        <line x1="70" y1="95" x2="38" y2="95" stroke="#c9a227" stroke-width="2.2"/>
-        <text x="18" y="99" font-family="Source Sans 3, system-ui, sans-serif" font-size="13" fill="#9a7b1e" font-weight="600">HO</text>
+        <!-- Doubles liaisons (Kekulé) -->
+        <path d="M120 48 L168 76" stroke="#c9a227" stroke-width="1.8" opacity="0.5"/>
+        <path d="M175 104 L175 124" stroke="#c9a227" stroke-width="1.8" opacity="0.5"/>
+        <path d="M168 144 L120 160" stroke="#c9a227" stroke-width="1.8" opacity="0.5"/>
 
-        <!-- OH en position 4 (para) — top-left -->
-        <circle cx="95" cy="55" r="3.5" fill="#c9a227"/>
-        <line x1="95" y1="55" x2="78" y2="28" stroke="#c9a227" stroke-width="2.2"/>
-        <text x="58" y="24" font-family="Source Sans 3, system-ui, sans-serif" font-size="13" fill="#9a7b1e" font-weight="600">HO</text>
+        <!-- OH position 3 (gauche) -->
+        <circle cx="65" cy="104" r="3.2" fill="#c9a227"/>
+        <line x1="65" y1="104" x2="32" y2="104" stroke="#c9a227" stroke-width="2.2"/>
+        <text x="8" y="109" font-family="Source Sans 3, system-ui, sans-serif" font-size="14" fill="#9a7b1e" font-weight="600">HO</text>
 
-        <!-- Chaîne -CH2-CH2-NH2 attachée en position 1 (bas-droit du cycle) -->
-        <circle cx="145" cy="135" r="3.5" fill="#c9a227"/>
-        <line x1="145" y1="135" x2="168" y2="165" stroke="#c9a227" stroke-width="2.4"/>
-        <circle cx="168" cy="165" r="3.5" fill="#c9a227"/>
-        <line x1="168" y1="165" x2="200" y2="165" stroke="#c9a227" stroke-width="2.4"/>
-        <circle cx="200" cy="165" r="3.5" fill="#c9a227"/>
-        <line x1="200" y1="165" x2="222" y2="192" stroke="#c9a227" stroke-width="2.4"/>
-        <circle cx="222" cy="192" r="12" stroke="#c9a227" stroke-width="2" fill="none" opacity="0.8"/>
-        <text x="208" y="197" font-family="Source Sans 3, system-ui, sans-serif" font-size="13" fill="#9a7b1e" font-weight="600">NH₂</text>
+        <!-- OH position 4 (haut-gauche) -->
+        <circle cx="65" cy="72" r="3.2" fill="#c9a227"/>
+        <line x1="65" y1="72" x2="42" y2="42" stroke="#c9a227" stroke-width="2.2"/>
+        <text x="18" y="38" font-family="Source Sans 3, system-ui, sans-serif" font-size="14" fill="#9a7b1e" font-weight="600">HO</text>
+
+        <!-- Chaîne -CH₂-CH₂-NH₂ attachée en position 1 (bas) -->
+        <circle cx="120" cy="168" r="3.2" fill="#c9a227"/>
+        <line x1="120" y1="168" x2="120" y2="198" stroke="#c9a227" stroke-width="2.4"/>
+        <circle cx="120" cy="198" r="3.2" fill="#c9a227"/>
+        <line x1="120" y1="198" x2="120" y2="228" stroke="#c9a227" stroke-width="2.4"/>
+        <circle cx="120" cy="228" r="3.2" fill="#c9a227"/>
+        <!-- NH₂ -->
+        <text x="132" y="234" font-family="Source Sans 3, system-ui, sans-serif" font-size="15" fill="#9a7b1e" font-weight="600">NH₂</text>
       </svg>
     </div>
   </div>
@@ -118,11 +118,12 @@
 
     <article class="resource-tile resource-tile--soon">
       <div class="tile-icon" aria-hidden="true">
+        {{/* Tête qui parle */}}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-          <line x1="12" y1="19" x2="12" y2="23"/>
-          <line x1="8" y1="23" x2="16" y2="23"/>
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          <path d="M19 6.5c1.2.8 2 2.1 2 3.5s-.8 2.7-2 3.5"/>
+          <path d="M21.5 4.5c1.8 1.2 3 3.2 3 5.5s-1.2 4.3-3 5.5"/>
         </svg>
       </div>
       <p class="tile-tag">ORAUX</p>
