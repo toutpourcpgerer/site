@@ -1,6 +1,6 @@
 .intro-band {
   display: grid; grid-template-columns: auto 1fr; gap: 20px 28px;
-  padding: 48px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 48px 0; border-top: 1px solid var(--line);
   align-items: start;
 }
 .intro-band > .section-kicker { margin-bottom: 0; padding-top: 8px; }
