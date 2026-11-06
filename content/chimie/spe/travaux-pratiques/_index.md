@@ -141,7 +141,7 @@ hide_auto_list: true
 
 <div class="tp-row">
   <div class="tp-row-main">
-    <h3>TP1 (TP112 annale CCINP) : Extraction et titrage de l'aspirine</h3>
+    <h3>TP1 (TP112 annale CCINP) : Suivi cinétique de la réaction entre _( \ce{KMnO4} \) et l'acide oxalique</h3>
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
