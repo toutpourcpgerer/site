@@ -22,6 +22,61 @@
   </div>
 </section>
 
+<section class="resources-section" id="ressources">
+  <div class="section-heading">
+    <div>
+      <div class="section-kicker">À EXPLORER</div>
+      <h2>Les ressources principales</h2>
+    </div>
+  </div>
+
+  <div class="resource-grid">
+    {{/* Cartes disponibles */}}
+    {{ with site.GetPage "chimie/fiches" }}
+      <article class="resource-tile">
+        <p class="tile-tag">RÉVISER</p>
+        <h3><a href="{{ .RelPermalink }}">Fiches de chimie</a></h3>
+        <p class="tile-description">Des résumés de cours et de méthodes, pour retrouver vite l’essentiel — en PCSI, PC, MP, PT ou PSI.</p>
+        <a class="tile-link" href="{{ .RelPermalink }}">
+          Voir les ressources <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    {{ end }}
+
+    {{ with site.GetPage "chimie/annales" }}
+      <article class="resource-tile">
+        <p class="tile-tag">S’ENTRAÎNER</p>
+        <h3><a href="{{ .RelPermalink }}">Annales de chimie</a></h3>
+        <p class="tile-description">Sujets de concours avec corrigés détaillés, remarques et notes d’utilité pour cibler ce qui compte vraiment.</p>
+        <a class="tile-link" href="{{ .RelPermalink }}">
+          Voir les ressources <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    {{ end }}
+
+    {{/* Cartes à venir */}}
+    <article class="resource-tile resource-tile--soon">
+      <p class="tile-tag">ÉCRITS</p>
+      <h3>Méthode de préparation aux écrits</h3>
+      <p class="tile-description">La méthode complète pour aborder les écrits sereinement et efficacement.</p>
+      <div class="tile-soon">
+        <span class="soon-badge">Disponible le 14 février</span>
+        <span class="soon-lock">Bientôt disponible</span>
+      </div>
+    </article>
+
+    <article class="resource-tile resource-tile--soon">
+      <p class="tile-tag">ORAUX</p>
+      <h3>Préparation aux oraux</h3>
+      <p class="tile-description">Outils et méthodes pour briller aux oraux des concours.</p>
+      <div class="tile-soon">
+        <span class="soon-badge">Disponible le 1<sup>er</sup> mai</span>
+        <span class="soon-lock">Bientôt disponible</span>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="intro-band" id="apropos">
   <div class="section-kicker">POURQUOI CE SITE</div>
   <div>
@@ -40,35 +95,6 @@
       <strong>L’idée est simple : la différence de réussite ne devrait venir que de ton travail,
       pas d’un manque d’accès aux bonnes ressources.</strong>
     </p>
-  </div>
-</section>
-
-<section class="resources-section" id="ressources">
-  <div class="section-heading">
-    <div>
-      <div class="section-kicker">À EXPLORER</div>
-      <h2>Les ressources principales</h2>
-    </div>
-  </div>
-
-  <div class="resource-grid">
-    {{ range $item := slice
-      (dict "path" "chimie/fiches" "tag" "RÉVISER" "title" "Fiches de chimie"
-            "desc" "Des résumés de cours et de méthodes, pour retrouver vite l’essentiel — en PCSI, PC, MP, PT ou PSI.")
-      (dict "path" "chimie/annales" "tag" "S’ENTRAÎNER" "title" "Annales de chimie"
-            "desc" "Sujets de concours avec corrigés détaillés, remarques et notes d’utilité pour cibler ce qui compte vraiment.")
-    }}
-      {{ with site.GetPage $item.path }}
-        <article class="resource-tile">
-          <p class="tile-tag">{{ $item.tag }}</p>
-          <h3><a href="{{ .RelPermalink }}">{{ $item.title }}</a></h3>
-          <p class="tile-description">{{ $item.desc }}</p>
-          <a class="tile-link" href="{{ .RelPermalink }}">
-            Voir les ressources <span aria-hidden="true">→</span>
-          </a>
-        </article>
-      {{ end }}
-    {{ end }}
   </div>
 </section>
 
