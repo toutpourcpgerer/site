@@ -131,6 +131,35 @@ body.sidebar-open { overflow: hidden; }
 
 .hero { padding: 48px 0 28px; }
 .hero-full .hero-inner { max-width: 820px; }
+.hero-with-molecule {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px 48px;
+  align-items: center;
+  max-width: 1100px;
+}
+.hero-with-molecule .hero-inner {
+  max-width: 640px;
+}
+.hero-molecule {
+  width: min(280px, 28vw);
+  opacity: 0.92;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-molecule svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 860px) {
+  .hero-with-molecule {
+    grid-template-columns: 1fr;
+  }
+  .hero-molecule {
+    display: none;
+  }
+}
 .hero-eyebrow {
   font-size: 13px; font-weight: 700; letter-spacing: 1.1px;
   text-transform: uppercase; color: var(--gold-dark); margin: 0 0 14px;
@@ -142,7 +171,7 @@ body.sidebar-open { overflow: hidden; }
 .hero h1 em { font-style: normal; color: #2b88ae; }
 .hero-lead {
   font-size: 18px; color: var(--muted); line-height: 1.75;
-  max-width: 640px; margin: 0 0 28px;
+  max-width: 640px; margin: 0;
 }
 .hero-lead strong { color: var(--ink); }
 .hero-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
