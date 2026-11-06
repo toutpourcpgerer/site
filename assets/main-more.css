@@ -29,6 +29,45 @@
 }
 .tile-link span { font-size: 16px; color: #9c751f; }
 
+/* Cartes « bientôt disponible » */
+.resource-tile--soon {
+  background: linear-gradient(160deg, #fdf8ef 0%, #faf6ee 100%);
+  border-color: #e8d9a8;
+}
+.resource-tile--soon:hover {
+  border-color: #d4bc6a;
+  box-shadow: 0 10px 28px rgba(201, 162, 39, .12);
+}
+.resource-tile--soon h3 {
+  color: var(--ink);
+}
+.tile-soon {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #e8d9a8;
+}
+.soon-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #FF6347;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.soon-lock {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  opacity: .85;
+}
+
 .thanks-band {
   display: grid; grid-template-columns: auto 1fr; gap: 20px 28px;
   padding: 48px 0 72px; border-top: 1px solid var(--line); align-items: start;
