@@ -147,7 +147,8 @@ body.sidebar-open { overflow: hidden; }
   pointer-events: none;
   user-select: none;
 }
-.hero-molecule svg {
+.hero-molecule svg,
+.hero-molecule img {
   width: 100%;
   height: auto;
   display: block;
