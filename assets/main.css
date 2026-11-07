@@ -152,6 +152,8 @@ body.sidebar-open { overflow: hidden; }
   width: 100%;
   height: auto;
   display: block;
+  /* Fond blanc de l'export → transparent sur le fond crème */
+  mix-blend-mode: multiply;
 }
 @media (max-width: 860px) {
   .hero-with-molecule {
