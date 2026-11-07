@@ -1,1 +1,185 @@
-{{PLACEHOLDER}}
+{{/* Page d'accueil */}}
+{{ define "main" }}
+
+<section class="hero hero-full">
+  <div class="hero-with-molecule">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Ressources gratuites · CPGE physique-chimie</p>
+      <h1>Toute la chimie de prépa au même endroit.</h1>
+      <p class="hero-lead">
+        Des fiches nettes, des annales vraiment commentées et une vraie préparation aux oraux.
+        Le tout gratuit et centralisé, pour que la qualité des ressources ne dépende plus de l'endroit où tu étudies.
+      </p>
+    </div>
+
+    <div class="hero-molecule" aria-hidden="true">
+      <img src="/molecules-dopamine-cafeine.png" alt="Structures de la dopamine et de la caféine" width="280" height="280" loading="eager">
+    </div>
+  </div>
+</section>
+
+{{/* Compteur de jours avant les concours — même logique que le site originel */}}
+<section class="countdown-band" aria-live="polite">
+  <div id="countdown">
+    Concours 2027 : <span id="days">–</span> jours restants
+  </div>
+</section>
+
+<section class="resources-section" id="ressources">
+  <div class="section-heading">
+    <div>
+      <div class="section-kicker">À EXPLORER</div>
+      <h2>Les ressources principales</h2>
+    </div>
+  </div>
+
+  <div class="resource-grid">
+    {{ with site.GetPage "chimie/fiches" }}
+      <article class="resource-tile">
+        <div class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <path d="M8 7h8M8 11h6"/>
+          </svg>
+        </div>
+        <p class="tile-tag">RÉVISER</p>
+        <h3><a href="{{ .RelPermalink }}">Fiches de chimie</a></h3>
+        <p class="tile-description">Des résumés de cours et de méthodes, pour retrouver vite l'essentiel — en PCSI, PC, MP, PT ou PSI.</p>
+        <a class="tile-link" href="{{ .RelPermalink }}">
+          Voir les ressources <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    {{ end }}
+
+    {{ with site.GetPage "chimie/annales" }}
+      <article class="resource-tile">
+        <div class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <p class="tile-tag">S'ENTRAÎNER</p>
+        <h3><a href="{{ .RelPermalink }}">Annales de chimie</a></h3>
+        <p class="tile-description">Sujets de concours avec corrigés détaillés, remarques et notes d'utilité pour cibler ce qui compte vraiment.</p>
+        <a class="tile-link" href="{{ .RelPermalink }}">
+          Voir les ressources <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    {{ end }}
+
+    <article class="resource-tile resource-tile--soon">
+      <div class="tile-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20h9"/>
+          <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      </div>
+      <p class="tile-tag">ÉCRITS</p>
+      <h3>Méthode de préparation aux écrits</h3>
+      <p class="tile-description">La méthode complète pour aborder les écrits sereinement et efficacement.</p>
+      <div class="tile-soon">
+        <span class="soon-badge">Disponible le 14 février</span>
+        <span class="soon-lock">Bientôt disponible</span>
+      </div>
+    </article>
+
+    <article class="resource-tile resource-tile--soon">
+      <div class="tile-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          <path d="M19 6.5c1.2.8 2 2.1 2 3.5s-.8 2.7-2 3.5"/>
+          <path d="M21.5 4.5c1.8 1.2 3 3.2 3 5.5s-1.2 4.3-3 5.5"/>
+        </svg>
+      </div>
+      <p class="tile-tag">ORAUX</p>
+      <h3>Préparation aux oraux</h3>
+      <p class="tile-description">Outils et méthodes pour briller aux oraux des concours.</p>
+      <div class="tile-soon">
+        <span class="soon-badge">Disponible le 1<sup>er</sup> mai</span>
+        <span class="soon-lock">Bientôt disponible</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="intro-band" id="apropos">
+  <div class="section-kicker">POURQUOI CE SITE</div>
+  <div>
+    <h2>La réduction des inégalités entre les prépas</h2>
+    <p>
+      Corrections de sujets introuvables, préparation aux oraux de qualité inégale, ...
+      Si tu es en prépa, tu connais déjà le problème. Tout pour Cpgérer est né de ce manque :
+      un endroit unique où tout est gratuit, centralisé, et pensé pour coller aux attentes des concours.
+    </p>
+    <p>
+      Le site est tenu par Antoine Cornet — prépa PC* à Descartes (Tours), normalien
+      (ENS Ulm, 2021), 4ᵉ à l'agrégation de physique-chimie option chimie en 2025. Chaque fiche,
+      chaque corrigé répond à un besoin qu'il a vécu lui-même en tant qu'élève, puis en tant que prof.
+    </p>
+    <p>
+      <strong>L'idée est simple : la différence de réussite ne devrait venir que de ton travail,
+      pas d'un manque d'accès aux bonnes ressources.</strong>
+    </p>
+  </div>
+</section>
+
+<section class="guestbook-teaser" id="livre-dor">
+  <div class="guestbook-teaser-inner">
+    <div class="section-kicker">LIVRE D'OR</div>
+    <h2>C'est vous qui en parlez le mieux</h2>
+    <p>
+      Alumnis (de prépa), anciens élèves de cours particuliers, fidèles du sites : le livre d'or recueille leurs retours sur le site
+      et les ressources. Un petit mot, une remarque, un encouragement — tout est le bienvenu.
+    </p>
+    <a class="button button-outline" href="{{ "livre-d-or/" | relURL }}">
+      Consulter le livre d'or <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<section class="thanks-band" id="remerciements">
+  <div class="section-kicker">REMERCIEMENTS</div>
+  <div>
+    <ul class="thanks-list">
+      <li>
+        <strong>Laurent Lepetit</strong> — mon professeur de physique de PCSI à Descartes.
+        Merci à toi qui as cru en moi et m'as fait me révéler.
+      </li>
+      <li>
+        <strong>Thibault Lemonnier</strong> — ancien directeur pédagogique d'Ipesup.
+        Merci de m'avoir fait confiance en tant que professeur à mon jeune âge.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const countdownDate = new Date("April 14, 2027 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const daysEl = document.getElementById("days");
+      const countdownEl = document.getElementById("countdown");
+
+      if (!daysEl || !countdownEl) return;
+
+      if (distance < 0) {
+        countdownEl.innerText = "Concours terminé !";
+        return;
+      }
+
+      daysEl.innerText = days;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000 * 60 * 60 * 24);
+  })();
+</script>
+
+{{ end }}
