@@ -4,6 +4,8 @@ description: "Test"
 back_to: "/"
 back_label: "Accueil"
 hide_auto_list: true
+publishDate: 2027-02-14
+expiryDate: 2027-08-01
 ---
 
 <div class="info-band">
