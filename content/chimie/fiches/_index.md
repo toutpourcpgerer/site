@@ -14,7 +14,7 @@ hide_auto_list: true
     <p>Une seule fiche : le résumé de tout le programme de spé.</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-gris" href="/chimie/fiches/pc/">Fiche PC</a>
+    <a class="btn-gold" href="/chimie/fiches/pc/">Fiche PC</a>
   </div>
 </div>
 
@@ -24,7 +24,7 @@ hide_auto_list: true
     <p>Une fiche pour résumer les deux années de prépa — idéale avant les concours.</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-gris" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI</a>
+    <a class="btn-gold" href="/chimie/fiches/mp-pt-psi/">Fiche MP / PT / PSI</a>
   </div>
 </div>
 
@@ -46,7 +46,7 @@ hide_auto_list: true
     <p>Des notions de TP tombent souvent aux écrits, il faut récupérer ces points gratuits.</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-gris" href="/chimie/fiches/tp/">TP chimie</a>
+    <a class="btn-gold" href="/chimie/fiches/tp/">TP chimie</a>
   </div>
 </div>
 
@@ -59,7 +59,7 @@ hide_auto_list: true
     La chimie organique est surtout traitée via les sujets par chapitre.</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-gris" href="/chimie/fiches/pcsi/">Essentiel inorganique PCSI</a>
+    <a class="btn-gold" href="/chimie/fiches/pcsi/">Essentiel inorganique PCSI</a>
     <a class="btn-gris" href="/chimie/sujets_chapitres/">Sujets par chapitre</a>
   </div>
 </div>
@@ -70,6 +70,6 @@ hide_auto_list: true
     <p>Fiches de révision pour la première année.</p>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-gris" href="/chimie/fiches/mpsi-ptsi/">Fiches MPSI / PTSI</a>
+    <a class="btn-gold" href="/chimie/fiches/mpsi-ptsi/">Fiches MPSI / PTSI</a>
   </div>
 </div>
