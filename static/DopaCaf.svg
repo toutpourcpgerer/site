@@ -1,44 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" fill="none">
-  <!-- Dopamine -->
-  <!-- Benzene ring -->
-  <path d="M90 40 L140 40 L165 83 L140 126 L90 126 L65 83 Z" stroke="#1a1a2e" stroke-width="2.4" stroke-linejoin="round"/>
-  <path d="M98 48 L132 48" stroke="#1a1a2e" stroke-width="1.6"/>
-  <path d="M150 62 L155 75" stroke="#1a1a2e" stroke-width="1.6"/>
-  <path d="M132 118 L98 118" stroke="#1a1a2e" stroke-width="1.6"/>
-  <!-- HO left -->
-  <line x1="65" y1="83" x2="32" y2="83" stroke="#1a1a2e" stroke-width="2.2"/>
-  <text x="8" y="88" font-family="system-ui,sans-serif" font-size="15" fill="#c0392b" font-weight="600">HO</text>
-  <!-- HO top -->
-  <line x1="90" y1="40" x2="70" y2="14" stroke="#1a1a2e" stroke-width="2.2"/>
-  <text x="48" y="16" font-family="system-ui,sans-serif" font-size="15" fill="#c0392b" font-weight="600">HO</text>
-  <!-- Side chain -->
-  <line x1="165" y1="83" x2="200" y2="83" stroke="#1a1a2e" stroke-width="2.4"/>
-  <line x1="200" y1="83" x2="225" y2="55" stroke="#1a1a2e" stroke-width="2.4"/>
-  <line x1="225" y1="55" x2="255" y2="55" stroke="#1a1a2e" stroke-width="2.4"/>
-  <text x="260" y="60" font-family="system-ui,sans-serif" font-size="15" fill="#2c5aa0" font-weight="600">NH₂</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .bond {
+        stroke: #222222;
+        stroke-width: 2.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+      .dbond {
+        stroke: #222222;
+        stroke-width: 2.6;
+        stroke-linecap: round;
+        fill: none;
+      }
+      .o {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        fill: #e53935;
+      }
+      .n {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        fill: #1e88e5;
+      }
+      .c {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        fill: #222222;
+      }
+    ]]></style>
+  </defs>
 
-  <!-- Caffeine -->
-  <!-- 6-ring -->
-  <path d="M80 200 L145 200 L172 245 L145 290 L80 290 L53 245 Z" stroke="#1a1a2e" stroke-width="2.4" stroke-linejoin="round"/>
-  <!-- 5-ring fused -->
-  <path d="M145 200 L185 182 L210 220 L172 245" stroke="#1a1a2e" stroke-width="2.4" stroke-linejoin="round"/>
-  <!-- Carbonyls -->
-  <line x1="112" y1="200" x2="112" y2="172" stroke="#1a1a2e" stroke-width="2.2"/>
-  <circle cx="112" cy="164" r="10" stroke="#c0392b" stroke-width="2" fill="none"/>
-  <text x="105" y="169" font-family="system-ui,sans-serif" font-size="14" fill="#c0392b" font-weight="700">O</text>
-  <line x1="53" y1="245" x2="25" y2="245" stroke="#1a1a2e" stroke-width="2.2"/>
-  <circle cx="16" cy="245" r="10" stroke="#c0392b" stroke-width="2" fill="none"/>
-  <text x="9" y="250" font-family="system-ui,sans-serif" font-size="14" fill="#c0392b" font-weight="700">O</text>
-  <!-- N-methyls -->
-  <line x1="80" y1="200" x2="58" y2="178" stroke="#1a1a2e" stroke-width="2"/>
-  <text x="40" y="176" font-family="system-ui,sans-serif" font-size="13" fill="#2c5aa0" font-weight="600">N</text>
-  <line x1="46" y1="166" x2="32" y2="152" stroke="#1a1a2e" stroke-width="1.8"/>
-  <line x1="80" y1="290" x2="58" y2="312" stroke="#1a1a2e" stroke-width="2"/>
-  <text x="40" y="320" font-family="system-ui,sans-serif" font-size="13" fill="#2c5aa0" font-weight="600">N</text>
-  <line x1="46" y1="324" x2="32" y2="338" stroke="#1a1a2e" stroke-width="1.8"/>
-  <text x="188" y="178" font-family="system-ui,sans-serif" font-size="13" fill="#2c5aa0" font-weight="600">N</text>
-  <line x1="198" y1="168" x2="218" y2="152" stroke="#1a1a2e" stroke-width="1.8"/>
-  <text x="188" y="248" font-family="system-ui,sans-serif" font-size="13" fill="#2c5aa0" font-weight="600">N</text>
-  <path d="M195 195 L205 225" stroke="#1a1a2e" stroke-width="1.5"/>
+  <!-- ========== DOPAMINE (haut) - layout proche du PNG ========== -->
+  <g id="dopamine">
+    <!-- Anneau benzénique (catéchol) légèrement incliné -->
+    <path class="bond" d="
+      M 142 95
+      L 176 76
+      L 214 90
+      L 224 128
+      L 190 148
+      L 152 134
+      Z"/>
+
+    <!-- Doubles liaisons aromatiques -->
+    <path class="dbond" d="M 147 98  L 174 81"/>
+    <path class="dbond" d="M 216 95  L 221 124"/>
+    <path class="dbond" d="M 187 144 L 156 132"/>
+
+    <!-- Groupe HO supérieur (position 3) -->
+    <line class="bond" x1="142" y1="95" x2="120" y2="78"/>
+    <text class="o" x="95" y="75">HO</text>
+
+    <!-- Groupe HO inférieur (position 4) -->
+    <line class="bond" x1="152" y1="134" x2="132" y2="158"/>
+    <text class="o" x="105" y="172">HO</text>
+
+    <!-- Chaîne éthylamine -CH2-CH2-NH2 (vers la droite haut) -->
+    <line class="bond" x1="224" y1="128" x2="262" y2="112"/>
+    <line class="bond" x1="262" y1="112" x2="300" y2="128"/>
+    <line class="bond" x1="300" y1="128" x2="338" y2="112"/>
+
+    <!-- NH2 -->
+    <text class="n" x="345" y="116">NH</text>
+    <text class="n" x="372" y="108" style="font-size:13px">2</text>
+  </g>
+
+  <!-- ========== CAFÉINE (bas) ========== -->
+  <g id="caffeine">
+    <!-- Cycle à 6 (pyrimidine-dione) -->
+    <path class="bond" d="
+      M 165 340
+      L 205 365
+      L 255 350
+      L 263 305
+      L 222 280
+      L 172 295
+      Z"/>
+
+    <!-- Double liaison C4=C5 -->
+    <path class="dbond" d="M 259 309 L 226 285"/>
+
+    <!-- Carbonyles -->
+    <!-- C2=O bas -->
+    <line class="bond" x1="205" y1="365" x2="205" y2="395"/>
+    <text class="o" x="195" y="413">O</text>
+
+    <!-- C6=O gauche -->
+    <line class="bond" x1="172" y1="295" x2="145" y2="275"/>
+    <text class="o" x="128" y="270">O</text>
+
+    <!-- Méthyl sur N1 (bas gauche) -->
+    <line class="bond" x1="165" y1="340" x2="140" y2="365"/>
+    <text class="c" x="112" y="380">H₃C</text>
+
+    <!-- Méthyl sur N3 (bas droite) -->
+    <line class="bond" x1="255" y1="350" x2="285" y2="368"/>
+    <text class="c" x="290" y="382">CH₃</text>
+
+    <!-- Cycle imidazole à 5 -->
+    <path class="bond" d="
+      M 222 280
+      L 262 252
+      L 300 272
+      L 292 312
+      L 263 305"/>
+
+    <!-- Double liaison dans l'imidazole -->
+    <path class="dbond" d="M 300 272 L 292 312"/>
+
+    <!-- Méthyl sur N7 (haut) -->
+    <line class="bond" x1="262" y1="252" x2="262" y2="222"/>
+    <text class="c" x="245" y="214">CH₃</text>
+
+    <!-- Étiquettes azote en bleu -->
+    <text class="n" x="152" y="348">N</text>
+    <text class="n" x="242" y="358">N</text>
+    <text class="n" x="254" y="250">N</text>
+    <text class="n" x="285" y="322">N</text>
+  </g>
 </svg>
