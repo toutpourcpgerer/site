@@ -4,6 +4,8 @@ description: "Les travaux pratiques de chimie posés aux concours ont été rép
 back_to: "/"
 back_label: "Accueil"
 hide_auto_list: true
+publishDate: 2027-05-01
+expiryDate: 2027-08-01
 ---
 <!--
 publishDate: 2027-05-01
