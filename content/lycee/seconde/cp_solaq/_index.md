@@ -36,7 +36,9 @@ hide_auto_list: true
 
 ### Cours
 
-
+<center>
+  <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf">Cours (version élèves)</a>
+</center>
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
@@ -67,7 +69,11 @@ hide_auto_list: true
   </tbody>
 </table>
 
-#### Ressources pour réviser
+### Travaux pratiques
+
+
+
+### Ressources pour réviser
 
 <div style="font-size: 0.88em; color: #5c6871;">
 
