@@ -10,21 +10,21 @@ hide_auto_list: true
 
 <div style="font-size: 0.88em; line-height: 1.55; color: #4a5560;">
 
-**Savoir**
+💙 **Savoir**
 
 - Citer des exemples courants de corps purs et de mélanges homogènes et hétérogènes.
 - Citer des tests chimiques courants de présence d'eau, de dihydrogène, de dioxygène, de dioxyde de carbone.
 - Citer la valeur de la masse volumique de l'eau liquide et la comparer à celles d'autres corps purs et mélanges.
 - Citer la composition approchée de l'air et l'ordre de grandeur de la valeur de sa masse volumique.
 
-**Savoir-faire**
+🔧 **Savoir-faire**
 
 - Identifier, à partir de valeurs de référence, une espèce chimique par ses températures de changement d'état ou sa masse volumique.
 - Interpréter un test chimique, c'est-à-dire identifier une espèce chimique à partir d'un test chimique.
 - Interpréter une chromatographie sur couche mince (CCM).
 - Distinguer un mélange d'un corps pur à partir de données expérimentales.
 
-**Savoir-faire expérimental**
+🧑‍🔬 **Savoir-faire expérimental**
 
 - Mesurer des volumes et des masses pour estimer la composition de mélanges.
 - Déterminer la masse volumique d'un échantillon.
@@ -38,9 +38,9 @@ hide_auto_list: true
 
 *À venir.*
 
-### Exercices
+### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
-<div style="font-size: 0.9em; overflow-x: auto;">
+<div style="font-size: 0.88em; overflow-x: auto;">
 
 <table style="width: 100%; border-collapse: collapse; margin: 0.8em 0;">
   <thead>
@@ -116,8 +116,10 @@ hide_auto_list: true
 #### Ressources pour réviser
 
 <div style="font-size: 0.88em; color: #5c6871;">
+  
 - [Playlist de vidéos d'identification des gaz](https://youtube.com/playlist?list=PLGUmmhaRCVymHy8xvw1KSBat4UizvJpmB)
 - [Jeu d'identification de médicaments par CCM](https://chimie.ostralo.net/chromatographie/)
+
 </div>
 
 ---
