@@ -40,33 +40,91 @@ hide_auto_list: true
 
 ### Exercices
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.9em; overflow-x: auto;">
 
-| Difficulté | Exercice | Corrigé |
-|:----------:|:--------:|:-------:|
-| ☆ | Exo 11 | — |
-| ★ | Exo 13 | — |
-| ☆ | Exo 14 | — |
-| ★★★ | Exo 35 | — |
-| ☆ | Exo 16 | — |
-| ★★ | Exo 23 | — |
-| ★★★ | Exo 34 | — |
-| ☆ | Exo 19 | — |
-| ☆☆ | Exo 25 | — |
-| ★★ | Exo 27 | — |
-| ★★ | Exo 33 | — |
+<table style="width: 100%; border-collapse: collapse; margin: 0.8em 0;">
+  <thead>
+    <tr style="border-bottom: 2px solid #cbd5e0;">
+      <th style="text-align: center; padding: 8px 10px; width: 18%;">Difficulté</th>
+      <th style="text-align: left; padding: 8px 10px;">Exercice</th>
+      <th style="text-align: center; padding: 8px 10px; width: 18%;">Corrigé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background: #f0f4f8;">
+      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Caractérisation d'un mélange</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">☆</td>
+      <td style="padding: 6px 10px;">Exo 11</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">★</td>
+      <td style="padding: 6px 10px;">Exo 13</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">☆</td>
+      <td style="padding: 6px 10px;">Exo 14</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">★★★</td>
+      <td style="padding: 6px 10px;">Exo 35</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+
+    <tr style="background: #f0f4f8;">
+      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Identification d'espèces</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">☆</td>
+      <td style="padding: 6px 10px;">Exo 16</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">★★</td>
+      <td style="padding: 6px 10px;">Exo 23</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">★★★</td>
+      <td style="padding: 6px 10px;">Exo 34</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+
+    <tr style="background: #f0f4f8;">
+      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">CCM</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">☆</td>
+      <td style="padding: 6px 10px;">Exo 19</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">☆☆</td>
+      <td style="padding: 6px 10px;">Exo 25</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">★★</td>
+      <td style="padding: 6px 10px;">Exo 27</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+
+    <tr style="background: #f0f4f8;">
+      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Bilan</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 6px 10px;">★★</td>
+      <td style="padding: 6px 10px;">Exo 33</td>
+      <td style="text-align: center; padding: 6px 10px;">—</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
-
-<details style="font-size: 0.88em; margin-top: 1.2em; color: #5c6871;">
-<summary style="cursor: pointer; font-weight: 600;">Organisation des exercices (par thème)</summary>
-
-1. **Caractérisation d'un mélange** — Exo 11 (☆), 13 (★), 14 (☆), 35 (★★★)  
-2. **Identification d'espèces** — Exo 16 (☆), 23 (★★), 34 (★★★)  
-3. **CCM** — Exo 19 (☆), 25 (☆☆), 27 (★★)  
-4. **Bilan** — Exo 33 (★★)
-
-</details>
 
 #### Ressources pour réviser
 
