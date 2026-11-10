@@ -42,71 +42,71 @@ hide_auto_list: true
 
 <div style="font-size: 0.7em; overflow-x: auto;">
 
-<table style="width: 80%; border-collapse: collapse; margin: 0.8em auto;">
+<table style="width: 80%; border-collapse: collapse; margin: 0.8em auto; line-height: 1.25;">
   <thead>
     <tr style="border-bottom: 2px solid #cbd5e0;">
-      <th style="text-align: center; padding: 8px 10px; width: 18%;">Difficulté</th>
-      <th style="text-align: left; padding: 8px 10px;">Exercice</th>
-      <th style="text-align: center; padding: 8px 10px; width: 18%;">Corrigé</th>
+      <th style="text-align: center; padding: 4px 8px; width: 18%;">Difficulté</th>
+      <th style="text-align: left; padding: 4px 8px;">Exercice</th>
+      <th style="text-align: center; padding: 4px 8px; width: 18%;">Corrigé</th>
     </tr>
   </thead>
   <tbody>
     <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Caractérisation d'un mélange</td>
+      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Caractérisation d'un mélange</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exercice 11 page 21</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">☆</td>
+      <td style="padding: 3px 8px;">Exercice 11 page 21</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">★</td>
-      <td style="padding: 6px 10px;">Exercice 13 page 21</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">★</td>
+      <td style="padding: 3px 8px;">Exercice 13 page 21</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exercice 14 page 21</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">☆</td>
+      <td style="padding: 3px 8px;">Exercice 14 page 21</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">★★★</td>
-      <td style="padding: 6px 10px;">Exercice 35 page 25</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">★★★</td>
+      <td style="padding: 3px 8px;">Exercice 35 page 25</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Identification d'espèces</td>
+      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Identification d'espèces</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exercice 16 page 21</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">☆</td>
+      <td style="padding: 3px 8px;">Exercice 16 page 21</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">CCM</td>
+      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">CCM</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exercice 19 page 21</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">☆</td>
+      <td style="padding: 3px 8px;">Exercice 19 page 21</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">☆☆</td>
-      <td style="padding: 6px 10px;">Exercice 25 page 23</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">☆☆</td>
+      <td style="padding: 3px 8px;">Exercice 25 page 23</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">★★</td>
-      <td style="padding: 6px 10px;">Exercice 27 page 24</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">★★</td>
+      <td style="padding: 3px 8px;">Exercice 27 page 24</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
     <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Bilan</td>
+      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Bilan</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">★★</td>
-      <td style="padding: 6px 10px;">Exercice 33 page 25</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
+      <td style="text-align: center; padding: 3px 8px;">★★</td>
+      <td style="padding: 3px 8px;">Exercice 33 page 25</td>
+      <td style="text-align: center; padding: 3px 8px;">—</td>
     </tr>
   </tbody>
 </table>
