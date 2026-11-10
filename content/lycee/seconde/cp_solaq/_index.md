@@ -40,17 +40,6 @@ hide_auto_list: true
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
-<style>
-.exo-table { width: 70%; max-width: 640px; border-collapse: collapse; margin: 0.5em auto; font-size: 0.85em; line-height: 1.3; }
-.exo-table th, .exo-table td { padding: 3px 8px; border-bottom: 1px solid #e2e8f0; vertical-align: middle; }
-.exo-table thead th { border-bottom: 2px solid #cbd5e0; font-weight: 600; }
-.exo-table .col-diff { width: 4.5em; text-align: center; white-space: nowrap; }
-.exo-table .col-exo  { width: 11.5em; white-space: nowrap; }
-.exo-table .col-corr { text-align: left; }
-.exo-table .theme { background: #f0f4f8; font-weight: 600; color: #2d3748; }
-.exo-table a { white-space: nowrap; }
-</style>
-
 <table class="exo-table">
   <thead>
     <tr>
