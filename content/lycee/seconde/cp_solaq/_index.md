@@ -72,7 +72,7 @@ hide_auto_list: true
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 3px 8px;">★★</td>
       <td style="padding: 3px 8px;">Exercice 30 page 24</td>
-      <td style="text-align: center; padding: 3px 8px;">[Corrigé par Khadija (2nde1)](/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf)</td>
+      <td style="text-align: center; padding: 3px 8px;"><a href="/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 3px 8px;">★★★</td>
@@ -111,7 +111,7 @@ hide_auto_list: true
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 3px 8px;">★★</td>
       <td style="padding: 3px 8px;">Exercice 29 page 24</td>
-      <td style="text-align: center; padding: 3px 8px;">[Corrigé par Khadija (2nde1)](/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf)</td>
+      <td style="text-align: center; padding: 3px 8px;"><a href="/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 3px 8px;">★★</td>
