@@ -40,9 +40,9 @@ hide_auto_list: true
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
-<div style="font-size: 0.7em; overflow-x: auto;">
+<div style="font-size: 0.8em; overflow-x: auto;">
 
-<table style="width: 80%; border-collapse: collapse; margin: 0.8em auto; line-height: 1.25;">
+<table style="width: 60%; border-collapse: collapse; margin: 0.6em auto; line-height: 1.25;">
   <thead>
     <tr style="border-bottom: 2px solid #cbd5e0;">
       <th style="text-align: center; padding: 4px 8px; width: 18%;">Difficulté</th>
