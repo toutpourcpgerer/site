@@ -9,6 +9,8 @@
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <link rel="icon" type="image/png" href="{{ "Logo_Site.png" | relURL }}">
 
+  {{ partial "gtm.html" . }}
+
   {{ $style := resources.Get "main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   {{ with resources.Get "main-more.css" }}
@@ -41,6 +43,13 @@
 </head>
 
 <body>
+  {{- if hugo.IsProduction -}}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3N9QG9J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager -->
+  {{- end -}}
+
   {{ partial "header.html" . }}
 
   <div class="page-wrapper">
