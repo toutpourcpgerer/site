@@ -40,93 +40,51 @@ hide_auto_list: true
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
-<div style="font-size: 0.8em; overflow-x: auto;">
+<style>
+.exo-table { width: 70%; max-width: 640px; border-collapse: collapse; margin: 0.5em auto; font-size: 0.85em; line-height: 1.3; }
+.exo-table th, .exo-table td { padding: 3px 8px; border-bottom: 1px solid #e2e8f0; vertical-align: middle; }
+.exo-table thead th { border-bottom: 2px solid #cbd5e0; font-weight: 600; }
+.exo-table .col-diff { width: 4.5em; text-align: center; white-space: nowrap; }
+.exo-table .col-exo  { width: 11.5em; white-space: nowrap; }
+.exo-table .col-corr { text-align: left; }
+.exo-table .theme { background: #f0f4f8; font-weight: 600; color: #2d3748; }
+.exo-table a { white-space: nowrap; }
+</style>
 
-<table style="width: 50%; border-collapse: collapse; margin: 0.5em auto; line-height: 1.25;">
+<table class="exo-table">
   <thead>
-    <tr style="border-bottom: 2px solid #cbd5e0;">
-      <th style="text-align: center; padding: 4px 8px; width: 18%;">Difficulté</th>
-      <th style="text-align: left; padding: 4px 8px;">Exercice</th>
-      <th style="text-align: center; padding: 4px 8px; width: 18%;">Corrigé</th>
+    <tr>
+      <th class="col-diff">Difficulté</th>
+      <th class="col-exo">Exercice</th>
+      <th class="col-corr">Corrigé</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Caractérisation d'un mélange</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">☆</td>
-      <td style="padding: 3px 8px;">Exercice 11 page 21</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">★</td>
-      <td style="padding: 3px 8px;">Exercice 13 page 21</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">☆</td>
-      <td style="padding: 3px 8px;">Exercice 14 page 21</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">★★</td>
-      <td style="padding: 3px 8px;">Exercice 30 page 24</td>
-      <td style="text-align: center; padding: 3px 8px;"><a href="/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">★★★</td>
-      <td style="padding: 3px 8px;">Exercice 35 page 25</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Identification d'espèces</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">☆</td>
-      <td style="padding: 3px 8px;">Exercice 16 page 21</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">CCM</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">☆</td>
-      <td style="padding: 3px 8px;">Exercice 19 page 21</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">☆☆</td>
-      <td style="padding: 3px 8px;">Exercice 25 page 23</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">★★</td>
-      <td style="padding: 3px 8px;">Exercice 27 page 24</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
-    <tr style="background: #f0f4f8;">
-      <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Bilan</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">★★</td>
-      <td style="padding: 3px 8px;">Exercice 29 page 24</td>
-      <td style="text-align: center; padding: 3px 8px;"><a href="/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 3px 8px;">★★</td>
-      <td style="padding: 3px 8px;">Exercice 33 page 25</td>
-      <td style="text-align: center; padding: 3px 8px;">—</td>
-    </tr>
+    <tr><td class="theme" colspan="3">Caractérisation d'un mélange</td></tr>
+    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 11 page 21</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★</td><td class="col-exo">Exercice 13 page 21</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 14 page 21</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 30 page 24</td><td class="col-corr"><a href="/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td></tr>
+    <tr><td class="col-diff">★★★</td><td class="col-exo">Exercice 35 page 25</td><td class="col-corr">—</td></tr>
+
+    <tr><td class="theme" colspan="3">Identification d'espèces</td></tr>
+    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 16 page 21</td><td class="col-corr">—</td></tr>
+
+    <tr><td class="theme" colspan="3">CCM</td></tr>
+    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 19 page 21</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">☆☆</td><td class="col-exo">Exercice 25 page 23</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 27 page 24</td><td class="col-corr">—</td></tr>
+
+    <tr><td class="theme" colspan="3">Bilan</td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 29 page 24</td><td class="col-corr"><a href="/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 33 page 25</td><td class="col-corr">—</td></tr>
   </tbody>
 </table>
-
-</div>
 
 #### Ressources pour réviser
 
 <div style="font-size: 0.88em; color: #5c6871;">
-  
+
 - [Playlist de vidéos d'identification des gaz](https://youtube.com/playlist?list=PLGUmmhaRCVymHy8xvw1KSBat4UizvJpmB)
 - [Jeu d'identification de médicaments par CCM](https://chimie.ostralo.net/chromatographie/)
 
