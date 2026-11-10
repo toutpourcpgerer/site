@@ -200,7 +200,8 @@
   white-space: nowrap;
 }
 .exo-table .col-exo {
-  width: 11.5em;
+  width: 13em;
+  text-align: center;
   white-space: nowrap;
 }
 .exo-table .col-corr {
