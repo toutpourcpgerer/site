@@ -42,7 +42,7 @@ hide_auto_list: true
 
 <div style="font-size: 0.8em; overflow-x: auto;">
 
-<table style="width: 60%; border-collapse: collapse; margin: 0.6em auto; line-height: 1.25;">
+<table style="width: 50%; border-collapse: collapse; margin: 0.5em auto; line-height: 1.25;">
   <thead>
     <tr style="border-bottom: 2px solid #cbd5e0;">
       <th style="text-align: center; padding: 4px 8px; width: 18%;">Difficulté</th>
@@ -68,6 +68,11 @@ hide_auto_list: true
       <td style="text-align: center; padding: 3px 8px;">☆</td>
       <td style="padding: 3px 8px;">Exercice 14 page 21</td>
       <td style="text-align: center; padding: 3px 8px;">—</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 3px 8px;">★★</td>
+      <td style="padding: 3px 8px;">Exercice 30 page 24</td>
+      <td style="text-align: center; padding: 3px 8px;">[Corrigé par Khadija (2nde1)](/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf)</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 3px 8px;">★★★</td>
@@ -102,6 +107,11 @@ hide_auto_list: true
     </tr>
     <tr style="background: #f0f4f8;">
       <td colspan="3" style="padding: 4px 8px; font-weight: 600; color: #2d3748;">Bilan</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="text-align: center; padding: 3px 8px;">★★</td>
+      <td style="padding: 3px 8px;">Exercice 29 page 24</td>
+      <td style="text-align: center; padding: 3px 8px;">[Corrigé par Khadija (2nde1)](/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf)</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 3px 8px;">★★</td>
