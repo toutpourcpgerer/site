@@ -6,6 +6,7 @@ hide_auto_list: true
 
 ## Chapitre 1.1 : Corps purs et mélanges
 
+<div class="poly-list">
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Cours chapitre 1.1</h3>
@@ -13,6 +14,7 @@ hide_auto_list: true
   <div class="poly-card-actions">
     <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf" target="_blank" rel="noopener">Cours (version élèves)</a>
   </div>
+</div>
 </div>
 
 ### Attendus pédagogiques
@@ -74,6 +76,7 @@ hide_auto_list: true
 
 ### Travaux pratiques
 
+<div class="poly-list">
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">TP1 : Identification d'espèces</h3>
@@ -92,6 +95,7 @@ hide_auto_list: true
     <a class="btn-gold" href="/lycee/seconde/cp_solaq/Fiche_CCM.docx" target="_blank" rel="noopener">Fiche CCM</a>
     <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP_CCM_MMs.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
+</div>
 </div>
 
 ### Ressources pour réviser
