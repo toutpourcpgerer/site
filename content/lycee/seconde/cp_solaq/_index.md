@@ -36,7 +36,7 @@ hide_auto_list: true
 
 ### Cours
 
-*À venir.*
+
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
