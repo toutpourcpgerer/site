@@ -71,7 +71,46 @@ hide_auto_list: true
 
 ### Travaux pratiques
 
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>TP1 : Identification d'espèces</h3>
+    <ul>
+      <li>Détermination de la masse volumique</li>
+      <li>Test au sulfate de cuivre anhydre</li>
+      <li>Température de fusion de l'eau VS eau+sel</li>
+    </ul>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP Masse volumique.pdf">Sujet</a>
+  </div>
+  {{/*
+  <div class="tp-col-corrige">
+    <a class="btn-blue" href=".pdf" target="_blank" rel="noopener">Correction</a>
+  </div>
+  */}}
+</div>
 
+<div class="tp-row">
+  <div class="tp-row-main">
+    <h3>TP2 : Colorants de Mm's</h3>
+    <ul>
+      <li>Détermination de la masse volumique</li>
+      <li>Test au sulfate de cuivre anhydre</li>
+      <li>Température de fusion de l'eau VS eau+sel</li>
+    </ul>
+  </div>
+  <div class="tp-col-dates">
+    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Fiche_CCM.docx">Fiche CCM</a>
+  </div>
+  <div class="tp-col-sujet">
+    <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP_CCM_MMs.pdf">Sujet</a>
+  </div>
+  {{/*
+  <div class="tp-col-corrige">
+    <a class="btn-blue" href=".pdf" target="_blank" rel="noopener">Correction</a>
+  </div>
+  */}}
+</div>
 
 ### Ressources pour réviser
 
