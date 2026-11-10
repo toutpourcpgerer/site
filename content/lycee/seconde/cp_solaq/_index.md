@@ -56,69 +56,56 @@ hide_auto_list: true
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exo 11</td>
+      <td style="padding: 6px 10px;">Exercice 11 page 21</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">★</td>
-      <td style="padding: 6px 10px;">Exo 13</td>
+      <td style="padding: 6px 10px;">Exercice 13 page 21</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exo 14</td>
+      <td style="padding: 6px 10px;">Exercice 14 page 21</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">★★★</td>
-      <td style="padding: 6px 10px;">Exo 35</td>
+      <td style="padding: 6px 10px;">Exercice 35 page 25</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
-
     <tr style="background: #f0f4f8;">
       <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Identification d'espèces</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exo 16</td>
+      <td style="padding: 6px 10px;">Exercice 16 page 21</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">★★</td>
-      <td style="padding: 6px 10px;">Exo 23</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="text-align: center; padding: 6px 10px;">★★★</td>
-      <td style="padding: 6px 10px;">Exo 34</td>
-      <td style="text-align: center; padding: 6px 10px;">—</td>
-    </tr>
-
     <tr style="background: #f0f4f8;">
       <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">CCM</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">☆</td>
-      <td style="padding: 6px 10px;">Exo 19</td>
+      <td style="padding: 6px 10px;">Exercice 19 page 21</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">☆☆</td>
-      <td style="padding: 6px 10px;">Exo 25</td>
+      <td style="padding: 6px 10px;">Exercice 25 page 23</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">★★</td>
-      <td style="padding: 6px 10px;">Exo 27</td>
+      <td style="padding: 6px 10px;">Exercice 27 page 24</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
-
     <tr style="background: #f0f4f8;">
       <td colspan="3" style="padding: 7px 10px; font-weight: 600; color: #2d3748;">Bilan</td>
     </tr>
     <tr style="border-bottom: 1px solid #e2e8f0;">
       <td style="text-align: center; padding: 6px 10px;">★★</td>
-      <td style="padding: 6px 10px;">Exo 33</td>
+      <td style="padding: 6px 10px;">Exercice 33 page 25</td>
       <td style="text-align: center; padding: 6px 10px;">—</td>
     </tr>
   </tbody>
@@ -129,10 +116,8 @@ hide_auto_list: true
 #### Ressources pour réviser
 
 <div style="font-size: 0.88em; color: #5c6871;">
-
 - [Playlist de vidéos d'identification des gaz](https://youtube.com/playlist?list=PLGUmmhaRCVymHy8xvw1KSBat4UizvJpmB)
 - [Jeu d'identification de médicaments par CCM](https://chimie.ostralo.net/chromatographie/)
-
 </div>
 
 ---
