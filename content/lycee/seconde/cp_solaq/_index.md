@@ -5,6 +5,12 @@ hide_auto_list: true
 ---
 
 ## Chapitre 1.1 : Corps pur et mélanges
+### Attendus pédagogiques
+
+
+### Cours
+
+### Exercices
 
 
 ## Chapitre 1.2 : Solutions aqueuses
