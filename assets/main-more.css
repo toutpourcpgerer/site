@@ -195,12 +195,9 @@
   font-weight: 600;
 }
 .exo-table .col-diff {
-  width: 6em;
+  width: 4.5em;
   text-align: center;
   white-space: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  letter-spacing: 0.12em;
 }
 .exo-table .col-exo {
   width: 13em;
