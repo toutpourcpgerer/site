@@ -53,19 +53,16 @@ hide_auto_list: true
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 11 page 21</td><td class="col-corr">—</td></tr>
     <tr><td class="col-diff">★</td><td class="col-exo">Exercice 13 page 21</td><td class="col-corr">—</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 14 page 21</td><td class="col-corr">—</td></tr>
-    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 30 page 24</td><td class="col-corr"><a href="/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td></tr>
+    <tr><td class="col-diff">☆☆</td><td class="col-exo">Exercice 30 page 24</td><td class="col-corr"><a href="/lycee/seconde/cp_solaq/Ex30p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td></tr>
     <tr><td class="col-diff">★★★</td><td class="col-exo">Exercice 35 page 25</td><td class="col-corr">—</td></tr>
-
     <tr><td class="theme" colspan="3">Identification d'espèces</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 16 page 21</td><td class="col-corr">—</td></tr>
-
     <tr><td class="theme" colspan="3">CCM</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 19 page 21</td><td class="col-corr">—</td></tr>
     <tr><td class="col-diff">☆☆</td><td class="col-exo">Exercice 25 page 23</td><td class="col-corr">—</td></tr>
     <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 27 page 24</td><td class="col-corr">—</td></tr>
-
     <tr><td class="theme" colspan="3">Bilan</td></tr>
-    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 29 page 24</td><td class="col-corr"><a href="/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td></tr>
+    <tr><td class="col-diff">☆☆</td><td class="col-exo">Exercice 29 page 24</td><td class="col-corr"><a href="/lycee/seconde/cp_solaq/Ex29p.24_Khadija.pdf" target="_blank" rel="noopener">Corrigé par Khadija (2nde1)</a></td></tr>
     <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 33 page 25</td><td class="col-corr">—</td></tr>
   </tbody>
 </table>
