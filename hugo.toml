@@ -2,7 +2,7 @@
 # CONFIGURATION DU SITE HUGO
 # ============================================================
 
-baseURL = "https://site-c8s.pages.dev/"
+baseURL = "https://tout-pour-cpgerer.com/"
 languageCode = "fr-fr"
 title = "Tout pour Cpgérer"
 enableRobotsTXT = true
