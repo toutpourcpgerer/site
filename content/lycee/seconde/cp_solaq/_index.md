@@ -6,6 +6,15 @@ hide_auto_list: true
 
 ## Chapitre 1.1 : Corps purs et mélanges
 
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Cours chapitre 1.1</h3>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf" target="_blank" rel="noopener">Cours (version élèves)</a>
+  </div>
+</div>
+
 ### Attendus pédagogiques
 
 <div style="font-size: 0.8em; line-height: 1.55; color: #4a5560;">
@@ -32,17 +41,6 @@ hide_auto_list: true
 - Déterminer une température de changement d'état.
 - Réaliser une CCM.
 
-</div>
-
-### Cours
-
-<div class="poly-card">
-  <div class="poly-card-body">
-    <h3 class="poly-card-title">Cours chapitre 1.1</h3>
-  </div>
-  <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf" target="_blank" rel="noopener">Cours (version élèves)</a>
-  </div>
 </div>
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
@@ -79,7 +77,7 @@ hide_auto_list: true
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">TP1 : Identification d'espèces</h3>
-    <p>Détermination de la masse volumique, test au sulfate de cuivre anhydre, température de fusion de l'eau VS eau+sel</p>
+    <p class="poly-card-note">Détermination de la masse volumique, test au sulfate de cuivre anhydre, température de fusion de l'eau VS eau+sel</p>
   </div>
   <div class="poly-card-actions">
     <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP Masse volumique.pdf" target="_blank" rel="noopener">Sujet</a>
