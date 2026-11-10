@@ -8,7 +8,7 @@ hide_auto_list: true
 
 ### Attendus pédagogiques
 
-<div style="font-size: 0.88em; line-height: 1.55; color: #4a5560;">
+<div style="font-size: 0.8em; line-height: 1.55; color: #4a5560;">
 
 💙 **Savoir**
 
@@ -36,9 +36,14 @@ hide_auto_list: true
 
 ### Cours
 
-<center>
-  <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf">Cours (version élèves)</a>
-</center>
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Cours chapitre 1.1</h3>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf" target="_blank" rel="noopener">Cours (version élèves)</a>
+  </div>
+</div>
 
 ### Exercices (Manuel physique-chimie 2de, Hatier 2019)
 
@@ -73,15 +78,11 @@ hide_auto_list: true
 
 <div class="poly-card">
   <div class="poly-card-body">
-    <h3 class="poly-card-title">TP1 ; Identification d'espèces</h3>
-    <ul>
-      <li>Détermination de la masse volumique</li>
-      <li>Test au sulfate de cuivre anhydre</li>
-      <li>Température de fusion de l'eau VS eau+sel</li>
-    </ul>
+    <h3 class="poly-card-title">TP1 : Identification d'espèces</h3>
+    <p>Détermination de la masse volumique, test au sulfate de cuivre anhydre, température de fusion de l'eau VS eau+sel</p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP Masse volumique.pdf">Sujet</a>
+    <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP Masse volumique.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
 </div>
 
@@ -90,8 +91,8 @@ hide_auto_list: true
     <h3 class="poly-card-title">TP2 : Colorant des Mm's</h3>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Fiche_CCM.docx">Fiche CCM</a>
-    <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP_CCM_MMs.pdf">Sujet</a>
+    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Fiche_CCM.docx" target="_blank" rel="noopener">Fiche CCM</a>
+    <a class="btn-vert" href="/lycee/seconde/cp_solaq/TP_CCM_MMs.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
 </div>
 
