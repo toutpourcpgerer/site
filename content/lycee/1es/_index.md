@@ -8,15 +8,17 @@ hide_auto_list: true
 
 <div class="poly-list">
 
+{{/*
 <div class="poly-card">
   <div class="poly-card-body">
-    <h3 class="poly-card-title">Partie 1 : Le Soleil</h3>
+    <h3 class="poly-card-title">Partie 0 : Généralités</h3>
     <p class="poly-card-note"> Chapitre transversal d'introduction</p>
   </div>
   <div class="poly-card-actions">
     <a class="btn-gold" href="/lycee/1es/gen/" target="_blank" rel="noopener">Ressources chapitre</a>
   </div>
 </div>
+*/}}
 
 <div class="poly-card">
   <div class="poly-card-body">
