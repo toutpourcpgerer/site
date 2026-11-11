@@ -8,7 +8,7 @@ hide_auto_list: true
 
 <div class="poly-list">
 
-{{/*
+<---
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Partie 0 : Généralités</h3>
@@ -18,7 +18,7 @@ hide_auto_list: true
     <a class="btn-gold" href="/lycee/1es/gen/" target="_blank" rel="noopener">Ressources chapitre</a>
   </div>
 </div>
-*/}}
+--->
 
 <div class="poly-card">
   <div class="poly-card-body">
