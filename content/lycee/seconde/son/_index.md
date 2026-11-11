@@ -61,8 +61,9 @@ hide_auto_list: true
     </td></tr>
     <tr><td class="theme" colspan="3">Perception d'un son</td></tr>
     <tr><td class="col-diff">★</td><td class="col-exo">
-      <a href="/lycee/seconde/son/Ex18p.223.pdf" target="_blank" rel="noopener">Exercice 18 page 223</a>
-      (recopié car faux dans manuel)</td>
+      <a href="/lycee/seconde/son/Ex18p.223.pdf" target="_blank" rel="noopener">Exercice 18 page 223</a><br>
+      <span style="font-size: 0.9em; color: #666;">(recopié car faux dans manuel)</span>
+    </td>
       <td class="col-corr">
       <a href="/lycee/seconde/son/TD_Chap3.1_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
     </td></tr>
