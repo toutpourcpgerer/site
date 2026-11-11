@@ -70,7 +70,7 @@ hide_auto_list: true
     <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 26 page 226</td><td class="col-corr">—</td></tr>
     <tr><td class="theme" colspan="3">Bilan</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 20 page 224</td><td class="col-corr">Cf manuel</td></tr>
-    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 30 page 227</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 30 page 227</td><td class="col-corr">—</td></tr>
   </tbody>
 </table>
 
