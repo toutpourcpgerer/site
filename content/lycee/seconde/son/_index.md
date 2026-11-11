@@ -56,9 +56,16 @@ hide_auto_list: true
   <tbody>
     <tr><td class="theme" colspan="3">Applications du cours</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 11 page 223</td><td class="col-corr">—</td></tr>
-    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 16 page 223</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 16 page 223</td><td class="col-corr">
+      <a href="/lycee/seconde/son/TD_Chap3.1_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
+    </td></tr>
     <tr><td class="theme" colspan="3">Perception d'un son</td></tr>
-    <tr><td class="col-diff">★</td><td class="col-exo">Exercice 18 page 223</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★</td><td class="col-exo">
+      <a href="/lycee/seconde/son/Ex18p.223.pdf" target="_blank" rel="noopener">Exercice 18 page 223</a>
+      (recopié car faux dans manuel)</td>
+      <td class="col-corr">
+      <a href="/lycee/seconde/son/TD_Chap3.1_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
+    </td></tr>
     <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 25 page 225</td><td class="col-corr">—</td></tr>
     <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 26 page 226</td><td class="col-corr">—</td></tr>
     <tr><td class="theme" colspan="3">Bilan</td></tr>
