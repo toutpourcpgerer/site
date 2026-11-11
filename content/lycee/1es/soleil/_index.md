@@ -12,7 +12,7 @@ hide_auto_list: true
     <h3 class="poly-card-title">Cours à compléter</h3>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/seconde/cp_solaq/Cours_Chap1.1_Elèves.pdf" target="_blank" rel="noopener">Cours (version élèves)</a>
+    <a class="btn-gold" href="/lycee/1es/soleil/Cours_Soleil.pdf" target="_blank" rel="noopener">Cours (version élèves)</a>
   </div>
 </div>
 
