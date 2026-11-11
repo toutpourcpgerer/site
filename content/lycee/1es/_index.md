@@ -8,7 +8,7 @@ hide_auto_list: true
 
 <div class="poly-list">
 
-<--
+<!--
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Partie 0 : Généralités</h3>
