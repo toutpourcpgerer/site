@@ -12,12 +12,14 @@ back_label: "Accueil"
     <h3 class="poly-card-title">Partie 1 : Le Soleil</h3>
     <p class="poly-card-note"> Réunit les chapitres
     <ul>
-      <li>Organisation</li>
+      <li>Thème 1.1 - Un niveau d'organisation : les éléments chimiques</li>
+      <li>Thème 2.1 - Le rayonnement solaire</li>
+      <li>Thème 2.2 - Le bilan radiatif terrestre</li>
     </ul>
     </p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/1ES/" target="_blank" rel="noopener">Ressources chapitre</a>
+    <a class="btn-gold" href="/lycee/1es/soleil/" target="_blank" rel="noopener">Ressources chapitre</a>
   </div>
 </div>
 
