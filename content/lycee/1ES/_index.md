@@ -7,19 +7,17 @@ back_label: "Accueil"
 
 ## Partie 0 : Quelques généralités sur la science
 
-
-
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Partie 1 : Le Soleil</h3>
     <p class="poly-card-note"> Réunit les chapitres
     <ul>
-      <li>Orga</li>
+      <li>Organisation</li>
     </ul>
     </p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/seconde/cp_solaq/" target="_blank" rel="noopener">Ressources chapitre</a>
+    <a class="btn-gold" href="/lycee/1ES/" target="_blank" rel="noopener">Ressources chapitre</a>
   </div>
 </div>
 
