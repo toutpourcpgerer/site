@@ -42,11 +42,6 @@ hide_auto_list: true
 
 ## Devoirs
 
-<div class="poly-card">
-  <div class="poly-card-body">
-    <h3 class="poly-card-title">Devoirs</h3>
-  </div>
-  <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/seconde/devoirs/" target="_blank" rel="noopener">Devoirs</a>
-  </div>
-</div>
+<center>
+<a class="btn-gold" href="/lycee/seconde/devoirs/" target="_blank" rel="noopener">Devoirs</a>
+</center>
