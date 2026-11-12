@@ -67,8 +67,12 @@ hide_auto_list: true
       <td class="col-corr">
       <a href="/lycee/seconde/son/TD_Chap3.1_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
     </td></tr>
-    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 25 page 225</td><td class="col-corr">—</td></tr>
-    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 26 page 226</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 25 page 225</td><td class="col-corr">
+      <a href="/lycee/seconde/son/Exo25p.225_Distanciel.pdf" target="_blank" rel="noopener">Corrigé (fait en distanciel)</a>
+    </td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 26 page 226</td><td class="col-corr">
+      <a href="/lycee/seconde/son/Exo26p.226_Distanciel.pdf" target="_blank" rel="noopener">Corrigé (fait en distanciel)</a>
+    </td></tr>
     <tr><td class="theme" colspan="3">Bilan</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 20 page 224</td><td class="col-corr">Cf manuel</td></tr>
     <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 30 page 227</td><td class="col-corr">—</td></tr>
