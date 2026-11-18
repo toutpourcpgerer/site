@@ -102,6 +102,7 @@ hide_auto_list: true
     <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
   </div>
   <div class="tp-col-corrige">
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4_Corr.pdf">Correction TP4</a>
   </div>
 </div>
 
