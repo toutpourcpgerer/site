@@ -75,7 +75,12 @@ hide_auto_list: true
     </td></tr>
     <tr><td class="theme" colspan="3">Bilan</td></tr>
     <tr><td class="col-diff">☆</td><td class="col-exo">Exercice 20 page 224</td><td class="col-corr">Cf manuel</td></tr>
-    <tr><td class="col-diff">★★</td><td class="col-exo">Exercice 30 page 227</td><td class="col-corr">—</td></tr>
+    <tr><td class="col-diff">★★</td><td class="col-exo">
+      <a href="/lycee/seconde/son/Ex30p.227.pdf" target="_blank" rel="noopener">Exercice 30 page 227</a><br>
+      <span style="font-size: 0.9em; color: #666;">(recopié car faux dans manuel)</span>
+    </td><td class="col-corr">
+      <a href="/lycee/seconde/son/TD_Chap3.1_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
+    </td></tr>
   </tbody>
 </table>
 
