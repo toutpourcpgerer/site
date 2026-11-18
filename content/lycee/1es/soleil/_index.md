@@ -55,6 +55,18 @@ hide_auto_list: true
 <div class="poly-card">
   <div class="poly-card-body">
     <h3 class="poly-card-title">Activité n°4 : Rayonnement des étoiles</h3>
+    <div class="poly-card-note">Classe puzzle pour répondre à la question "Comment le Soleil nous chauffe-t-il ?".
+    Loi de Stefan-Boltzmann; loi de Wien; Relation d'Einstein et transport de la chaleur.
+    </div>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-vert" href="/lycee/1es/soleil/Activité4_Puzzle_Soleil" target="_blank" rel="noopener">Sujet</a>
+  </div>
+</div>
+
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Activité n°5 : Répartition de la chaleur sur Terre</h3>
     <p class="poly-card-note"></p>
   </div>
   <div class="poly-card-actions">
@@ -62,6 +74,15 @@ hide_auto_list: true
   </div>
 </div>
 
+<div class="poly-card">
+  <div class="poly-card-body">
+    <h3 class="poly-card-title">Activité n°6 : Protection et exploitation du rayonnement solaire</h3>
+    <p class="poly-card-note"></p>
+  </div>
+  <div class="poly-card-actions">
+    <a class="btn-vert" href="/lycee/1es/soleil/" target="_blank" rel="noopener">Sujet (non dispo)</a>
+  </div>
+</div>
 </div>
 
 ## Chapitre 3 : Le bilan radiatif terrestre
