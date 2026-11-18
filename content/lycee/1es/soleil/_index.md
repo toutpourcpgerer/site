@@ -60,7 +60,7 @@ hide_auto_list: true
     </div>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/lycee/1es/soleil/Activité4_Puzzle_Soleil" target="_blank" rel="noopener">Sujet</a>
+    <a class="btn-vert" href="/lycee/1es/soleil/Activité4_Puzzle_Soleil.pdf" target="_blank" rel="noopener">Sujet</a>
   </div>
 </div>
 
