@@ -31,5 +31,3 @@ description: "Des ressources sur les capacités numérique du programme de physi
     <a class="btn-gold" href="/informatique-physico-chimique/TD_Info_PhyChi_Corr.pdf">Corrigé</a>
   </div>
 </div>
-
-## Annales de CCINP Modélisation
