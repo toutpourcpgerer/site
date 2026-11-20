@@ -15,7 +15,7 @@ hide_auto_list: true
     <p class="poly-card-note"> Chapitre transversal d'introduction</p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/1es/gen/" target="_blank" rel="noopener">Ressources chapitre</a>
+    <a class="btn-gold" href="/lycee/1es/gen/">Ressources chapitre</a>
   </div>
 </div>
 -->
@@ -32,7 +32,7 @@ hide_auto_list: true
     </div>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-gold" href="/lycee/1es/soleil/" target="_blank" rel="noopener">Ressources chapitre</a>
+    <a class="btn-gold" href="/lycee/1es/soleil/">Ressources chapitre</a>
   </div>
 </div>
 
