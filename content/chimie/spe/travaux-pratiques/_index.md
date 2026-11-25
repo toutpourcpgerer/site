@@ -52,7 +52,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1.pdf">Sujet TP1</a>
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1.pdf" target="_blank" rel="noopener">Sujet TP1</a>
   </div>
   <div class="tp-col-corrige">
     <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP1_Corr.pdf" target="_blank" rel="noopener">Correction TP1</a>
@@ -68,10 +68,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates"></div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2.pdf">Sujet TP2</a>
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2.pdf" target="_blank" rel="noopener">Sujet TP2</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf">Correction TP2</a>
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP2_Corr.pdf" target="_blank" rel="noopener">Correction TP2</a>
   </div>
 </div>
 
@@ -82,10 +82,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates">10/10 - 17/10</div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf">Sujet TP3</a>
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3.pdf" target="_blank" rel="noopener">Sujet TP3</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3_Corr.pdf">Correction TP3</a>
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP3_Corr.pdf" target="_blank" rel="noopener">Correction TP3</a>
   </div>
 </div>
 
@@ -99,10 +99,10 @@ hide_auto_list: true
   </div>
   <div class="tp-dates">7/11 - 14/11</div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf">Sujet TP4</a>
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4.pdf" target="_blank" rel="noopener">Sujet TP4</a>
   </div>
   <div class="tp-col-corrige">
-    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4_Corr.pdf">Correction TP4</a>
+    <a class="btn-blue" href="/chimie/spe/travaux-pratiques/annee-impaire/TP4_Corr.pdf" target="_blank" rel="noopener">Correction TP4</a>
   </div>
 </div>
 
@@ -116,7 +116,7 @@ hide_auto_list: true
   </div>
   <div class="tp-dates">21/11 - 28/11</div>
   <div class="tp-col-sujet">
-    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf">Sujet TP5</a>
+    <a class="btn-vert" href="/chimie/spe/travaux-pratiques/annee-impaire/TP5.pdf" target="_blank" rel="noopener">Sujet TP5</a>
   </div>
   <div class="tp-col-corrige">
   </div>
