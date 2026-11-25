@@ -15,7 +15,7 @@ description: "Des ressources sur les capacités numérique du programme de physi
     </ul>
   </div>
   <div class="fiche-row-actions">
-    <a class="btn-blue" href="/informatique-physico-chimique/Cours_Info_PhyChi_Complété.pdf">Cours</a>
+    <a class="btn-blue" href="/informatique-physico-chimique/Cours_Info_PhyChi_Complété.pdf" target="_blank" rel="noopener">Cours</a>
   </div>
 </div>
 
@@ -27,7 +27,7 @@ description: "Des ressources sur les capacités numérique du programme de physi
     <p class="poly-card-note">Incluant les méthodes de calcul d'intégrale, hors-programme, mais beaucoup posées.</p>
   </div>
   <div class="poly-card-actions">
-    <a class="btn-vert" href="/informatique-physico-chimique/TD_Info_PhyChi.pdf">Sujet</a>
-    <a class="btn-gold" href="/informatique-physico-chimique/TD_Info_PhyChi_Corr.pdf">Corrigé</a>
+    <a class="btn-vert" href="/informatique-physico-chimique/TD_Info_PhyChi.pdf" target="_blank" rel="noopener">Sujet</a>
+    <a class="btn-gold" href="/informatique-physico-chimique/TD_Info_PhyChi_Corr.pdf" target="_blank" rel="noopener">Corrigé</a>
   </div>
 </div>
