@@ -9,9 +9,9 @@ hide_auto_list: true
 ## Polycopié de préparation : « Objectif oraux de l'X ! »
 
 <center>
-  <a class="btn-vert" href="/integration/oraux-x/X-Hebdo.pdf">Enoncés</a>
+  <a class="btn-vert" href="/integration/oraux-x/X-Hebdo.pdf" target="_blank" rel="noopener">Enoncés</a>
   &emsp;
-  <a class="btn-gold" href="/integration/oraux-x/X-Hebdo_Corr.pdf">Corrections</a>
+  <a class="btn-gold" href="/integration/oraux-x/X-Hebdo_Corr.pdf" target="_blank" rel="noopener">Corrections</a>
 </center>
 
 **10 semaines** d'exercices hebdomadaires de X-ENS destinés aux **PC** (maths, physique & chimie).
